@@ -148,7 +148,7 @@ export const books: Book[] = [
       {
         heading: "THE CONTEMPORARY CRISIS OF MARRIAGE AND FAMILY",
         paragraphs: [
-          "There is a great lack of appreciation for the dignity of human beings, respect for human life and value for the Sacrament of Marriage has been diminishing on a rapid phase. As a result of this, people contemplate much less the need for having recourse to this sacrament, and create a proper family. A certain sense of an attitude of aversion and animosity towards the Church has crept in and a degrading level of morality is on the increase.",
+          "There is a great lack of appreciation for the dignity of human beings, respect for human life and value for the Sacrament of Marriage has been diminishing at a rapid pace. As a result of this, people contemplate much less the need for having recourse to this sacrament, and create a proper family. A certain sense of an attitude of aversion and animosity towards the Church has crept in and a degrading level of morality is on the increase.",
           "As a result of this, the proper understanding of the concept of marriage as intended by God has disappeared. The very notion of the sacrament is going through a serious crisis today. This crisis shows modern man’s serious inability to conceive of the reality symbolically and, therefore, to understand his own life in depth. Though, there are some positive aspects of the signs of the salvation of Christ operating in the world but, the negative impacts have caused greater damage to the institution of family; generally, there is a sign of the refusal that man gives to the love of God and concrete difficulties that family experiences in transmitting values.",
           "Secularism has drained out the nature and the concept of morality from peoples’ lives and has resulted in uncontrolled freedom. The sin of the century is the loss of the sense of sin. People have lost the sense of recognizing the presence of God in their lives. There is a movement of ideas and behavior which advocates humanism totally without God, and is completely centered upon the cult of action and production caught up in the enthusiasm of consumerism and pleasure seeking, unconcerned with the danger of losing one’s soul. All these have resulted in the loss of a sense of sin, and sense of God in peoples’ lives.",
           "By and large, the value and the sanctity of family life are being devalued at a drastic level. Certainly, in Africa and Asia, human love in its natural dimension is less degraded than in the West. But over all, there is a disregard for the Sacrament of Marriage, and an attitude of contempt and hatred to the concepts of marriage and the institution of family life in countries of secularized world. There is the need to re-instill the importance of the concept of marriage, and speed up the mission and evangelization of the Gospel of Life in the Church.",
@@ -1021,7 +1021,7 @@ export const books: Book[] = [
   {
     id: "book-08",
     order: 8,
-    title: "Preaching God’s Word Day in and Day Out – (Cycle- A)",
+    title: "Preaching God’s Word Day in and Day Out – (Cycle-A)",
     slug: "preaching-gods-word-day-in-and-day-out-cycle-a",
     description:
       "An enriching collection of homily reflections for Liturgical Cycle A, journeying through the Gospel of Matthew and the mystery of Christ. These reflections invite readers to encounter God’s Word more deeply, connect faith with daily life, and allow the Gospel to transform the heart through prayer, meditation, and faithful living.",
@@ -1037,7 +1037,7 @@ export const books: Book[] = [
     publishedAt: null,
     createdAt: "2024-01-01",
     seo: {
-      title: "Preaching God’s Word Day in and Day Out – (Cycle- A)",
+      title: "Preaching God’s Word Day in and Day Out – (Cycle-A)",
       description:
         "An enriching collection of homily reflections for Liturgical Cycle A, journeying through the Gospel of Matthew and the mystery of Christ. These reflections invite readers to encounter God’s Word more deeply, connect faith with daily life, and allow the Gospel to transform the heart through prayer, meditation, and faithful living.",
     },
@@ -1045,7 +1045,7 @@ export const books: Book[] = [
       {
         heading: "ABOUT THE BOOK",
         paragraphs: [
-          "“Preaching God’s Word Day in and Day Out – (Cycle- A)” is a collection of homiletic reflections rooted in the liturgical readings of Cycle A.",
+          "“Preaching God’s Word Day in and Day Out – (Cycle-A)” is a collection of homiletic reflections rooted in the liturgical readings of Cycle A.",
         ],
       },
       {
@@ -1217,9 +1217,9 @@ export const books: Book[] = [
         "Jesus as the suffering Messiah and the powerful Son of God",
         "Urgency, movement, healing miracles, and dynamic action in Mark's Gospel",
         "Discipleship through sacrifice, suffering, service, and steadfast faith",
-        "Proclaiming God's plan of salvation (salvezza delle animae)",
+        "Proclaiming God's plan of salvation (salvezza delle anime)",
         "Caribbean cultural context, local community life, and worship",
-        "Use of French-Kewyol dialect for meaningful local pastoral communication",
+        "Use of French-Kweyol dialect for meaningful local pastoral communication",
         "The living and transformative power of Scripture (Hebrews 4:12; 2 Timothy 3:16)",
         "Human limitation and humility in the ministry of the Word",
         "The spiritual seed of God's Word producing a rich harvest",
@@ -1236,7 +1236,7 @@ export const books: Book[] = [
       points: [
         "Following Christ through discipleship, service, and sacrifice",
         "Encountering the action-oriented urgency of Mark's Gospel",
-        "Rooted in Caribbean culture and the salvation of souls (salvezza delle animae)",
+        "Rooted in Caribbean culture and the salvation of souls (salvezza delle anime)",
         "Keeping our hearts open to the transformative seed of the Word",
       ],
       paragraphs: [
@@ -1456,7 +1456,7 @@ export const books: Book[] = [
   {
     id: "book-12",
     order: 12,
-    title: "Holy Women As Evangelizers Of The Gospel",
+    title: "Holy Women as Evangelizers of the Gospel",
     slug: "holy-women-as-evangelizers-of-the-gospel",
     description:
       "An inspiring exploration of the indispensable role of holy women in salvation history and the Church today, showing how faith, courageous testimony, prayer, hospitality, and lives transformed by Christ become powerful instruments of evangelization.",
@@ -1473,7 +1473,7 @@ export const books: Book[] = [
     publishedAt: null,
     createdAt: "2024-01-01",
     seo: {
-      title: "Holy Women As Evangelizers Of The Gospel | Rev. Fr. Dr. Joseph Raj",
+      title: "Holy Women as Evangelizers of the Gospel | Rev. Fr. Dr. Joseph Raj",
       description:
         "The profound contribution of holy women in salvation history and the contemporary Church, exploring how faith, courage, and lives transformed by Christ become instruments of the Gospel.",
     },

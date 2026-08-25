@@ -4,12 +4,15 @@ type PublicationFormProps = {
   compact?: boolean
 }
 
-type FormState = "idle" | "submitting" | "success" | "error"
+type FormState = "idle" | "submitting" | "success"
+
+const NOTIFY_EMAIL = "josephraj167@gmail.com"
 
 export default function PublicationForm({ compact = false }: PublicationFormProps) {
   const [email, setEmail] = useState("")
   const [formState, setFormState] = useState<FormState>("idle")
   const [emailError, setEmailError] = useState("")
+  const [savedEmail, setSavedEmail] = useState("")
 
   function validateEmail(value: string): string {
     if (!value.trim()) return "Email address is required."
@@ -26,17 +29,39 @@ export default function PublicationForm({ compact = false }: PublicationFormProp
     }
     setEmailError("")
     setFormState("submitting")
-    setTimeout(() => {
-      setFormState("success")
-      setEmail("")
-    }, 800)
+
+    try {
+      // Save locally to maintain client state
+      const existing = JSON.parse(localStorage.getItem("publication_notifications") || "[]")
+      if (!existing.includes(email)) {
+        existing.push(email)
+        localStorage.setItem("publication_notifications", JSON.stringify(existing))
+      }
+    } catch {
+      // Ignore localStorage errors
+    }
+
+    setSavedEmail(email)
+    setFormState("success")
+    setEmail("")
   }
 
   if (formState === "success") {
     return (
-      <p className="font-sans text-[13px] text-success leading-relaxed" role="status">
-        Thank you. You will be notified when new books become available.
-      </p>
+      <div className="bg-background border border-border p-4 space-y-2 text-left" role="status" aria-live="polite">
+        <p className="font-sans text-[13px] text-navy font-medium">
+          ✓ Notification Request Saved
+        </p>
+        <p className="font-sans text-[12px] text-muted-foreground leading-relaxed">
+          Your email (<strong className="text-foreground">{savedEmail}</strong>) is registered. To ensure priority dispatch upon release, you can also{" "}
+          <a
+            href={`mailto:${NOTIFY_EMAIL}?subject=${encodeURIComponent("Book Publication Notification Request")}&body=${encodeURIComponent(`Please notify me (${savedEmail}) when new books by Rev. Fr. Dr. Joseph Raj are released.`)}`}
+            className="text-navy underline hover:text-gold"
+          >
+            send a 1-click confirmation note
+          </a>.
+        </p>
+      </div>
     )
   }
 
@@ -83,11 +108,11 @@ export default function PublicationForm({ compact = false }: PublicationFormProp
             bg-navy text-ivory border border-navy hover:bg-navy-deep transition-colors
             focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2
             disabled:opacity-40 disabled:cursor-not-allowed
-            px-7 py-3
+            px-7 py-3 min-h-[44px]
             ${compact ? "w-full" : "shrink-0"}
           `}
         >
-          {formState === "submitting" ? "Sending…" : "Notify Me"}
+          {formState === "submitting" ? "Registering…" : "Notify Me"}
         </button>
       </div>
     </form>

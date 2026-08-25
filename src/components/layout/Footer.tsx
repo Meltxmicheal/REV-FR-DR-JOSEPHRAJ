@@ -18,8 +18,7 @@ export default function Footer() {
               Joseph Raj
             </p>
             <p className="font-sans text-[13px] text-muted-foreground leading-relaxed">
-              Priest, theologian, canonist, preacher, scholar, and author of fifteen works in
-              moral theology and canon law.
+              Priest, theologian, canonist, preacher, scholar, and author of theological, canonical, and spiritual writings across thirteen published volumes.
             </p>
           </div>
 

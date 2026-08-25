@@ -100,6 +100,75 @@ export default function BookDetailPage() {
     } else if (book) {
       document.title = `${book.title} | Rev. Fr. Dr. Joseph Raj`
     }
+
+    // Inject dynamic JSON-LD Schema for Book & Breadcrumbs
+    if (book) {
+      const scriptId = "book-jsonld-schema"
+      let scriptTag = document.getElementById(scriptId) as HTMLScriptElement | null
+      if (!scriptTag) {
+        scriptTag = document.createElement("script")
+        scriptTag.id = scriptId
+        scriptTag.type = "application/ld+json"
+        document.head.appendChild(scriptTag)
+      }
+
+      const structuredData = {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Book",
+            "@id": `https://josephraj.org/books/${book.slug}#book`,
+            "name": book.title,
+            "description": book.description,
+            "image": `https://josephraj.org${book.coverImage}`,
+            "url": `https://josephraj.org/books/${book.slug}`,
+            "inLanguage": "en",
+            "author": {
+              "@type": "Person",
+              "@id": "https://josephraj.org/#author",
+              "name": "Rev. Fr. Dr. Joseph Raj"
+            },
+            "genre": book.categories || [book.category],
+            "workExample": {
+              "@type": "Book",
+              "bookFormat": "https://schema.org/Paperback",
+              "availability": "https://schema.org/PreOrder"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": `https://josephraj.org/books/${book.slug}#breadcrumb`,
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://josephraj.org/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Books",
+                "item": "https://josephraj.org/books"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": `Book ${book.order ?? ""}: ${book.title}`,
+                "item": `https://josephraj.org/books/${book.slug}`
+              }
+            ]
+          }
+        ]
+      }
+
+      scriptTag.text = JSON.stringify(structuredData)
+
+      return () => {
+        const tag = document.getElementById(scriptId)
+        if (tag) tag.remove()
+      }
+    }
   }, [book])
 
   if (!book) return <NotFound />
@@ -734,7 +803,7 @@ export default function BookDetailPage() {
               to="/books"
               className="font-sans text-[11px] sm:text-[12px] font-semibold tracking-[0.18em] uppercase text-navy border border-navy/30 px-6 py-2.5 hover:bg-navy hover:text-ivory transition-colors shrink-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring"
             >
-              All Books Catalogue
+              All Books
             </Link>
 
             <div className="w-full sm:w-auto text-left sm:text-right">
