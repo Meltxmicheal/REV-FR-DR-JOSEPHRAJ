@@ -1,0 +1,645 @@
+# REV. FR. DR. JOSEPH RAJ — FINAL FRONTEND DEVELOPMENT PROMPT
+
+## Professional Author, Theologian & Scholar Website
+
+You are a senior UI/UX designer, visual designer, and frontend architect.
+
+Design and develop a premium, professional, production-ready frontend for the official website of:
+
+**Rev. Fr. Dr. Joseph Raj**
+
+The website represents a priest, theologian, canonist, preacher, scholar, and author.
+
+The website must communicate:
+
+- Scholarly authority
+- Spiritual depth
+- Literary excellence
+- Trust
+- Professionalism
+- Simplicity
+- Timelessness
+- Human warmth
+- Editorial quality
+
+The website should feel like the official digital presence of an established theologian and author.
+
+It should NOT feel like:
+
+- a SaaS website
+- a startup landing page
+- an AI product
+- a gaming website
+- a flashy portfolio
+- a futuristic website
+- a social-media profile
+- a generic template
+
+---
+
+# 1. PRIMARY DESIGN DIRECTION
+
+Use the design direction:
+
+## "Premium Editorial + Scholarly + Timeless"
+
+The visual language should be inspired by:
+
+- prestigious academic institutions
+- theological publications
+- literary publishers
+- university faculty websites
+- premium author websites
+- scholarly journals
+- classical editorial design
+
+The design should remain visually relevant for many years.
+
+Do not follow temporary web-design trends simply because they are popular.
+
+The website should look premium because of:
+
+- typography
+- spacing
+- composition
+- color harmony
+- grid
+- imagery
+- book-cover presentation
+- hierarchy
+- content structure
+
+NOT because of visual effects.
+
+---
+
+# 2. ABSOLUTE DESIGN RESTRICTIONS
+
+Do NOT use:
+
+- Glassmorphism
+- Backdrop blur UI
+- Motion graphics
+- Parallax scrolling
+- WebGL
+- WebGL shaders
+- Particle systems
+- 3D effects
+- Animated backgrounds
+- Animated gradients
+- Scroll-triggered animations
+- Large entrance animations
+- Lottie animations
+- GSAP
+- Framer Motion
+- SVG animations
+- Shimmer loading animations
+- Pulsing skeleton animations
+- Glowing effects
+- Neon colors
+- Excessive gradients
+- Floating glass cards
+- Excessive rounded cards
+- Excessive drop shadows
+- Flashy page transitions
+- Image zoom animations
+- Excessive hover animations
+
+The website must remain calm, elegant and professional.
+
+---
+
+# 3. ALLOWED INTERACTIONS
+
+Use only subtle functional interactions.
+
+Allowed:
+
+- navigation hover state
+- active navigation state
+- subtle link underline
+- subtle button hover
+- button focus state
+- form validation states
+- form loading state
+- form success state
+- form error state
+- mobile menu open/close
+- subtle border/color changes
+- accessible keyboard focus
+
+Interactions must be immediate and restrained.
+
+Do not use animation merely to make the website look impressive.
+
+---
+
+# 4. IMAGE LOADING EXPERIENCE
+
+Image loading may use a **static blurred or gradient placeholder**.
+
+For example:
+
+Image request
+↓
+Static blurred/low-resolution placeholder
+↓
+Final image
+
+Do NOT use:
+
+- shimmer
+- animated skeleton
+- pulsing gradient
+- animated blur
+- moving placeholder
+
+The loading experience should feel calm and professional.
+
+Use `next/image` in the eventual Next.js implementation.
+
+---
+
+# 5. BRAND PERSONALITY
+
+The website should communicate five primary qualities:
+
+### SCHOLARLY
+
+Strong typography and structured information.
+
+### SPIRITUAL
+
+Calm colors and generous whitespace.
+
+### LITERARY
+
+Elegant serif typography and carefully presented books.
+
+### PROFESSIONAL
+
+Clear information architecture and navigation.
+
+### TIMELESS
+
+No dependency on visual trends.
+
+---
+
+# 6. COLOR SYSTEM
+
+Create a sophisticated and restrained color palette.
+
+Recommended direction:
+
+## Primary — Deep Navy
+
+Use for:
+
+- headings
+- navigation
+- buttons
+- footer
+- important UI
+
+Suggested starting point:
+
+`#17243A`
+
+Adjust if necessary based on visual testing.
+
+---
+
+## Background — Warm Ivory
+
+Use as the primary editorial background.
+
+Suggested:
+
+`#F7F4EE`
+
+This should create a warm literary feeling rather than a sterile white interface.
+
+---
+
+## Surface — White
+
+Use for:
+
+- book sections
+- forms
+- content surfaces
+- selected components
+
+Suggested:
+
+`#FFFFFF`
+
+---
+
+## Accent — Muted Antique Gold
+
+Use VERY selectively.
+
+Suggested:
+
+`#A88A52`
+
+Use for:
+
+- small dividers
+- section labels
+- subtle active states
+- decorative details
+
+Do NOT overuse gold.
+
+The website must NOT look overly luxurious or ornamental.
+
+---
+
+## Secondary Text — Warm Gray
+
+Suggested:
+
+`#6B6B67`
+
+Use for:
+
+- descriptions
+- metadata
+- supporting text
+
+---
+
+## Borders
+
+Use extremely subtle warm-gray borders.
+
+---
+
+# 7. COLOR PRINCIPLE
+
+The website should approximately follow:
+
+70% neutral / ivory / white
+
+20% deep navy
+
+10% accent and supporting colors
+
+Do not introduce random colors.
+
+Every color should have a defined purpose.
+
+Maintain WCAG-conscious contrast.
+
+---
+
+# 8. TYPOGRAPHY SYSTEM
+
+Typography is one of the most important aspects of the website.
+
+Use a sophisticated:
+
+## SERIF + SANS-SERIF
+
+system.
+
+---
+
+## DISPLAY / HEADINGS
+
+Use ONE elegant editorial serif family.
+
+Possible choices:
+
+- Cormorant Garamond
+- EB Garamond
+- Libre Baskerville
+- Source Serif
+- Playfair Display
+
+Choose the most appropriate one.
+
+Do not mix multiple decorative serif fonts.
+
+The heading font should communicate:
+
+- scholarship
+- literature
+- authority
+- tradition
+
+---
+
+## BODY
+
+Use ONE clean modern sans-serif.
+
+Possible choices:
+
+- Inter
+- Source Sans 3
+- Manrope
+- IBM Plex Sans
+
+Choose ONE.
+
+The body font must prioritize readability.
+
+---
+
+# 9. TYPOGRAPHIC HIERARCHY
+
+Create a complete typography system:
+
+- Display
+- H1
+- H2
+- H3
+- H4
+- Body Large
+- Body
+- Body Small
+- Caption
+- Navigation
+- Button
+- Metadata
+- Book Title
+- Eyebrow
+
+Use typography and spacing to create hierarchy.
+
+Do not rely on boxes and shadows to create hierarchy.
+
+---
+
+# 10. LAYOUT
+
+Use a professional editorial grid.
+
+Maximum desktop content width:
+
+Approximately 1200–1280px.
+
+Use:
+
+- generous whitespace
+- consistent gutters
+- strong alignment
+- clear columns
+- balanced proportions
+
+Do not overcrowd the page.
+
+Whitespace is a major design element.
+
+---
+
+# 11. RESPONSIVE BREAKPOINTS
+
+Design and test:
+
+- 1440px
+- 1280px
+- 1024px
+- 768px
+- 390px
+- 375px
+
+Mobile must be intentionally designed.
+
+Do not simply shrink the desktop layout.
+
+---
+
+# 12. NAVIGATION
+
+Create a refined professional navigation.
+
+Desktop:
+
+LEFT:
+
+**Rev. Fr. Dr. Joseph Raj**
+
+RIGHT:
+
+- Home
+- About
+- Books
+- Contact
+
+Optional:
+
+**Publication Updates**
+
+Navigation should be:
+
+- clean
+- compact
+- readable
+- professional
+
+Do NOT use:
+
+- glass navigation
+- transparent blur
+- floating navigation
+- excessive shadows
+
+---
+
+# 13. MOBILE NAVIGATION
+
+Create a clean mobile navigation.
+
+Requirements:
+
+- accessible menu button
+- clear navigation items
+- large touch targets
+- strong contrast
+- keyboard accessibility
+
+Do not use elaborate animated menu transitions.
+
+---
+
+# 14. HOMEPAGE
+
+Create the homepage as an editorial introduction to the author.
+
+The homepage should NOT look like a product landing page.
+
+---
+
+# 15. HERO SECTION
+
+Use a balanced two-column layout on desktop.
+
+### LEFT
+
+Eyebrow:
+
+`PRIEST · THEOLOGIAN · CANONIST · AUTHOR`
+
+Main heading:
+
+# Rev. Fr. Dr. Joseph Raj
+
+Supporting text:
+
+Use the supplied author biography to create a concise professional introduction.
+
+Primary CTA:
+
+**Explore Books**
+
+Secondary CTA:
+
+**About the Author**
+
+---
+
+### RIGHT
+
+Use the supplied author image.
+
+The author image should:
+
+- be high quality
+- maintain natural proportions
+- use an elegant crop
+- have appropriate whitespace
+- remain the visual focus
+
+Do NOT apply:
+
+- glow
+- glass
+- blur effects
+- neon
+- dramatic gradients
+- decorative animation
+
+A subtle editorial border or frame is acceptable.
+
+---
+
+# 16. HERO COMPOSITION
+
+The hero should feel:
+
+- balanced
+- calm
+- authoritative
+- spacious
+
+Do not center everything.
+
+Use editorial asymmetry where appropriate.
+
+The author's name should be one of the strongest elements on the page.
+
+---
+
+# 17. ABOUT INTRODUCTION
+
+Immediately after the hero, create:
+
+## About the Author
+
+Use a concise version of the supplied biography.
+
+Layout:
+
+Text + supporting author image/details.
+
+CTA:
+
+**Read Full Biography**
+
+Use generous whitespace.
+
+---
+
+# 18. SCHOLARLY AREAS
+
+Create an editorial section showing major areas of the author's work.
+
+Possible categories based on the supplied biography:
+
+01 — Marriage & Family
+
+02 — Moral Theology
+
+03 — Canon Law
+
+04 — Spirituality
+
+05 — Scripture
+
+Do NOT use colorful feature cards.
+
+Use:
+
+- typography
+- numbering
+- dividers
+- columns
+- whitespace
+
+The design should resemble an academic publication.
+
+---
+
+# 19. BOOKS
+
+Books are one of the central purposes of the website.
+
+There are exactly:
+
+# 15 BOOKS
+
+Use all 15 supplied book images.
+
+Do NOT generate replacement covers.
+
+Do NOT invent book covers.
+
+Do NOT invent book titles.
+
+Do NOT invent book descriptions.
+
+Use the supplied content where available.
+
+---
+
+# 20. BOOK ASSET STRUCTURE
+
+Use:
+
+```text
+public/
+└── images/
+    ├── author/
+    │   └── author.jpg
+    │
+    └── books/
+        ├── book1.jpg
+        ├── book2.jpg
+        ├── book3.jpg
+        ├── book4.jpg
+        ├── book5.jpg
+        ├── book6.jpg
+        ├── book7.jpg
+        ├── book8.jpg
+        ├── book9.jpg
+        ├── book10.jpg
+        ├── book11.jpg
+        ├── book12.jpg
+        ├── book13.jpg
+        ├── book14.jpg
+        └── book15.jpg

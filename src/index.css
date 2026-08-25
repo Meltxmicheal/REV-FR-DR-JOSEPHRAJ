@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+
+@import 'tailwindcss';
+
+@theme {
+  /* ── Color palette ─────────────────────────────── */
+  --color-background: #F7F4EE;
+  --color-foreground: #1A1917;
+  --color-card: #EDE9E0;
+  --color-card-foreground: #1A1917;
+
+  --color-primary: #17243A;
+  --color-primary-foreground: #F7F4EE;
+
+  --color-secondary: #ECE8DF;
+  --color-secondary-foreground: #1A1917;
+
+  --color-muted: #E8E3D9;
+  --color-muted-foreground: #6B6B67;
+
+  --color-accent: #A88A52;
+  --color-accent-foreground: #FFFFFF;
+
+  --color-border: #D8D2C5;
+  --color-ring: #17243A;
+
+  --color-error: #B91C1C;
+  --color-success: #14532D;
+
+  --color-navy: #17243A;
+  --color-navy-deep: #0E1824;
+  --color-navy-mid: #253454;
+  --color-ivory: #F7F4EE;
+  --color-gold: #A88A52;
+  --color-gold-light: #C4A66E;
+  --color-warm-gray: #6B6B67;
+
+  /* ── Typography ────────────────────────────────── */
+  --font-serif: 'EB Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* ── Radius ────────────────────────────────────── */
+  --radius-sm: 1px;
+  --radius-md: 2px;
+  --radius-lg: 3px;
+}
+
+html {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'kern' 1, 'liga' 1;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* EB Garamond optical sizing */
+.font-serif {
+  font-optical-sizing: auto;
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid var(--color-ring);
+  outline-offset: 3px;
+}
+
+/* Selection */
+::selection {
+  background: var(--color-primary);
+  color: var(--color-primary-foreground);
+}
+
+/* Scrollbars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+}
+
+/* ── Page transition ───────────────────────────── */
+@keyframes page-fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.page-enter {
+  animation: page-fade-in 220ms ease forwards;
+}
+
+/* ── Section reveal ────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 380ms ease, transform 380ms ease;
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Hero stagger ──────────────────────────────── */
+@keyframes hero-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-stagger > * {
+  opacity: 0;
+  animation: hero-in 400ms ease forwards;
+}
+
+.hero-stagger > *:nth-child(1) { animation-delay: 60ms; }
+.hero-stagger > *:nth-child(2) { animation-delay: 140ms; }
+.hero-stagger > *:nth-child(3) { animation-delay: 220ms; }
+.hero-stagger > *:nth-child(4) { animation-delay: 300ms; }
+
+/* ── Modal ─────────────────────────────────────── */
+@keyframes overlay-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes modal-in {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes overlay-out {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+@keyframes modal-out {
+  from { opacity: 1; transform: translateY(0); }
+  to   { opacity: 0; transform: translateY(10px); }
+}
+
+.modal-overlay-enter {
+  animation: overlay-in 200ms ease forwards;
+}
+
+.modal-overlay-exit {
+  animation: overlay-out 180ms ease forwards;
+}
+
+.modal-panel-enter {
+  animation: modal-in 240ms ease forwards;
+}
+
+.modal-panel-exit {
+  animation: modal-out 180ms ease forwards;
+}
