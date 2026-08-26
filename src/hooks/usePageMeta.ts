@@ -25,3 +25,4 @@ export function usePageMeta(title: string, description: string) {
     }
   }, [title, description])
 }
+

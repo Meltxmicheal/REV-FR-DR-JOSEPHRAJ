@@ -204,7 +204,7 @@ export default function BookDetailPage() {
     .slice(0, 3)
 
   return (
-    <main id="root">
+    <main id="root" className="bg-parchment min-h-screen">
       {/* ── Breadcrumb & Navigation Bar ──────────────────────────── */}
       <nav aria-label="Breadcrumb" className="border-b border-border bg-secondary/40">
         <Container>

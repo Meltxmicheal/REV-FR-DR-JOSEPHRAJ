@@ -36,9 +36,10 @@ export default function Button({
       disabled={disabled}
       className={`
         inline-flex items-center justify-center font-sans font-medium tracking-wide
-        transition-colors cursor-pointer
+        transition-all duration-200 ease-out cursor-pointer
+        hover:scale-[1.015] active:scale-[0.99] motion-reduce:transform-none
         focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2
-        disabled:opacity-40 disabled:cursor-not-allowed
+        disabled:opacity-40 disabled:cursor-not-allowed disabled:transform-none
         ${variants[variant]}
         ${sizes[size]}
         ${className}

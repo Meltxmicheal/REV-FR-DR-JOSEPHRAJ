@@ -10,14 +10,14 @@ type BookCardProps = {
 
 export default function BookCard({ book, index }: BookCardProps) {
   return (
-    <article className="group flex flex-col h-full">
+    <article className="group flex flex-col h-full bg-background p-4 sm:p-5 border border-border/80 shadow-[0_2px_8px_rgba(23,36,58,0.03)] hover:shadow-[0_12px_32px_rgba(23,36,58,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out motion-reduce:transform-none motion-reduce:transition-none">
       {/* Cover — clickable */}
       <Link
         to={`/books/${book.slug}`}
         aria-label={`View book: ${book.title}`}
-        className="w-full text-left cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 group/cover block"
+        className="w-full text-left cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 group/cover block overflow-hidden shadow-sm"
       >
-        <div className="w-full transition-all duration-250 ease-out group-hover/cover:-translate-y-1 group-hover/cover:scale-[1.018] group-hover/cover:shadow-[0_8px_24px_rgba(23,36,58,0.12)] motion-reduce:transform-none motion-reduce:transition-none">
+        <div className="w-full transition-transform duration-300 ease-out group-hover/cover:scale-[1.018] motion-reduce:transform-none">
           <BookCover title={book.title} coverImage={book.coverImage} index={index} />
         </div>
       </Link>

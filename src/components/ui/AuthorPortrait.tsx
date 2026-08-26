@@ -16,7 +16,7 @@ export default function AuthorPortrait({
   if (!imgError) {
     return (
       <div
-        className={`w-full aspect-[3/4] bg-secondary overflow-hidden relative ${className}`}
+        className={`group w-full aspect-[3/4] bg-secondary overflow-hidden relative shadow-[0_4px_20px_rgba(23,36,58,0.06)] border border-border/70 ${className}`}
       >
         {!loaded && (
           <div className="absolute inset-0 bg-secondary" aria-hidden="true" />
@@ -24,7 +24,7 @@ export default function AuthorPortrait({
         <img
           src={author.imageUrl}
           alt={`Portrait of ${author.fullName}`}
-          className={`w-full h-full object-cover object-top transition-opacity duration-500 ${
+          className={`w-full h-full object-cover object-top transition-all duration-500 ease-out group-hover:scale-[1.018] motion-reduce:transform-none ${
             loaded ? "opacity-100" : "opacity-0"
           }`}
           loading={priority ? "eager" : "lazy"}
@@ -50,3 +50,4 @@ export default function AuthorPortrait({
     </div>
   )
 }
+

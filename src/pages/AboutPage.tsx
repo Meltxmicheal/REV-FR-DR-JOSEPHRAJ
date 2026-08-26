@@ -48,7 +48,7 @@ export default function AboutPage() {
   const working = author.languages.filter((l) => l.level === "working")
 
   return (
-    <main id="root">
+    <main id="root" className="bg-parchment min-h-screen">
       {/* ── Hero ─────────────────────────────────────────────────── */}
       <section aria-labelledby="about-heading" className="border-b border-border py-16 md:py-20">
         <Container>

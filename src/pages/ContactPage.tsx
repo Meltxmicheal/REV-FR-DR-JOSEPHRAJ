@@ -9,7 +9,7 @@ export default function ContactPage() {
     "Get in touch with Rev. Fr. Dr. Joseph Raj, or sign up to be notified when his books become available."
   )
   return (
-    <main id="root">
+    <main id="root" className="bg-parchment min-h-screen">
       {/* ── Page header ──────────────────────────────────────────── */}
       <section aria-labelledby="contact-heading" className="border-b border-border py-16 md:py-20">
         <Container>
