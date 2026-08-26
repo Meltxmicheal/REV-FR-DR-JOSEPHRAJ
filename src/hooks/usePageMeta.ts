@@ -1,0 +1,27 @@
+import { useEffect } from "react"
+
+export function usePageMeta(title: string, description: string) {
+  useEffect(() => {
+    document.title = title
+    const metaDesc = document.querySelector('meta[name="description"]')
+    if (metaDesc) {
+      metaDesc.setAttribute("content", description)
+    }
+    const ogTitle = document.querySelector('meta[property="og:title"]')
+    if (ogTitle) {
+      ogTitle.setAttribute("content", title)
+    }
+    const ogDesc = document.querySelector('meta[property="og:description"]')
+    if (ogDesc) {
+      ogDesc.setAttribute("content", description)
+    }
+    const twTitle = document.querySelector('meta[property="twitter:title"]')
+    if (twTitle) {
+      twTitle.setAttribute("content", title)
+    }
+    const twDesc = document.querySelector('meta[property="twitter:description"]')
+    if (twDesc) {
+      twDesc.setAttribute("content", description)
+    }
+  }, [title, description])
+}

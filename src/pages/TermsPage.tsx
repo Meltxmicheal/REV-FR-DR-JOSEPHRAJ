@@ -2,11 +2,15 @@ import { useEffect } from "react"
 import { Link } from "react-router-dom"
 import Container from "../components/layout/Container"
 import SectionHeading from "../components/ui/SectionHeading"
+import { usePageMeta } from "../hooks/usePageMeta"
 
 export default function TermsPage() {
+  usePageMeta(
+    "Terms of Use — Rev. Fr. Dr. Joseph Raj",
+    "Terms governing the use of this website, copyright, intellectual property, and theological materials."
+  )
   useEffect(() => {
     window.scrollTo(0, 0)
-    document.title = "Terms of Use | Rev. Fr. Dr. Joseph Raj"
   }, [])
 
   return (

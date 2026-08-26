@@ -1,8 +1,13 @@
 import Container from "../components/layout/Container"
 import ContactForm from "../components/forms/ContactForm"
 import Divider from "../components/ui/Divider"
+import { usePageMeta } from "../hooks/usePageMeta"
 
 export default function ContactPage() {
+  usePageMeta(
+    "Contact — Rev. Fr. Dr. Joseph Raj",
+    "Get in touch with Rev. Fr. Dr. Joseph Raj, or sign up to be notified when his books become available."
+  )
   return (
     <main id="root">
       {/* ── Page header ──────────────────────────────────────────── */}

@@ -2,11 +2,15 @@ import { useEffect } from "react"
 import { Link } from "react-router-dom"
 import Container from "../components/layout/Container"
 import SectionHeading from "../components/ui/SectionHeading"
+import { usePageMeta } from "../hooks/usePageMeta"
 
 export default function PrivacyPage() {
+  usePageMeta(
+    "Privacy Policy — Rev. Fr. Dr. Joseph Raj",
+    "Privacy policy and data protection principles for the official author and pastoral website of Rev. Fr. Dr. Joseph Raj."
+  )
   useEffect(() => {
     window.scrollTo(0, 0)
-    document.title = "Privacy Policy | Rev. Fr. Dr. Joseph Raj"
   }, [])
 
   return (

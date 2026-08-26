@@ -6,6 +6,7 @@ import SectionHeading from "../components/ui/SectionHeading"
 import Divider from "../components/ui/Divider"
 import PublicationForm from "../components/forms/PublicationForm"
 import { books, DISCOVERY_CATEGORIES, type Book } from "../data/books"
+import { usePageMeta } from "../hooks/usePageMeta"
 
 const categories = ["All Books", ...DISCOVERY_CATEGORIES]
 
@@ -18,6 +19,10 @@ function isBookInCategory(cat: string, book: Book): boolean {
 }
 
 export default function BooksPage() {
+  usePageMeta(
+    "Books & Publications — Rev. Fr. Dr. Joseph Raj",
+    "A catalogue of thirteen forthcoming works spanning moral theology, canon law, scripture, and pastoral spirituality by Rev. Fr. Dr. Joseph Raj."
+  )
   const [searchParams, setSearchParams] = useSearchParams()
   const categoryParam = searchParams.get("category")
 

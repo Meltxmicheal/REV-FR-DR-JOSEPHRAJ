@@ -1,8 +1,10 @@
-import { useState } from "react"
 import { Link } from "react-router-dom"
 import Container from "../components/layout/Container"
 import Divider from "../components/ui/Divider"
+import AuthorPortrait from "../components/ui/AuthorPortrait"
 import { author } from "../data/author"
+import { books } from "../data/books"
+import { usePageMeta } from "../hooks/usePageMeta"
 
 /* ── Shared layout primitives ──────────────────────────────────────────── */
 
@@ -36,48 +38,12 @@ function TwoCol({
   )
 }
 
-/* ── Author portrait ───────────────────────────────────────────────────── */
-function AuthorPortrait() {
-  const [imgError, setImgError] = useState(false)
-  const [loaded, setLoaded] = useState(false)
-
-  if (!imgError) {
-    return (
-      <div className="group relative w-full aspect-[3/4] cursor-zoom-in overflow-hidden rounded-[28px] border border-border bg-secondary shadow-[0_18px_40px_rgba(20,26,43,0.08)] transition-all duration-500 ease-out hover:-translate-y-1 hover:shadow-[0_24px_55px_rgba(20,26,43,0.12)] hover:[box-shadow:0_0_0_1px_rgba(212,175,55,0.35),0_24px_55px_rgba(20,26,43,0.12)]">
-        {!loaded && <div className="absolute inset-0 bg-secondary" aria-hidden="true" />}
-        <div className="absolute inset-0 rounded-[28px] opacity-0 transition-all duration-500 group-hover:opacity-100">
-          <div className="absolute inset-0 rounded-[28px] border border-gold/40 shadow-[0_0_24px_rgba(212,175,55,0.35)]" />
-        </div>
-        <div className="absolute inset-0 transition-transform duration-500 ease-out group-hover:scale-[1.02] group-hover:rotate-[1.5deg]">
-          <img
-            src={author.imageUrl}
-            alt={`Portrait of ${author.fullName}`}
-            className={`h-full w-full object-cover object-top transition-all duration-500 ease-out group-hover:scale-[1.04] ${loaded ? "opacity-100" : "opacity-0"}`}
-            onLoad={() => setLoaded(true)}
-            onError={() => setImgError(true)}
-          />
-        </div>
-        <div className="pointer-events-none absolute inset-0 flex items-end justify-start bg-gradient-to-t from-[#0f172a]/50 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-          <span className="mb-4 ml-4 rounded-full border border-white/30 bg-white/15 px-3 py-1.5 font-sans text-[10px] font-medium uppercase tracking-[0.22em] text-white backdrop-blur-sm">
-            View portrait
-          </span>
-        </div>
-      </div>
-    )
-  }
-
-  return (
-    <div className="w-full aspect-[3/4] rounded-[28px] border border-border bg-secondary flex flex-col items-center justify-center gap-2 shadow-[0_18px_40px_rgba(20,26,43,0.08)]">
-      <p className="font-sans text-[12px] text-muted-foreground text-center">Author Portrait</p>
-      <p className="font-sans text-[11px] text-muted-foreground opacity-50 text-center px-4">
-        Place author.jpg in public/images/author/
-      </p>
-    </div>
-  )
-}
-
 /* ── Page ──────────────────────────────────────────────────────────────── */
 export default function AboutPage() {
+  usePageMeta(
+    "About the Author — Rev. Fr. Dr. Joseph Raj",
+    "Biography of Rev. Fr. Dr. Joseph Raj: formation, priestly ministry, academic studies in Rome, and pastoral service across the Archdioceses of Castries and Melbourne."
+  )
   const fluent = author.languages.filter((l) => l.level === "fluent")
   const working = author.languages.filter((l) => l.level === "working")
 
@@ -426,7 +392,7 @@ export default function AboutPage() {
               to="/books"
               className="shrink-0 inline-flex items-center font-sans text-[13px] font-medium tracking-wide bg-navy text-ivory border border-navy hover:bg-navy-deep transition-colors px-7 py-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 min-h-[48px]"
             >
-              View all 15 Books
+              View all {books.length} Books →
             </Link>
           </div>
         </Container>

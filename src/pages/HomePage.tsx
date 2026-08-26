@@ -5,41 +5,12 @@ import BookGrid from "../components/books/BookGrid"
 import SectionHeading from "../components/ui/SectionHeading"
 import Divider from "../components/ui/Divider"
 import PublicationForm from "../components/forms/PublicationForm"
+import AuthorPortrait from "../components/ui/AuthorPortrait"
 import { books } from "../data/books"
 import { author } from "../data/author"
 import { useInView } from "../hooks/useInView"
 import { useReducedMotion } from "../hooks/useReducedMotion"
-
-function AuthorPortrait() {
-  const [imgError, setImgError] = useState(false)
-  const [loaded, setLoaded] = useState(false)
-
-  if (!imgError) {
-    return (
-      <div className="w-full aspect-[3/4] bg-secondary overflow-hidden relative">
-        {!loaded && (
-          <div className="absolute inset-0 bg-secondary" aria-hidden="true" />
-        )}
-        <img
-          src={author.imageUrl}
-          alt={`Portrait of ${author.fullName}`}
-          className={`w-full h-full object-cover object-top transition-opacity duration-500 ${loaded ? "opacity-100" : "opacity-0"}`}
-          onLoad={() => setLoaded(true)}
-          onError={() => setImgError(true)}
-        />
-      </div>
-    )
-  }
-
-  return (
-    <div className="w-full aspect-[3/4] bg-secondary border border-border flex flex-col items-center justify-center gap-2">
-      <p className="font-sans text-[12px] text-muted-foreground text-center">Author Portrait</p>
-      <p className="font-sans text-[11px] text-muted-foreground opacity-50 text-center px-4">
-        Place author.jpg in public/images/author/
-      </p>
-    </div>
-  )
-}
+import { usePageMeta } from "../hooks/usePageMeta"
 
 function RevealSection({ children, className = "", delay = 0 }: {
   children: React.ReactNode
@@ -55,7 +26,7 @@ function RevealSection({ children, className = "", delay = 0 }: {
       className={className}
       style={
         reduced
-          ? {}
+          ? undefined
           : {
               opacity: inView ? 1 : 0,
               transform: inView ? "translateY(0)" : "translateY(10px)",
@@ -69,6 +40,10 @@ function RevealSection({ children, className = "", delay = 0 }: {
 }
 
 export default function HomePage() {
+  usePageMeta(
+    "Rev. Fr. Dr. Joseph Raj — Theologian, Canonist & Author",
+    "The official website of Rev. Fr. Dr. Joseph Raj — priest, theologian, canonist, and author of works on marriage, moral theology, canon law, and spirituality."
+  )
   const reduced = useReducedMotion()
   const featuredBooks = books.slice(0, 3)
 

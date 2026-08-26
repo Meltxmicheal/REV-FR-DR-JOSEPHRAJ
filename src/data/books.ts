@@ -107,15 +107,14 @@ export type Book = {
   }
 }
 
-/* NOTE: Titles and descriptions for Books 8-15 are placeholders.
-   Real content must be supplied when the backend is connected.
+/* Complete 13-volume collection of Rev. Fr. Dr. Joseph Raj.
    Cover image paths follow the convention /images/books/book{n}.jpg */
 export const books: Book[] = [
   {
     id: "book-01",
     order: 1,
     title:
-      "AN ANALYSIS OF THE JURIDICAL, THEOLOGICAL, AND PASTORAL RAMIFICATIONS OF MATRIMONIAL CONSENT",
+      "An Analysis of the Juridical, Theological, and Pastoral Ramifications of Matrimonial Consent",
     slug: "an-analysis-of-the-juridical-theological-and-pastoral-ramifications-of-matrimonial-consent",
     description:
       "An in-depth study of matrimonial consent in its juridical, theological, and pastoral dimensions, examining its importance in Christian marriage, the validity of marital consent, the sacramental nature of marriage, and the role of the Christian family in the Church and society.",
@@ -342,7 +341,8 @@ export const books: Book[] = [
   {
     id: "book-03",
     order: 3,
-    title: "THE LENTEN JOURNEY OF A PILGRIM",
+    title:
+      "The Lenten Journey of a Pilgrim – A Short Journey within the Longer Journey of Life",
     slug: "the-lenten-journey-of-a-pilgrim",
     description:
       "A reflective spiritual journey that presents Lent as a sacred pilgrimage within the larger journey of human life, guiding the reader through prayer, fasting, almsgiving, struggle, transformation, grace, and ultimately the hope of Resurrection and eternal life.",
@@ -359,7 +359,8 @@ export const books: Book[] = [
     publishedAt: null,
     createdAt: "2024-01-01",
     seo: {
-      title: "The Lenten Journey of a Pilgrim",
+      title:
+        "The Lenten Journey of a Pilgrim – A Short Journey within the Longer Journey of Life",
       description:
         "The Lenten Journey of a Pilgrim presents Lent as a sacred journey within the pilgrimage of life, offering simple and reflective insights through prayer, fasting, almsgiving, temptation, transformation, grace, Resurrection, and eternal life.",
     },
@@ -1021,7 +1022,7 @@ export const books: Book[] = [
   {
     id: "book-08",
     order: 8,
-    title: "Preaching God’s Word Day in and Day Out – (Cycle-A)",
+    title: "Preaching God’s Word Day in and Day Out – Cycle A",
     slug: "preaching-gods-word-day-in-and-day-out-cycle-a",
     description:
       "An enriching collection of homily reflections for Liturgical Cycle A, journeying through the Gospel of Matthew and the mystery of Christ. These reflections invite readers to encounter God’s Word more deeply, connect faith with daily life, and allow the Gospel to transform the heart through prayer, meditation, and faithful living.",
@@ -1037,7 +1038,7 @@ export const books: Book[] = [
     publishedAt: null,
     createdAt: "2024-01-01",
     seo: {
-      title: "Preaching God’s Word Day in and Day Out – (Cycle-A)",
+      title: "Preaching God’s Word Day in and Day Out – Cycle A",
       description:
         "An enriching collection of homily reflections for Liturgical Cycle A, journeying through the Gospel of Matthew and the mystery of Christ. These reflections invite readers to encounter God’s Word more deeply, connect faith with daily life, and allow the Gospel to transform the heart through prayer, meditation, and faithful living.",
     },
@@ -1045,7 +1046,7 @@ export const books: Book[] = [
       {
         heading: "ABOUT THE BOOK",
         paragraphs: [
-          "“Preaching God’s Word Day in and Day Out – (Cycle-A)” is a collection of homiletic reflections rooted in the liturgical readings of Cycle A.",
+          "“Preaching God’s Word Day in and Day Out – Cycle A” is a collection of homiletic reflections rooted in the liturgical readings of Cycle A.",
         ],
       },
       {
@@ -1134,7 +1135,7 @@ export const books: Book[] = [
   {
     id: "book-09",
     order: 9,
-    title: "PREACHING GOD’S WORD DAY IN AND DAY OUT (CYCLE - B)",
+    title: "Preaching God’s Word Day in and Day Out – Cycle B",
     slug: "preaching-gods-word-day-in-and-day-out-cycle-b",
     description:
       "Journey through Liturgical Cycle B with the Gospel of Mark, reflecting on Christ’s humanity, compassion, suffering, discipleship, and call to service. These homily reflections connect God’s Word with daily life, Caribbean culture, and the mission of bringing Christ’s love, peace, and salvation to others.",
@@ -1150,7 +1151,7 @@ export const books: Book[] = [
     publishedAt: null,
     createdAt: "2024-01-01",
     seo: {
-      title: "PREACHING GOD’S WORD DAY IN AND DAY OUT (CYCLE - B)",
+      title: "Preaching God’s Word Day in and Day Out – Cycle B",
       description:
         "Journey through Liturgical Cycle B with the Gospel of Mark, reflecting on Christ’s humanity, compassion, suffering, discipleship, and call to service. These homily reflections connect God’s Word with daily life, Caribbean culture, and the mission of bringing Christ’s love, peace, and salvation to others.",
     },
@@ -1158,7 +1159,7 @@ export const books: Book[] = [
       {
         heading: "ABOUT THE BOOK",
         paragraphs: [
-          "“Preaching God’s Word Day in and Day Out (Cycle - B)” is a collection of homiletic reflections centered on the liturgical readings of Cycle B.",
+          "“Preaching God’s Word Day in and Day Out – Cycle B” is a collection of homiletic reflections centered on the liturgical readings of Cycle B.",
           "In the liturgical calendar, Cycle B invites the faithful to journey deeper into the mystery of Christ primarily through the Gospel of Mark, supplemented by the Gospel of John during key liturgical moments.",
         ],
       },
@@ -1247,7 +1248,7 @@ export const books: Book[] = [
   {
     id: "book-10",
     order: 10,
-    title: "PREACHING GOD’S WORD DAY IN AND DAY OUT (CYCLE - C)",
+    title: "Preaching God’s Word Day in and Day Out – Cycle C",
     slug: "preaching-gods-word-day-in-and-day-out-cycle-c",
     description:
       "Homiletic reflections for Liturgical Cycle C centered on the Gospel of Luke, reflecting on Christ’s compassion, mercy, forgiveness, the poor, prayer, the Holy Spirit, Emmaus, migrant context, and the call to eternal life.",
@@ -1264,7 +1265,7 @@ export const books: Book[] = [
     publishedAt: null,
     createdAt: "2024-01-01",
     seo: {
-      title: "PREACHING GOD’S WORD DAY IN AND DAY OUT (CYCLE - C)",
+      title: "Preaching God’s Word Day in and Day Out – Cycle C",
       description:
         "Homiletic reflections for Liturgical Cycle C centered on the Gospel of Luke, reflecting on Christ’s compassion, mercy, forgiveness, the poor, prayer, the Holy Spirit, Emmaus, migrant context, and the call to eternal life.",
     },
@@ -1272,7 +1273,7 @@ export const books: Book[] = [
       {
         heading: "ABOUT THE BOOK",
         paragraphs: [
-          "“PREACHING GOD’S WORD DAY IN AND DAY OUT (CYCLE - C)” is a collection of homiletic reflections for Liturgical Cycle C, centered primarily on the Gospel of Luke and complemented by the Gospel of John during significant liturgical moments.",
+          "“Preaching God’s Word Day in and Day Out – Cycle C” is a collection of homiletic reflections for Liturgical Cycle C, centered primarily on the Gospel of Luke and complemented by the Gospel of John during significant liturgical moments.",
         ],
       },
       {
@@ -1358,7 +1359,7 @@ export const books: Book[] = [
     publishedAt: null,
     createdAt: "2024-01-01",
     seo: {
-      title: "What Matters Most Is Faith | Rev. Fr. Dr. Joseph Raj",
+      title: "What Matters Most Is Faith",
       description:
         "Faith is the foundation of Christian life. Exploring biblical encounters with Christ, salvation history, and Hebrews 11, this book reveals how authentic trust in God transforms the heart.",
     },
@@ -1473,7 +1474,7 @@ export const books: Book[] = [
     publishedAt: null,
     createdAt: "2024-01-01",
     seo: {
-      title: "Holy Women as Evangelizers of the Gospel | Rev. Fr. Dr. Joseph Raj",
+      title: "Holy Women as Evangelizers of the Gospel",
       description:
         "The profound contribution of holy women in salvation history and the contemporary Church, exploring how faith, courage, and lives transformed by Christ become instruments of the Gospel.",
     },
@@ -1549,7 +1550,7 @@ export const books: Book[] = [
   {
     id: "book-13",
     order: 13,
-    title: "The Heart God Sees - Beyond What Man Cannot See",
+    title: "The Heart God Sees – Beyond What Man Cannot See",
     slug: "the-heart-god-sees-beyond-what-man-cannot-see",
     description:
       "An exploration of divine perception through Sacred Scripture, revealing how God looks beyond outward appearance, social status, and human judgment to see the motives, wounds, sincerity, and transformative capacity of the human heart.",
@@ -1566,7 +1567,7 @@ export const books: Book[] = [
     publishedAt: null,
     createdAt: "2024-01-01",
     seo: {
-      title: "The Heart God Sees - Beyond What Man Cannot See | Rev. Fr. Dr. Joseph Raj",
+      title: "The Heart God Sees – Beyond What Man Cannot See",
       description:
         "Discovering how God looks beyond external appearances into the depths and sincerity of the human heart through Sacred Scripture and encounters with Christ.",
     },

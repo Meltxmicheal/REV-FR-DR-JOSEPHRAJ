@@ -91,14 +91,24 @@ export default function BookDetailPage() {
 
   useEffect(() => {
     window.scrollTo(0, 0)
-    if (book?.seo) {
-      document.title = `${book.seo.title} | Rev. Fr. Dr. Joseph Raj`
+    if (book) {
+      const titleBase = book.seo?.title || book.title
+      const finalTitle = titleBase.includes("Joseph Raj")
+        ? titleBase
+        : `${titleBase} | Rev. Fr. Dr. Joseph Raj`
+      document.title = finalTitle
+
+      const desc = book.seo?.description || book.description
       const metaDesc = document.querySelector('meta[name="description"]')
-      if (metaDesc) {
-        metaDesc.setAttribute("content", book.seo.description)
-      }
-    } else if (book) {
-      document.title = `${book.title} | Rev. Fr. Dr. Joseph Raj`
+      if (metaDesc) metaDesc.setAttribute("content", desc)
+      const ogTitle = document.querySelector('meta[property="og:title"]')
+      if (ogTitle) ogTitle.setAttribute("content", finalTitle)
+      const ogDesc = document.querySelector('meta[property="og:description"]')
+      if (ogDesc) ogDesc.setAttribute("content", desc)
+      const twTitle = document.querySelector('meta[property="twitter:title"]')
+      if (twTitle) twTitle.setAttribute("content", finalTitle)
+      const twDesc = document.querySelector('meta[property="twitter:description"]')
+      if (twDesc) twDesc.setAttribute("content", desc)
     }
 
     // Inject dynamic JSON-LD Schema for Book & Breadcrumbs

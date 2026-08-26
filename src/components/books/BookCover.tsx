@@ -18,16 +18,25 @@ const coverPalettes = [
 
 export default function BookCover({ title, coverImage, index = 0 }: BookCoverProps) {
   const [imgError, setImgError] = useState(false)
+  const [loaded, setLoaded] = useState(false)
   const palette = coverPalettes[index % coverPalettes.length]
 
   if (coverImage && !imgError) {
     return (
-      <div className="w-full aspect-[2/3] overflow-hidden bg-secondary">
+      <div className="w-full aspect-[2/3] overflow-hidden bg-secondary relative">
+        {!loaded && (
+          <div className="absolute inset-0 bg-secondary" aria-hidden="true" />
+        )}
         <img
           src={coverImage}
           alt={`Cover of ${title}`}
-          className="w-full h-full object-cover object-center"
+          className={`w-full h-full object-cover object-center transition-opacity duration-500 ${
+            loaded ? "opacity-100" : "opacity-0"
+          }`}
           loading="lazy"
+          decoding="async"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          onLoad={() => setLoaded(true)}
           onError={() => setImgError(true)}
         />
       </div>
