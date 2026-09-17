@@ -64,7 +64,7 @@ export const author: AuthorData = {
   eyebrow: "PRIEST · THEOLOGIAN · CANONIST · PREACHER · AUTHOR",
 
   shortBio:
-    "Born in Tamil Nadu, India, and ordained to the priesthood in 1997 for the Archdiocese of Castries, Saint Lucia, Rev. Fr. Dr. Joseph Raj is a theologian, canonist, preacher, and author whose writings span marriage, family life, moral theology, canon law, and spirituality.",
+    "Born in Tamil Nadu, India, and ordained to the priesthood in 1997 for the Archdiocese of Castries, Saint Lucia. Rev. Fr. Dr. Joseph Raj is a theologian, canonist, preacher, and author whose writings span marriage, family life, moral theology, canon law, and spirituality.",
 
   imageUrl: "/images/author/author.jpg",
 
