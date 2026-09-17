@@ -24,3 +24,4 @@ export function useParallax(speed = 0.06) {
 
   return reduced ? 0 : offset
 }
+
