@@ -13,7 +13,7 @@ type Fields = {
 
 type Errors = Partial<Record<keyof Fields, string>>
 
-const AUTHOR_EMAIL = "josephraj167@gmail.com"
+const AUTHOR_EMAIL = "josephraj13@hotmail.com"
 
 function validate(fields: Fields): Errors {
   const errors: Errors = {}
@@ -42,6 +42,24 @@ export default function ContactForm() {
     }
   }
 
+  function formatEmailBody() {
+    return [
+      "New message received from the Rev. Dr. Fr. Joseph Raj website.",
+      "",
+      `Name:\n${fields.name}`,
+      "",
+      `Email:\n${fields.email}`,
+      "",
+      `Subject:\n${fields.subject}`,
+      "",
+      `Message:\n${fields.message}`,
+      "",
+      "Source:\nContact Form (josephraj.org)",
+      "",
+      `Date:\n${new Date().toLocaleString()}`,
+    ].join("\n")
+  }
+
   function handleSubmit(e: FormEvent) {
     e.preventDefault()
     const newErrors = validate(fields)
@@ -53,9 +71,8 @@ export default function ContactForm() {
     setFormState("submitting")
 
     // Construct mailto link with encoded parameters
-    const subjectEncoded = encodeURIComponent(`[Website Inquiry] ${fields.subject}`)
-    const bodyContent = `From: ${fields.name}\nEmail: ${fields.email}\nSubject: ${fields.subject}\n\nMessage:\n${fields.message}`
-    const bodyEncoded = encodeURIComponent(bodyContent)
+    const subjectEncoded = encodeURIComponent(`Website Contact — ${fields.subject}`)
+    const bodyEncoded = encodeURIComponent(formatEmailBody())
     const mailtoUrl = `mailto:${AUTHOR_EMAIL}?subject=${subjectEncoded}&body=${bodyEncoded}`
 
     // Trigger email client directly
@@ -64,8 +81,7 @@ export default function ContactForm() {
   }
 
   function handleCopy() {
-    const bodyContent = `From: ${fields.name}\nEmail: ${fields.email}\nSubject: ${fields.subject}\n\nMessage:\n${fields.message}`
-    navigator.clipboard.writeText(bodyContent)
+    navigator.clipboard.writeText(formatEmailBody())
     setCopied(true)
     setTimeout(() => setCopied(false), 3000)
   }

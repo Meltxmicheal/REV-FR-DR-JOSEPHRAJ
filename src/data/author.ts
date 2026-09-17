@@ -30,6 +30,7 @@ export type AuthorData = {
   name: string
   fullName: string
   eyebrow: string
+  email: string
   shortBio: string
   imageUrl: string
 
@@ -62,6 +63,7 @@ export const author: AuthorData = {
   name: "Joseph Raj",
   fullName: "Rev. Fr. Dr. Joseph Raj",
   eyebrow: "PRIEST · THEOLOGIAN · CANONIST · PREACHER · AUTHOR",
+  email: "josephraj13@hotmail.com",
 
   shortBio:
     "Born in Tamil Nadu, India, and ordained to the priesthood in 1997 for the Archdiocese of Castries, Saint Lucia. Rev. Fr. Dr. Joseph Raj is a theologian, canonist, preacher, and author whose writings span marriage, family life, moral theology, canon law, and spirituality.",
@@ -117,32 +119,45 @@ export const author: AuthorData = {
     "Spirituality",
   ],
 
-  /* ── Section 06: Published Works (from biography) ───────────── */
+  /* ── Section 06: Published Works (Books 1–15) ───────────────── */
   publishedWorks: [
-    {
-      title:
-        "God the Creator's Plan for the Sanctification of Family Through the Nuptial Blessing of the Sacrament of Marriage",
-    },
     {
       title:
         "An Analysis of the Juridical, Theological and Pastoral Ramifications of Matrimonial Consent",
     },
     { title: "Common Law Unions and the Use of Virtue Ethics" },
+    { title: "The Lenten Journey of a Pilgrim" },
+    { title: "God the Creator’s Plan for Sanctification of Family" },
     {
       title:
-        "The Lenten Journey of a Pilgrim – A Short Journey within the Longer Journey of Life",
+        "My Soul Magnifies the Lord - A Tribute to the Blessed Virgin Mother Mary",
     },
-    { title: "The Magical Perfection of Number 7 in Sacred Scriptures" },
+    {
+      title: "The Magical Perfection of Number 7 in Sacred Scripture",
+    },
     {
       title:
-        "The Theological, Canonical and Pastoral Implications of the Sacraments in the Church",
+        "The Theological, Canonical, and Pastoral Significances of the Sacraments in the Church",
+    },
+    {
+      title: "Preaching God’s Word Day in and Day Out – (Cycle- A)",
+    },
+    {
+      title: "PREACHING GOD'S WORD DAY IN AND DAY OUT (CYCLE - B)",
+    },
+    {
+      title: "PREACHING GOD'S WORD DAY IN AND DAY OUT (CYCLE - C)",
     },
     { title: "What Matters Most is Faith" },
-    { title: "Holy Women As Evangelizers of the Gospel" },
-    { title: "The Heart God Sees - Beyond What Man Cannot See" },
+    { title: "Holy Women as Evangelizers of the Gospel" },
     {
-      title:
-        "My Soul Magnifies the Lord: A Tribute to the Blessed Virgin Mother Mary",
+      title: "The Heart God Sees — Beyond What Man Cannot See",
+    },
+    {
+      title: "Celebrating the Liturgical Life of the Church",
+    },
+    {
+      title: "Encountering Immanuel: The Messiah",
     },
   ],
 

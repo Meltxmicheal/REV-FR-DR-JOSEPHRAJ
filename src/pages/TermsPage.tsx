@@ -56,7 +56,7 @@ export default function TermsPage() {
               <p className="font-serif text-navy italic">
                 Office of Rev. Fr. Dr. Joseph Raj<br />
                 Archdiocese of Castries, Saint Lucia<br />
-                Email: <a href="mailto:josephraj167@gmail.com" className="text-gold underline underline-offset-4">josephraj167@gmail.com</a>
+                Email: <a href="mailto:josephraj13@hotmail.com" className="text-gold underline underline-offset-4">josephraj13@hotmail.com</a>
               </p>
             </section>
 

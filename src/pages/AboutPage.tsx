@@ -285,24 +285,32 @@ export default function AboutPage() {
         <Container>
           <TwoCol number="06" label="Published Works">
             <div id="published-works-heading">
-              <p className="font-sans text-[13px] text-muted-foreground mb-6 italic">
-                Works mentioned in the author's biography. The website book catalogue is maintained
-                separately.
+              <p className="font-sans text-[13px] text-muted-foreground mb-6">
+                Complete fifteen-volume scholarly and pastoral collection spanning moral theology, canon law, sacred scripture, and spiritual formation.
               </p>
-              <ol className="space-y-0" aria-label="Published works listed in biography">
-                {author.publishedWorks.map((work, i) => (
+              <ol className="space-y-0" aria-label="Published works">
+                {books.map((b, i) => (
                   <li
-                    key={i}
+                    key={b.id}
                     className={`flex items-start gap-5 py-5 ${
-                      i < author.publishedWorks.length - 1 ? "border-b border-border" : ""
+                      i < books.length - 1 ? "border-b border-border" : ""
                     }`}
                   >
                     <span className="font-sans text-[11px] text-gold tracking-widest pt-0.5 shrink-0 w-6">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <p className="font-serif text-[16px] text-navy leading-snug font-normal italic">
-                      {work.title}
-                    </p>
+                    <Link
+                      to={`/books/${b.slug}`}
+                      className="font-serif text-[16px] text-navy hover:text-gold transition-colors leading-snug font-normal italic inline-flex items-center gap-1.5 group"
+                    >
+                      <span>{b.title}</span>
+                      <span
+                        className="not-italic text-[12px] text-gold/70 group-hover:text-gold opacity-0 group-hover:opacity-100 transition-opacity shrink-0"
+                        aria-hidden="true"
+                      >
+                        →
+                      </span>
+                    </Link>
                   </li>
                 ))}
               </ol>

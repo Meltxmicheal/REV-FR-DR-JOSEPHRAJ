@@ -6,7 +6,7 @@ type PublicationFormProps = {
 
 type FormState = "idle" | "submitting" | "success"
 
-const NOTIFY_EMAIL = "josephraj167@gmail.com"
+const NOTIFY_EMAIL = "josephraj13@hotmail.com"
 
 export default function PublicationForm({ compact = false }: PublicationFormProps) {
   const [email, setEmail] = useState("")
@@ -47,6 +47,18 @@ export default function PublicationForm({ compact = false }: PublicationFormProp
   }
 
   if (formState === "success") {
+    const notifyBody = [
+      "New publication notification request received from the Rev. Dr. Fr. Joseph Raj website.",
+      "",
+      `Email:\n${savedEmail}`,
+      "",
+      "Source:\nPublication Updates Form (josephraj.org)",
+      "",
+      `Date:\n${new Date().toLocaleString()}`,
+      "",
+      "Request:\nPlease notify me when new books and publications by Rev. Fr. Dr. Joseph Raj are released.",
+    ].join("\n")
+
     return (
       <div className="bg-background border border-border p-4 space-y-2 text-left" role="status" aria-live="polite">
         <p className="font-sans text-[13px] text-navy font-medium">
@@ -55,7 +67,7 @@ export default function PublicationForm({ compact = false }: PublicationFormProp
         <p className="font-sans text-[12px] text-muted-foreground leading-relaxed">
           Your email (<strong className="text-foreground">{savedEmail}</strong>) is registered. To ensure priority dispatch upon release, you can also{" "}
           <a
-            href={`mailto:${NOTIFY_EMAIL}?subject=${encodeURIComponent("Book Publication Notification Request")}&body=${encodeURIComponent(`Please notify me (${savedEmail}) when new books by Rev. Fr. Dr. Joseph Raj are released.`)}`}
+            href={`mailto:${NOTIFY_EMAIL}?subject=${encodeURIComponent("Website Notification Request — New Book Releases")}&body=${encodeURIComponent(notifyBody)}`}
             className="text-navy underline hover:text-gold"
           >
             send a 1-click confirmation note
