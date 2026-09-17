@@ -294,26 +294,6 @@ export default function BookDetailPage() {
                 {book.description}
               </p>
 
-              {/* Categories & Themes */}
-              {book.categories && book.categories.length > 0 && (
-                <div className="border-t border-border pt-5 mb-8">
-                  <p className="font-sans text-[11px] font-semibold tracking-[0.2em] uppercase text-muted-foreground mb-3">
-                    Categories & Themes
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {book.categories.map((cat) => (
-                      <Link
-                        key={cat}
-                        to={`/books?category=${encodeURIComponent(cat)}`}
-                        className="font-sans text-[12px] font-medium text-navy bg-secondary/80 hover:bg-navy hover:text-ivory transition-colors px-3 py-1.5 border border-border focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring"
-                      >
-                        {cat}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-
               <Divider className="mb-8" />
 
               {/* Dynamic CTA */}

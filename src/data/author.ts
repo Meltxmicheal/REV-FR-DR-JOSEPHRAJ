@@ -123,35 +123,41 @@ export const author: AuthorData = {
   publishedWorks: [
     {
       title:
-        "An Analysis of the Juridical, Theological and Pastoral Ramifications of Matrimonial Consent",
+        "An Analysis of the Juridical, Theological, and Pastoral Ramifications of Matrimonial Consent",
     },
     { title: "Common Law Unions and the Use of Virtue Ethics" },
-    { title: "The Lenten Journey of a Pilgrim" },
-    { title: "God the Creator’s Plan for Sanctification of Family" },
     {
       title:
-        "My Soul Magnifies the Lord - A Tribute to the Blessed Virgin Mother Mary",
+        "The Lenten Journey of a Pilgrim – A Short Journey within the Longer Journey of Life",
     },
     {
-      title: "The Magical Perfection of Number 7 in Sacred Scripture",
+      title:
+        "God the Creator’s Plan for Sanctification of Family Through the Nuptial Blessing of the Sacrament of Marriage",
+    },
+    {
+      title:
+        "My Soul Magnifies the Lord – A Tribute to the Blessed Virgin Mother Mary",
+    },
+    {
+      title: "The Magical Perfection of Number ‘7’ in Sacred Scripture",
     },
     {
       title:
         "The Theological, Canonical, and Pastoral Significances of the Sacraments in the Church",
     },
     {
-      title: "Preaching God’s Word Day in and Day Out – (Cycle- A)",
+      title: "Preaching God’s Word Day in and Day Out – Cycle A",
     },
     {
-      title: "PREACHING GOD'S WORD DAY IN AND DAY OUT (CYCLE - B)",
+      title: "Preaching God’s Word Day in and Day Out – Cycle B",
     },
     {
-      title: "PREACHING GOD'S WORD DAY IN AND DAY OUT (CYCLE - C)",
+      title: "Preaching God’s Word Day in and Day Out – Cycle C",
     },
-    { title: "What Matters Most is Faith" },
+    { title: "What Matters Most Is Faith" },
     { title: "Holy Women as Evangelizers of the Gospel" },
     {
-      title: "The Heart God Sees — Beyond What Man Cannot See",
+      title: "The Heart God Sees – Beyond What Man Cannot See",
     },
     {
       title: "Celebrating the Liturgical Life of the Church",
