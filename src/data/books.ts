@@ -107,8 +107,8 @@ export type Book = {
   }
 }
 
-/* Complete 13-volume collection of Rev. Fr. Dr. Joseph Raj.
-   Cover image paths follow the convention /images/books/book{n}.jpg */
+/* Complete 14-volume collection of Rev. Fr. Dr. Joseph Raj.
+   Cover image paths follow the convention /images/books/book{n}.{ext} */
 export const books: Book[] = [
   {
     id: "book-01",
@@ -1647,6 +1647,113 @@ export const books: Book[] = [
       ],
       paragraphs: [
         "Ultimately, the great lesson of Scripture is not merely that God sees the heart. It is that the heart God sees can, by His grace, become a heart that increasingly resembles His own.",
+      ],
+    },
+  },
+  {
+    id: "book-14",
+    order: 14,
+    title: "Celebrating the Liturgical Life of the Church",
+    slug: "celebrating-the-liturgical-life-of-the-church",
+    description:
+      "An exploration of the Church’s liturgical life, revealing how Advent, Christmas, Lent, Holy Week, Easter, Pentecost, and Ordinary Time make the mystery of Christ present and meaningful in the journey of faith.",
+    coverImage: "/images/books/book14.png",
+    status: "COMING_SOON",
+    category: "Homiletics & Liturgy",
+    categories: [
+      "Gospel & Homily Reflections",
+      "Prayer, Mercy & Spiritual Growth",
+      "Christian Discipleship",
+      "The Human Heart & Transformation",
+      "Faith & Trust",
+    ],
+    publishedAt: null,
+    createdAt: "2024-01-01",
+    seo: {
+      title: "Celebrating the Liturgical Life of the Church",
+      description:
+        "Explore the liturgical life of the Catholic Church through Advent, Christmas, Lent, Holy Week, Easter, Pentecost, and Ordinary Time, and discover how sacred time draws believers deeper into the mystery of Christ.",
+    },
+    generalIntroduction: [
+      {
+        heading: "THE SACRED RHYTHM OF TIME AND ENCOUNTER WITH GOD",
+        paragraphs: [
+          "There is something deeply beautiful about the way the Church understands time. For most people, time is measured by clocks, calendars, appointments, seasons, years, and the events that mark the passing of life. Days begin and end, weeks follow one another, months become years, and the pages of the calendar slowly turn. Yet, for the Church, time is more than a succession of moments. Time can become a place of encounter with God. The ordinary movement of days can become a sacred rhythm in which the mystery of salvation is remembered, celebrated, and lived.",
+          "This is the heart of the Church’s liturgical life. The liturgy does not simply place religious celebrations into a calendar. It gathers the Church into the mystery of Christ. The Church celebrates Advent because Christ comes; she celebrates Christmas because the Word has become flesh; she enters Lent because the human heart is called to conversion; she walks through Holy Week because Christ gives himself for the salvation of the world; she rejoices at Easter because Christ is risen; she celebrates Pentecost because the Holy Spirit has been poured into the Church; and she continues through Ordinary Time because the mystery of Christ does not cease when a particular feast has ended. The mystery celebrated becomes the mystery by which the Church lives.",
+        ],
+      },
+      {
+        heading: "PARTICIPATION IN THE MYSTERY OF SALVATION",
+        paragraphs: [
+          "In this sense, the liturgical year is not merely a calendar of religious events. It is a profound expression of the Christian faith. It places the mystery of Christ before the eyes of the Church again and again—not because Christ needs to be brought back into the world, but because we continually need to enter more deeply into what he has already accomplished for us. The saving work of Christ happened once and for all. His Incarnation, Passion, Death, Resurrection, and the sending of the Holy Spirit belong to the unique mystery of salvation. Yet the Church, living in time, returns to these mysteries liturgically so that every generation may encounter their meaning anew. The liturgical celebration is therefore not a mere exercise in remembering the past. It is a participation in the mystery of Christ that continues to shape the present and open the believer toward the future. This is why the liturgy has such a profound place in the life of the Church.",
+          "The Church does not merely mark time; she sanctifies time. The world measures time by what happens within it. The Church looks at time in the light of what God has done within it. God entered human history. He did not remain distant from the passing of human existence. He entered the world through the mystery of the Incarnation. The eternal Word became flesh and dwelt among us. The Son of God accepted human time, human history, human relationships, human suffering, and even human death. In Jesus Christ, eternity entered time. This gives Christian time its deepest meaning. The Church therefore does not look upon time as something empty that must simply be filled with activity. Time has been touched by the mystery of Christ. The history of salvation has become part of human history, and human history has been opened to the possibility of communion with God. Every liturgical celebration is therefore an invitation to look at time differently.",
+        ],
+      },
+      {
+        heading: "THE CHRIST-CENTERED NATURE OF THE LITURGICAL YEAR",
+        paragraphs: [
+          "Advent teaches the Church to wait with hope. Christmas reveals the God who comes near. Lent opens the way toward conversion. Holy Week brings the believer before the mystery of sacrificial love. Easter announces that death does not have the final word. Pentecost celebrates the Spirit who gives life to the Church. Ordinary Time reminds us that the mystery of Christ must become visible within the ordinary circumstances of human existence. The Church’s calendar is therefore theological. Its seasons speak. Its colors speak. Its symbols speak. Its readings speak. Its gestures, vestments, feasts, solemnities, and sacred days all form a language through which the mystery of Christ is communicated. To enter the liturgical life of the Church is, therefore, to learn how to read this language. At the heart of the entire liturgical year stands one person: Jesus Christ.",
+          "The liturgical year does not exist simply to organize the devotional life of the Church. Its center is Christ himself. Everything flows from him and returns to him. The seasons and celebrations are different windows through which the Church contemplates the one mystery of salvation accomplished in Christ. Advent looks toward the coming of Christ. Christmas celebrates his coming among us. Epiphany reveals him to the nations. Lent prepares the Church to enter more deeply into his Passion. The Sacred Triduum places before us the mystery of his self-giving, Death, and Resurrection. Easter celebrates the victory of the Risen Lord. Pentecost celebrates the gift of the Holy Spirit and the continuing mission of Christ through his Church.",
+          "Ordinary Time allows the Church to walk with Christ through the unfolding of his ministry and to discover how his mystery touches the ordinary circumstances of life. Seen in this light, the liturgical year is profoundly Christ-centered. It is not a collection of disconnected celebrations. Beneath its diversity there is one mystery, one Lord, one saving work. The liturgical year continually brings the Church back to the same Christ, yet never leaves her unchanged.",
+        ],
+      },
+      {
+        heading: "LIVING REMEMBRANCE AND DEEPER PARTICIPATION",
+        paragraphs: [
+          "Why does the Church celebrate the same mysteries again? At first sight, one might ask an obvious question: If Christ was born once, why do we celebrate Christmas every year? If He died and rose once, why does the Church return annually to His Passion, Death, and Resurrection? Why do we repeatedly hear the same Gospel stories and celebrate the same solemnities?",
+          "The answer lies in the nature of Christian remembrance. Biblical remembrance is not simply the recollection of something that happened long ago. The liturgical celebration allows the Church to stand within the mystery she celebrates. The events of salvation belong to the past as historical events, but their saving significance is not locked in the past. Christ is risen. His saving work remains alive. The Church therefore celebrates these mysteries so that their transforming power may continue to shape her life. We do not celebrate Christmas because Christ needs to be born again. We celebrate Christmas because we need to enter more deeply into the mystery of the God who has already come among us. We do not celebrate the Passion because Christ must suffer again. We celebrate it because the love revealed upon the Cross continues to challenge, console, and transform the Church. We do not celebrate Easter because Christ needs to rise again. We celebrate because the Resurrection remains the foundation of Christian hope and the source of new life.",
+          "The repetition of the liturgical year is therefore not empty repetition. It is an invitation to deeper participation. The same mystery is encountered again, but we are not the same people who encountered it last year. We return with different experiences, different wounds, different joys, different questions, different struggles, and perhaps a deeper awareness of our need for God. The liturgy meets us where we are and once again places the mystery of Christ before us.",
+        ],
+      },
+      {
+        heading: "SEASONS, COLORS, AND SACRED SIGNS",
+        paragraphs: [
+          "The liturgical seasons give a rhythm to the Church’s contemplation of Christ. Advent teaches us that faith knows how to wait. Christmas reveals the astonishing humility of God who comes into human existence. Lent reminds us that encountering Christ also involves conversion. Holy Week leads us into the deepest mystery of divine love revealed through suffering and self-gift. Easter opens before us the horizon of resurrection and hope. The celebration of Easter does not end with the proclamation of Christ’s Resurrection on Easter Sunday. The Church continues to celebrate the victory of the Risen Christ throughout the fifty days of the Easter Season, inviting the faithful to receive and live its fruits through Divine Mercy Sunday and Good Shepherd Sunday. It concludes with the Ascension of the Lord and the command to mission, reminding the Church that those who have encountered the Risen Christ are sent to become his witnesses. Pentecost reveals the continuing presence and action of the Holy Spirit. Ordinary Time reminds us that the extraordinary mystery of salvation must be lived within the ordinary circumstances of daily life. Each season has its own character, its own emphasis, its own atmosphere. The Church’s use of color adds another dimension to this rhythm. Violet, white, red, green, rose, and, in certain circumstances, other colors, are not merely decorative choices. They become part of the visual language of worship. The Church also gives significance to days, weeks, Sundays, solemnities, feasts, memorials, octaves, and other liturgical celebrations. Sacred signs and symbols further deepen this language.",
+          "All of these elements raise important questions. Why does the Church wait before celebrating Christmas? Why does Lent last forty days? Why is Easter celebrated for fifty days? Why is Sunday the central day of Christian worship? Why does the priest wear violet during certain seasons and white during others? Why is red associated with both the Passion of Christ and the Holy Spirit? Why does the Church use ashes, palms, candles, incense, water, oil, bread, wine, and other visible signs? Why does the Church celebrate the saints within the same liturgical year?",
+          "These questions are not merely questions of Church regulation. Behind them lies a theology of time, worship, memory, symbol, and salvation. To understand the liturgical life of the Church is therefore to discover that nothing in the liturgy is intended to be meaningless. The Church’s worship speaks through words and silence, through Scripture and sacrament, through color and gesture, through feast and season, through celebration and waiting.",
+        ],
+      },
+      {
+        heading: "THE LITURGY AS A WAY OF LIVING",
+        paragraphs: [
+          "Yet there is a danger whenever the liturgy is separated from life. It is possible to know the liturgical calendar without allowing the liturgy to touch the heart. It is possible to know the names of the seasons, the colors of vestments, the dates of important feasts, and the order of celebrations while remaining untouched by the mystery they proclaim. The Church celebrates so that the mystery of Christ may become the mystery of her own life. The Christian does not simply observe Advent but learns to hope. The Christian does not simply celebrate Christmas but learns to recognize God’s presence. The Christian does not merely enter Lent but discovers the need for conversion. The Christian does not simply commemorate the Cross but learns the meaning of self-giving love. The Christian does not merely rejoice at Easter but learns to live as a person of resurrection hope.",
+          "This book seeks to enter into this rich mystery of the Church’s liturgical life. It is not intended simply as a handbook of liturgical regulations, nor merely as a calendar explaining the dates and duration of the Church’s seasons. Rather, it seeks to discover the meaning beneath the rhythm of the liturgical year and to understand how the Church’s celebration of time is centered upon the saving mystery of Christ. The chapters that follow will therefore move from the foundation of the liturgy to the meaning of sacred time, from the structure of the liturgical year to the language of colors, numbers, days, symbols, and sacred signs. From there, we will enter into the major seasons of the Church's celebration: Advent, Christmas, Lent, Holy Week, Easter, Pentecost, and Ordinary Time. The purpose is not merely to know what the Church celebrates, but to understand why she celebrates it. Nor is the final goal simply knowledge. The deeper invitation is to discover how the mysteries celebrated by the Church can become mysteries lived within the Christian existence.",
+          "The liturgical year gives the Church a rhythm, but it also gives her a memory, a present encounter, and a hope-filled future. It remembers what God has accomplished, celebrates what God continues to do, and points toward the fulfilment of all things in Christ. Time itself becomes an invitation. The passing of another Advent can become an invitation to hope. Another Christmas can awaken wonder at the Incarnation. Another Lent can reopen the door to conversion. Another Holy Week can reveal anew the depth of divine love. Another Easter can renew hope. Another Pentecost can awaken the Church to the power of the Spirit. Another season of Ordinary Time can remind us that holiness is lived not only in extraordinary moments but within the ordinary fabric of life.",
+          "Thus, the liturgical year continually brings the Church back to the mystery at the center of everything: Christ has come, Christ is risen, Christ is present, and Christ will come again. The Church celebrates this mystery not simply to remember it, but to live from it. And perhaps this is the deepest meaning of the liturgical life of the Church: the saving mysteries of Christ are not distant events belonging only to the past. They are mysteries into which the Church continually enters, mysteries she celebrates with faith, and mysteries she is called to embody in the world.",
+          "The liturgy teaches the Church how to live within the mystery of Christ. It teaches her to wait, to receive, to rejoice, to repent, to suffer, to hope, to celebrate, and to go forth. For when the Church celebrates well, she does not merely mark the passage of time. She allows time itself to become a place where the mystery of Christ is encountered, celebrated, and lived.",
+        ],
+      },
+    ],
+    bookThemes: {
+      heading: "KEY THEMES OF THE LITURGICAL YEAR",
+      subtitle:
+        "Theological and spiritual dimensions of sacred time and Catholic worship.",
+      points: [
+        "Time as a sacred realm and place of encounter with God",
+        "The sanctification of time through the Incarnation and Paschal Mystery",
+        "The Christ-centered nature of all feasts, seasons, and solemnities",
+        "Liturgical remembrance (anamnesis) as living participation in salvation history",
+        "The seasons of grace: Advent, Christmas, Lent, Holy Week, Easter, Pentecost, and Ordinary Time",
+        "The theological language of liturgical colors, symbols, gestures, and sacred signs",
+        "The Sunday assembly as the foundational day of Christian worship",
+        "Connecting the liturgical mystery with daily life, conversion, and prayer",
+      ],
+      paragraphs: [
+        "Through its seasons, signs, and feasts, the liturgical year guides the Church to enter into the mystery of Christ, transforming the passage of ordinary days into a sacred journey of faith.",
+      ],
+    },
+    concludingReflection: {
+      heading: "LIVING WITHIN THE MYSTERY OF CHRIST",
+      subtitle:
+        "Allowing sacred time to transform the Christian journey.",
+      points: [
+        "Encountering Christ at the center of every liturgical season",
+        "Translating the celebrations of the altar into the fabric of daily life",
+        "Learning to wait, rejoice, repent, hope, and witness to the Gospel",
+        "Embodying the saving mysteries of Christ in the world",
+      ],
+      paragraphs: [
+        "When the Church celebrates well, she does not merely mark the passage of time. She allows time itself to become a place where the mystery of Christ is encountered, celebrated, and lived.",
       ],
     },
   },

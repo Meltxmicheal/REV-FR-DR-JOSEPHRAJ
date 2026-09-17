@@ -20,7 +20,7 @@ export default function NotFoundPage() {
           </h1>
           <p className="font-sans text-base text-muted-foreground leading-relaxed mb-8">
             The page you are looking for does not exist or has been moved. You can return to the
-            home page or browse the complete 13-volume collection in the catalogue.
+            home page or browse the complete 14-volume collection in the catalogue.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-5">
             <Link
