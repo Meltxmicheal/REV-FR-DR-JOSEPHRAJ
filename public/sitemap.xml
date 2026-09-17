@@ -32,7 +32,7 @@
     <priority>0.3</priority>
   </url>
 
-  <!-- Books Catalogue (Books 1 to 13) -->
+  <!-- Books Catalogue (Books 1 to 15) -->
   <url>
     <loc>https://josephraj.org/books/an-analysis-of-the-juridical-theological-and-pastoral-ramifications-of-matrimonial-consent</loc>
     <changefreq>monthly</changefreq>
@@ -100,6 +100,11 @@
   </url>
   <url>
     <loc>https://josephraj.org/books/celebrating-the-liturgical-life-of-the-church</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://josephraj.org/books/encountering-immanuel-the-messiah</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

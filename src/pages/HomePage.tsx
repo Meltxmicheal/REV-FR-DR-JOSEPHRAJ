@@ -78,7 +78,7 @@ export default function HomePage() {
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-secondary/80 border border-border text-[11px] font-sans text-navy mb-5 shadow-xs">
                 <span className="w-1.5 h-1.5 rounded-full bg-gold" />
                 <span className="font-medium tracking-wide">
-                  Complete 14-Volume Scholarly &amp; Pastoral Collection
+                  Complete 15-Volume Scholarly &amp; Pastoral Collection
                 </span>
               </div>
 
@@ -235,7 +235,7 @@ export default function HomePage() {
             <SectionHeading
               label="Selected Works"
               title="From the Catalogue"
-              subtitle="Fourteen volumes spanning moral theology, canon law, scripture, and pastoral reflection — all forthcoming."
+              subtitle="Fifteen volumes spanning moral theology, canon law, scripture, and pastoral reflection — all forthcoming."
             />
             <Link
               to="/books"

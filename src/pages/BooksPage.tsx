@@ -21,7 +21,7 @@ function isBookInCategory(cat: string, book: Book): boolean {
 export default function BooksPage() {
   usePageMeta(
     "Books & Publications — Rev. Fr. Dr. Joseph Raj",
-    "A catalogue of fourteen forthcoming works spanning moral theology, canon law, scripture, and pastoral spirituality by Rev. Fr. Dr. Joseph Raj."
+    "A catalogue of fifteen forthcoming works spanning moral theology, canon law, scripture, and pastoral spirituality by Rev. Fr. Dr. Joseph Raj."
   )
   const [searchParams, setSearchParams] = useSearchParams()
   const categoryParam = searchParams.get("category")

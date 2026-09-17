@@ -107,7 +107,7 @@ export type Book = {
   }
 }
 
-/* Complete 14-volume collection of Rev. Fr. Dr. Joseph Raj.
+/* Complete 15-volume collection of Rev. Fr. Dr. Joseph Raj.
    Cover image paths follow the convention /images/books/book{n}.{ext} */
 export const books: Book[] = [
   {
@@ -1754,6 +1754,113 @@ export const books: Book[] = [
       ],
       paragraphs: [
         "When the Church celebrates well, she does not merely mark the passage of time. She allows time itself to become a place where the mystery of Christ is encountered, celebrated, and lived.",
+      ],
+    },
+  },
+  {
+    id: "book-15",
+    order: 15,
+    title: "Encountering Immanuel: The Messiah",
+    slug: "encountering-immanuel-the-messiah",
+    description:
+      "An exploration of the coming of Christ as Immanuel — God with us — from the promises of salvation and Mary’s fiat to Bethlehem, the shepherds, Magi, and the continuing call to encounter, receive, and proclaim Christ.",
+    coverImage: "/images/books/book15.png",
+    status: "COMING_SOON",
+    category: "Biblical Theology",
+    categories: [
+      "Biblical Characters",
+      "Faith & Trust",
+      "Gospel & Homily Reflections",
+      "Christian Discipleship",
+      "Prayer, Mercy & Spiritual Growth",
+      "Evangelization & Mission",
+      "The Human Heart & Transformation",
+    ],
+    publishedAt: null,
+    createdAt: "2024-01-01",
+    seo: {
+      title: "Encountering Immanuel: The Messiah",
+      description:
+        "Explore the mystery of Christ as Immanuel — God with us — through salvation history, Mary’s fiat, the Incarnation, Advent, Christmas, and the call to encounter and proclaim Christ.",
+    },
+    generalIntroduction: [
+      {
+        heading: "THE DIVINE INITIATIVE AND THE PROMISE OF SALVATION",
+        paragraphs: [
+          "The Christian mystery begins with a God who desires to be with his people. From the beginning of creation, God did not remain distant from humanity but revealed himself as a God who seeks communion with the human family. He created man and woman in his own image and likeness and called them to share in his life and love (cf. Gen 1:27). The story of salvation is therefore not primarily the story of humanity searching for God; it is, above all, the story of God searching for humanity. Even when sin disrupted the original harmony between the Creator and his creatures, God’s desire to save and restore humanity did not cease. The history of salvation reveals a God who continually comes toward his people, speaks to them, enters into covenant with them, raises up prophets among them, and gradually prepares them for the fullness of his self-revelation.",
+          "God’s plan of salvation was not an improvised response to human sin. From the beginning, his loving purpose was directed toward the restoration and redemption of humanity. The Scriptures gradually unveil this divine plan. After the fall, God did not abandon the human family to the consequences of sin. He continued to reveal his mercy and to open a path toward reconciliation. With Abraham, God established a covenant and promised that through him all the families of the earth would be blessed (Gen 12:1–3). Through Moses, he formed Israel as his covenant people and led them toward a deeper knowledge of his presence. Through David, he strengthened the promise of an enduring kingdom. Through the prophets, he awakened hope in the hearts of his people and announced the coming of a Redeemer who would bring salvation, justice, peace, and restoration.",
+        ],
+      },
+      {
+        heading: "THE PROMISE OF IMMANUEL AND MARY'S FIAT",
+        paragraphs: [
+          "Throughout this long history, God was preparing humanity for something far greater than another prophet, another king, or another messenger. He was preparing his people for the coming of his own Son. The promises of the Old Testament gradually converge upon the mystery that would be revealed in Jesus Christ. The prophet Isaiah proclaimed, “Look, the young woman is with child and shall bear a son, and shall name him Immanuel” (Isa 7:14). The name Immanuel, meaning “God with us,” expresses the profound mystery toward which the whole history of salvation was moving. God was not merely sending someone to speak on his behalf; he himself was coming to dwell among his people. The expectation of the Messiah therefore became one of the deepest hopes of Israel. Generations lived in anticipation of the fulfilment of God’s promises. They waited for the One who would bring light to those who walked in darkness, freedom to those oppressed by sin, consolation to those who mourned, and salvation to God’s people. The prophets kept this hope alive, even when Israel experienced suffering, exile, political oppression, and spiritual infidelity.",
+          "Beneath the changing circumstances of history remained the promise that God had not forgotten his people. He was coming. Yet the coming of the Messiah required not only a divine initiative but also a human response. God, who respects the freedom he has given to humanity, prepared a human heart capable of receiving the mystery of his Son. At the appointed time, he sent the angel Gabriel to a young woman in Nazareth named Mary. The Annunciation marks a decisive moment in salvation history. The promises of the past begin to move toward their fulfilment, and the future of humanity is mysteriously entrusted to Mary’s response.",
+          "Mary’s encounter with the angel reveals the extraordinary way in which God chooses to enter human history. He does not come with earthly power or political authority. He comes through a humble young woman whose heart is open to God’s will. The angel announces that she will conceive and bear a son and that he will be called the Son of the Most High (Lk 1:31–35). Mary is confronted with a mystery that surpasses human understanding, yet she does not allow fear or uncertainty to prevent her from trusting God. Her response, “Here am I, the servant of the Lord; let it be with me according to your word” (Lk 1:38), becomes one of the most consequential acts of faith in the history of salvation. Mary’s fiat is more than a personal act of obedience. It is humanity’s welcoming response to God’s initiative. God comes toward humanity, and Mary opens herself to receive him. In her, the longing of generations finds a human response.",
+        ],
+      },
+      {
+        heading: "THE WORD MADE FLESH: THE MYSTERY OF THE INCARNATION",
+        paragraphs: [
+          "This mystery is expressed with incomparable depth in the Prologue of the Gospel according to John. Whereas Matthew and Luke present the events surrounding the birth of Jesus, John takes us beyond Bethlehem and beyond the boundaries of human history to contemplate the eternal mystery of the One who has come among us. He begins: “In the beginning was the Word, and the Word was with God, and the Word was God” (Jn 1:1). Before Jesus is revealed in Bethlehem, John directs our attention to his eternal identity. The child who will be born is not merely a remarkable human being or a messenger chosen by God. He is the eternal Word who was with the Father from the beginning and who is himself God. John then declares the astonishing truth at the heart of Christmas: “And the Word became flesh and lived among us” (Jn 1:14). Here lies the mystery of the Incarnation. The eternal Word does not merely appear among humanity or communicate God’s message from a distance. He becomes flesh. He enters fully into the human condition. The God whom humanity could never reach by its own strength comes within human reach. The invisible God becomes visible. The eternal enters time. The Creator enters his creation. The One through whom all things were made comes to dwell among the creatures he created.",
+          "John’s Prologue also reveals that the coming of Christ is an invitation to encounter and receive him. “He came to what was his own, and his own people did not accept him. But to all who received him, who believed in his name, he gave power to become children of God” (Jn 1:11–12). These words introduce an important dimension of the Christmas mystery. God’s coming is a gift, but the gift calls for a response. Christ comes to humanity, but humanity must choose whether to receive him. The mystery of Christmas therefore involves both God’s coming and our welcoming.",
+        ],
+      },
+      {
+        heading: "ADVENT EXPECTATION AND CARRYING CHRIST TO OTHERS",
+        paragraphs: [
+          "This twofold movement lies at the heart of Advent. During Advent, the Church enters into the expectation of the Messiah. We remember the long preparation of God’s people and allow their longing to awaken our own. We prepare our hearts through prayer, repentance, conversion, vigilance, and hope. Yet Advent is not simply our movement toward God. It is also our awakening to the truth that God is already moving toward us. While we prepare to encounter him, he is coming to encounter us. There is therefore a profound meeting of two movements. Humanity longs for God, and God comes in search of humanity. We prepare to receive him, while he prepares to give himself to us. We wait for his coming, while he has already begun his coming toward us. The expectation of Advent and the fulfilment of Christmas meet in the person of Jesus Christ.",
+          "Mary stands at the center of this mystery as the first human person to receive Immanuel in faith. Her fiat teaches us what it means to prepare for the coming of Christ. She did not merely wait for God; she welcomed him. The Word became flesh in her, and she became the first dwelling place of Immanuel. Her encounter immediately became a gift for others. Carrying Christ within her, Mary went to visit Elizabeth (Lk 1:39–45). Elizabeth recognized the presence of the Lord, and the child in her womb leaped for joy. Even before the birth of Jesus at Bethlehem, the Messiah was already being encountered. Mary carried Immanuel, Elizabeth recognized him, and John responded to his presence with joy. The mystery of Christmas had already begun to unfold. This reveals something essential about Christian discipleship. To encounter Christ is never merely a private experience. Those who receive him are called to carry him to others. She encountered Immanuel and became an instrument through whom others encountered Christ.",
+        ],
+      },
+      {
+        heading: "WITNESSES OF THE ENCOUNTER AND THE POWER OF THE HOLY SPIRIT",
+        paragraphs: [
+          "The encounter with Immanuel, however, does not end with Bethlehem or even with the revelation of the Son at the Jordan. The coming of Christ calls forth different responses. Some, like Mary and Joseph, make room for God’s mystery; some, like the shepherds, Simeon, Anna, and the Magi, recognize, receive, and proclaim him; others, like Herod, resist and reject him. Bethlehem itself presents the sobering possibility that the One who comes to dwell among us may find no room. John the Baptist reveals another dimension of encounter: having recognized Christ, he points others towards him and prepares the way for the Lord. Those who truly encounter Immanuel are invited not only to receive his presence but also to become signs that lead others to him.",
+          "The mystery continues through the action of the Holy Spirit. The same Spirit who brought about the Incarnation in Mary, descended upon Jesus at the Jordan, and accompanied his salvific mission continues to work in the Church and in the lives of believers. The Spirit inspired the apostles to proclaim Christ with courage, guided the early Church in its mission, and throughout the ages has raised up saints, missionaries, teachers, pastors, consecrated persons, and countless faithful witnesses who have carried the presence of Christ into the world. The Spirit who made Mary the bearer of Immanuel continues to make the Church a bearer of Immanuel. Thus, the story of God’s coming among us is not confined to the past. Through the Spirit, Christ continues to be encountered, received, proclaimed, and carried into the lives of people in every generation. The encounter that begins with receiving Immanuel ultimately leads to transformation and mission.",
+        ],
+      },
+      {
+        heading: "LIVING THE ENCOUNTER WITH IMMANUEL EVERY DAY",
+        paragraphs: [
+          "The chapters that follow will trace this mystery through the people and events surrounding the coming of the Messiah. We will begin with the God who comes to us and the longing of humanity for the promised Redeemer. We will then enter the mystery of preparation, encounter Mary and Elizabeth before the birth of Christ, contemplate Joseph’s faithful acceptance of the divine plan, and finally arrive at Bethlehem, where the Word becomes flesh. The encounters continue: the shepherds come and see, Simeon and Anna recognize salvation, the Magi seek and worship the newborn King, while Herod reveals the tragic possibility of rejecting the Messiah.",
+          "The Christmas mystery then opens beyond Bethlehem toward the continuing presence of Immanuel and reaches its liturgical culmination in the Baptism of Jesus, where the Father reveals him as the beloved Son. Throughout this book, therefore, encounter will remain the central theme. The question is not simply whether Christ came into the world, but whether we are willing to encounter him, receive him, recognize him, worship him, and allow his presence to transform our lives. The same Christ who was encountered by Mary, Elizabeth, Joseph, the shepherds, Simeon, Anna, the Magi, John the Baptist and the Apostles in the early church continues to come toward us. He remains Immanuel — God with us. Every encounter with Immanuel invites us to open our hearts anew and allow his presence to lead us into a deeper communion with God.",
+          "Advent teaches us to awaken our longing for him. Christmas celebrates his coming. The days that follow invite us to recognize his presence and to continue walking with him. The mystery of the Incarnation therefore does not end at the manger. It opens a lifelong relationship with the One who came to dwell among us. The One for whom humanity has longed has drawn near. The eternal Word has become flesh. Immanuel has entered our history. And every human heart is invited to respond as Mary did: with faith, openness, surrender, and joy.",
+          "The question before us is therefore not merely, “Has Christ come?” The Gospel has already given us the answer. He has come. The deeper question is: Are we ready to encounter him? Has Christmas become a ‘one day’ celebration or a celebration of encountering Immanuel throughout our lives? May this book, therefore, lead us beyond merely celebrating the birth of Christ to a living encounter with him, so that Immanuel — God with us may truly become God with us every day of our lives.",
+        ],
+      },
+    ],
+    bookThemes: {
+      heading: "KEY THEMES OF THE ENCOUNTER WITH IMMANUEL",
+      subtitle:
+        "Biblical, theological, and spiritual dimensions of God dwelling among us.",
+      points: [
+        "Salvation history as God's persistent search and loving covenant with humanity",
+        "The prophetic promise of Immanuel (Isa 7:14) and the expectation of the Messiah",
+        "Mary's fiat (Lk 1:38) as the faithful human response welcoming divine grace",
+        "The mystery of the Incarnation: the eternal Word made flesh (Jn 1:14)",
+        "Advent and Christmas as dynamic encounters of divine gift and human welcoming",
+        "Carrying Christ to others inspired by the Visitation (Lk 1:39–45)",
+        "Biblical witnesses of encounter: Joseph, the shepherds, Simeon, Anna, and the Magi",
+        "The Holy Spirit enabling the Church and believers to be bearers of Immanuel today",
+        "From historical event to daily life: living in continuous communion with Christ",
+      ],
+      paragraphs: [
+        "Through the biblical narrative of the Incarnation, this volume invites believers to move beyond a seasonal celebration to an enduring, transformative encounter with Immanuel—God with us every day.",
+      ],
+    },
+    concludingReflection: {
+      heading: "A LIVING ENCOUNTER WITH IMMANUEL",
+      subtitle:
+        "Moving beyond seasonal remembrance into daily communion with Christ.",
+      points: [
+        "Recognizing God's continual initiative to encounter human hearts",
+        "Responding with Mary-like openness, trust, and surrender to God's will",
+        "Becoming joyful bearers and witnesses of Christ in everyday life",
+        "Living with Immanuel — God with us — in every moment and circumstance",
+      ],
+      paragraphs: [
+        "May this book lead us beyond merely celebrating the birth of Christ to a living encounter with him, so that Immanuel — God with us — may truly become God with us every day of our lives.",
       ],
     },
   },
