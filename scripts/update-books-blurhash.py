@@ -36,3 +36,4 @@ with open('src/data/books.ts', 'w', encoding='utf-8') as f:
     f.write(content)
 
 print("Successfully injected webpImage and blurHash into src/data/books.ts for all 15 books.")
+
