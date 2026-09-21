@@ -33,6 +33,8 @@ export type AuthorData = {
   email: string
   shortBio: string
   imageUrl: string
+  webpImageUrl?: string
+  blurHash?: string
 
   /* Biography sections */
   earlyLifeAndFormation: string[]
@@ -69,6 +71,8 @@ export const author: AuthorData = {
     "Born in Tamil Nadu, India, and ordained to the priesthood in 1997 for the Archdiocese of Castries, Saint Lucia. Rev. Fr. Dr. Joseph Raj is a theologian, canonist, preacher, and author whose writings span marriage, family life, moral theology, canon law, and spirituality.",
 
   imageUrl: "/images/author/author.jpg",
+  webpImageUrl: "/images/author/author.webp",
+  blurHash: "TSOV_gw[8^VCbbkDI9R*o~s:jttR",
 
   /* ── Section 01: Early Life & Formation ──────────────────────── */
   earlyLifeAndFormation: [

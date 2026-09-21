@@ -61,7 +61,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-10 md:gap-16 items-start">
             {/* Portrait */}
             <div className="w-44 md:w-52 shrink-0">
-              <AuthorPortrait />
+              <AuthorPortrait priority />
             </div>
 
             {/* Identity */}

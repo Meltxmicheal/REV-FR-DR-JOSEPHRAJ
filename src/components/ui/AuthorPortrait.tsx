@@ -1,5 +1,5 @@
-import { useState } from "react"
 import { author } from "../../data/author"
+import OptimizedImage from "./OptimizedImage"
 
 type AuthorPortraitProps = {
   className?: string
@@ -10,34 +10,7 @@ export default function AuthorPortrait({
   className = "",
   priority = false,
 }: AuthorPortraitProps) {
-  const [imgError, setImgError] = useState(false)
-  const [loaded, setLoaded] = useState(false)
-
-  if (!imgError) {
-    return (
-      <div
-        className={`group w-full aspect-[3/4] bg-secondary overflow-hidden relative shadow-[0_4px_20px_rgba(23,36,58,0.06)] border border-border/70 ${className}`}
-      >
-        {!loaded && (
-          <div className="absolute inset-0 bg-secondary" aria-hidden="true" />
-        )}
-        <img
-          src={author.imageUrl}
-          alt={author.fullName}
-          className={`w-full h-full object-cover object-top transition-all duration-500 ease-out group-hover:scale-[1.018] motion-reduce:transform-none ${
-            loaded ? "opacity-100" : "opacity-0"
-          }`}
-          loading={priority ? "eager" : "lazy"}
-          decoding="async"
-          sizes="(max-width: 640px) 100vw, 400px"
-          onLoad={() => setLoaded(true)}
-          onError={() => setImgError(true)}
-        />
-      </div>
-    )
-  }
-
-  return (
+  const fallbackUI = (
     <div
       className={`w-full aspect-[3/4] bg-secondary border border-border flex flex-col items-center justify-center gap-2 ${className}`}
     >
@@ -49,5 +22,22 @@ export default function AuthorPortrait({
       </p>
     </div>
   )
-}
 
+  return (
+    <div
+      className={`group w-full overflow-hidden shadow-[0_4px_20px_rgba(23,36,58,0.06)] border border-border/70 ${className}`}
+    >
+      <OptimizedImage
+        src={author.imageUrl}
+        webpSrc={author.webpImageUrl}
+        blurHash={author.blurHash}
+        alt={author.fullName}
+        priority={priority}
+        aspectRatio="aspect-[3/4]"
+        imgClassName="object-top transition-all duration-500 ease-out group-hover:scale-[1.018] motion-reduce:transform-none"
+        sizes="(max-width: 640px) 100vw, 400px"
+        fallback={fallbackUI}
+      />
+    </div>
+  )
+}

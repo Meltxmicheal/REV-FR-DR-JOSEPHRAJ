@@ -243,7 +243,14 @@ export default function BookDetailPage() {
             {/* Left: Book Cover */}
             <div className="w-full max-w-[280px] sm:max-w-[320px] md:max-w-none mx-auto md:mx-0">
               <div className="shadow-[0_8px_30px_rgba(23,36,58,0.12)] border border-border">
-                <BookCover title={book.title} coverImage={book.coverImage} index={bookIndex} />
+                <BookCover
+                  title={book.title}
+                  coverImage={book.coverImage}
+                  webpImage={book.webpImage}
+                  blurHash={book.blurHash}
+                  priority={true}
+                  index={bookIndex}
+                />
               </div>
             </div>
 

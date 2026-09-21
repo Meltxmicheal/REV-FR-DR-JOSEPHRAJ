@@ -83,6 +83,8 @@ export type Book = {
   slug: string
   description: string
   coverImage: string
+  webpImage?: string
+  blurHash?: string
   status: BookStatus
   category: string
   categories?: DiscoveryCategory[]
@@ -119,6 +121,8 @@ export const books: Book[] = [
     description:
       "An in-depth study of matrimonial consent in its juridical, theological, and pastoral dimensions, examining its importance in Christian marriage, the validity of marital consent, the sacramental nature of marriage, and the role of the Christian family in the Church and society.",
     coverImage: "/images/books/book1.jpg",
+    webpImage: "/images/books/book1.webp",
+    blurHash: "TdHeI8R-Ip~qa}oeElj[xan$WBNH",
     status: "COMING_SOON",
     category: "Moral Theology",
     categories: [
@@ -223,6 +227,8 @@ export const books: Book[] = [
     description:
       "An exploration of common law unions and their effects on marriage and family life, examining how virtue ethics, pastoral accompaniment, and the teaching of the Church can help people embrace the Sacrament of Marriage and pursue lives of Christian holiness.",
     coverImage: "/images/books/book2.jpg",
+    webpImage: "/images/books/book2.webp",
+    blurHash: "ThJal%xtE1_4xZt6S*axozjcR*fl",
     status: "COMING_SOON",
     category: "Moral Theology",
     categories: [
@@ -347,6 +353,8 @@ export const books: Book[] = [
     description:
       "A reflective spiritual journey that presents Lent as a sacred pilgrimage within the larger journey of human life, guiding the reader through prayer, fasting, almsgiving, struggle, transformation, grace, and ultimately the hope of Resurrection and eternal life.",
     coverImage: "/images/books/book3.jpg",
+    webpImage: "/images/books/book3.webp",
+    blurHash: "TzHe%+t7og.Toft7IVj?WVD%WVae",
     status: "COMING_SOON",
     category: "Spiritual Theology",
     categories: [
@@ -531,6 +539,8 @@ export const books: Book[] = [
     description:
       "An exploration of God’s plan for marriage and family life, focusing on the Nuptial Blessing, the grace of the Sacrament of Marriage, and the vocation of Christian families to holiness and sanctification through Sacred Scripture and the teachings of the Church.",
     coverImage: "/images/books/book4.jpg",
+    webpImage: "/images/books/book4.webp",
+    blurHash: "TbJ%:*aeD*_4jYV@Elaxs,RPs.of",
     status: "COMING_SOON",
     category: "Marriage & Family",
     categories: [
@@ -662,6 +672,8 @@ export const books: Book[] = [
     description:
       "A heartfelt tribute to the Blessed Virgin Mary, exploring her many titles, her role in salvation history, and the faith, humility, obedience, and maternal intercession that continue to inspire Christians throughout the Church.",
     coverImage: "/images/books/book5.jpg",
+    webpImage: "/images/books/book5.webp",
+    blurHash: "TfIrBEx]E3.AR+R-9aMxxZM~s+V@",
     status: "COMING_SOON",
     category: "Marian Theology",
     categories: [
@@ -747,6 +759,8 @@ export const books: Book[] = [
     description:
       "An exploration of the profound biblical symbolism of the number seven, revealing its connection with divine perfection, completeness, creation, salvation history, the life of the Church, and the fulfillment of God’s plan.",
     coverImage: "/images/books/book6.jpg",
+    webpImage: "/images/books/book6.webp",
+    blurHash: "TeGt{4WY4;~Va}IVOGj[s+bcjZoc",
     status: "COMING_SOON",
     category: "Biblical Theology",
     categories: [
@@ -865,6 +879,8 @@ export const books: Book[] = [
     description:
       "A comprehensive exploration of the sacraments and sacramentals through theological, canonical, and pastoral perspectives, examining their role in salvation, the sanctification of the faithful, and the Church’s response to contemporary pastoral challenges.",
     coverImage: "/images/books/book7.jpg",
+    webpImage: "/images/books/book7.webp",
+    blurHash: "TUKwRaxZXA_4oeNHE,kCV@x]floe",
     status: "COMING_SOON",
     category: "Sacramental Theology",
     categories: [
@@ -1027,6 +1043,8 @@ export const books: Book[] = [
     description:
       "An enriching collection of homily reflections for Liturgical Cycle A, journeying through the Gospel of Matthew and the mystery of Christ. These reflections invite readers to encounter God’s Word more deeply, connect faith with daily life, and allow the Gospel to transform the heart through prayer, meditation, and faithful living.",
     coverImage: "/images/books/book8.jpg",
+    webpImage: "/images/books/book8.webp",
+    blurHash: "TlJ*Fx-;M{~qxuRj9bR,afD*j]Rk",
     status: "COMING_SOON",
     category: "Homiletics & Liturgy",
     categories: [
@@ -1140,6 +1158,8 @@ export const books: Book[] = [
     description:
       "Journey through Liturgical Cycle B with the Gospel of Mark, reflecting on Christ’s humanity, compassion, suffering, discipleship, and call to service. These homily reflections connect God’s Word with daily life, Caribbean culture, and the mission of bringing Christ’s love, peace, and salvation to others.",
     coverImage: "/images/books/book9.jpg",
+    webpImage: "/images/books/book9.webp",
+    blurHash: "ThK18g-:IV~pt7Rk4=NIoyIUofR+",
     status: "COMING_SOON",
     category: "Homiletics & Liturgy",
     categories: [
@@ -1253,6 +1273,8 @@ export const books: Book[] = [
     description:
       "Homiletic reflections for Liturgical Cycle C centered on the Gospel of Luke, reflecting on Christ’s compassion, mercy, forgiveness, the poor, prayer, the Holy Spirit, Emmaus, migrant context, and the call to eternal life.",
     coverImage: "/images/books/book10.jpg",
+    webpImage: "/images/books/book10.webp",
+    blurHash: "ToJ@Bw%1WB~Vt6soI[RlkCD+R*W=",
     status: "COMING_SOON",
     category: "Homiletics & Liturgy",
     categories: [
@@ -1347,6 +1369,8 @@ export const books: Book[] = [
     description:
       "Faith is the foundation of Christian life and the doorway into relationship with God. Exploring salvation history, the Hall of Faith in Hebrews, and fifteen biblical encounters with Christ, this work reveals how genuine trust, humility, and surrender to the Lord transform the human heart.",
     coverImage: "/images/books/book11.jpg",
+    webpImage: "/images/books/book11.webp",
+    blurHash: "TRGu2Kxa0L?Fs:NG4:WC%MxZa#Rk",
     status: "COMING_SOON",
     category: "Biblical Theology",
     categories: [
@@ -1462,6 +1486,8 @@ export const books: Book[] = [
     description:
       "An inspiring exploration of the indispensable role of holy women in salvation history and the Church today, showing how faith, courageous testimony, prayer, hospitality, and lives transformed by Christ become powerful instruments of evangelization.",
     coverImage: "/images/books/book12.jpg",
+    webpImage: "/images/books/book12.webp",
+    blurHash: "TzJ@wNoLof~pa#oeo#j]M|V@s.ae",
     status: "COMING_SOON",
     category: "Spiritual Theology",
     categories: [
@@ -1555,6 +1581,8 @@ export const books: Book[] = [
     description:
       "An exploration of divine perception through Sacred Scripture, revealing how God looks beyond outward appearance, social status, and human judgment to see the motives, wounds, sincerity, and transformative capacity of the human heart.",
     coverImage: "/images/books/book13.jpg",
+    webpImage: "/images/books/book13.webp",
+    blurHash: "T.K0{Ej[M{~pj[V@T1j[o0Rkj@W=",
     status: "COMING_SOON",
     category: "Spiritual Theology",
     categories: [
@@ -1658,6 +1686,8 @@ export const books: Book[] = [
     description:
       "An exploration of the Church’s liturgical life, revealing how Advent, Christmas, Lent, Holy Week, Easter, Pentecost, and Ordinary Time make the mystery of Christ present and meaningful in the journey of faith.",
     coverImage: "/images/books/book14.png",
+    webpImage: "/images/books/book14.webp",
+    blurHash: "TkKm,@f+Io.8jsn~~qs:xVRkWVof",
     status: "COMING_SOON",
     category: "Homiletics & Liturgy",
     categories: [
@@ -1765,6 +1795,8 @@ export const books: Book[] = [
     description:
       "An exploration of the coming of Christ as Immanuel — God with us — from the promises of salvation and Mary’s fiat to Bethlehem, the shepherds, Magi, and the continuing call to encounter, receive, and proclaim Christ.",
     coverImage: "/images/books/book15.png",
+    webpImage: "/images/books/book15.webp",
+    blurHash: "TcJQ}~%1D%yFWVV@.Ts:n~4=WB%M",
     status: "COMING_SOON",
     category: "Biblical Theology",
     categories: [

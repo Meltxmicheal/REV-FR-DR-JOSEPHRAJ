@@ -1,9 +1,13 @@
-import { useState } from "react"
+import OptimizedImage from "../ui/OptimizedImage"
 
 type BookCoverProps = {
   title: string
   coverImage: string
+  webpImage?: string
+  blurHash?: string
+  priority?: boolean
   index?: number
+  className?: string
 }
 
 const coverPalettes = [
@@ -16,34 +20,18 @@ const coverPalettes = [
   { bg: "#0E1824", accent: "#C4A66E", rule: "#D8D2C5" },
 ]
 
-export default function BookCover({ title, coverImage, index = 0 }: BookCoverProps) {
-  const [imgError, setImgError] = useState(false)
-  const [loaded, setLoaded] = useState(false)
+export default function BookCover({
+  title,
+  coverImage,
+  webpImage,
+  blurHash,
+  priority = false,
+  index = 0,
+  className = "",
+}: BookCoverProps) {
   const palette = coverPalettes[index % coverPalettes.length]
 
-  if (coverImage && !imgError) {
-    return (
-      <div className="w-full aspect-[2/3] overflow-hidden bg-secondary relative">
-        {!loaded && (
-          <div className="absolute inset-0 bg-secondary" aria-hidden="true" />
-        )}
-        <img
-          src={coverImage}
-          alt={`${title} by Rev. Fr. Dr. Joseph Raj`}
-          className={`w-full h-full object-cover object-center transition-opacity duration-500 ${
-            loaded ? "opacity-100" : "opacity-0"
-          }`}
-          loading="lazy"
-          decoding="async"
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          onLoad={() => setLoaded(true)}
-          onError={() => setImgError(true)}
-        />
-      </div>
-    )
-  }
-
-  return (
+  const placeholderFallback = (
     <div
       className="w-full aspect-[2/3] flex flex-col items-center justify-between py-8 px-6 relative overflow-hidden"
       style={{ backgroundColor: palette.bg }}
@@ -79,5 +67,23 @@ export default function BookCover({ title, coverImage, index = 0 }: BookCoverPro
         <div className="w-full h-px" style={{ backgroundColor: palette.accent }} />
       </div>
     </div>
+  )
+
+  if (!coverImage) {
+    return placeholderFallback
+  }
+
+  return (
+    <OptimizedImage
+      src={coverImage}
+      webpSrc={webpImage}
+      blurHash={blurHash}
+      alt={`${title} by Rev. Fr. Dr. Joseph Raj`}
+      priority={priority}
+      aspectRatio="aspect-[2/3]"
+      className={className}
+      fallback={placeholderFallback}
+      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+    />
   )
 }

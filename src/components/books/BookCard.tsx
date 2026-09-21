@@ -17,9 +17,13 @@ export default function BookCard({ book, index }: BookCardProps) {
         aria-label={`View book: ${book.title}`}
         className="w-full text-left cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 group/cover block overflow-hidden shadow-sm"
       >
-        <div className="w-full transition-transform duration-300 ease-out group-hover/cover:scale-[1.018] motion-reduce:transform-none">
-          <BookCover title={book.title} coverImage={book.coverImage} index={index} />
-        </div>
+          <BookCover
+            title={book.title}
+            coverImage={book.coverImage}
+            webpImage={book.webpImage}
+            blurHash={book.blurHash}
+            index={index}
+          />
       </Link>
 
       {/* Info */}

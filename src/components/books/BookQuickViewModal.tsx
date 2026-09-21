@@ -149,9 +149,13 @@ export default function BookQuickViewModal({ book, onClose }: Props) {
         <div className="grid grid-cols-1 sm:grid-cols-[200px_1fr] lg:grid-cols-[240px_1fr] gap-0">
           {/* Cover */}
           <div className="sm:border-r border-border px-6 sm:px-8 pb-6 sm:py-8">
-            <div className="max-w-[180px] sm:max-w-none mx-auto sm:mx-0">
-              <BookCover title={book.title} coverImage={book.coverImage} index={bookIndex} />
-            </div>
+              <BookCover
+                title={book.title}
+                coverImage={book.coverImage}
+                webpImage={book.webpImage}
+                blurHash={book.blurHash}
+                index={bookIndex}
+              />
           </div>
 
           {/* Details */}
