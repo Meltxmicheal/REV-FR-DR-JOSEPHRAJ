@@ -72,7 +72,7 @@ export default function HomePage() {
         />
 
         <Container>
-          <div className="py-14 sm:py-20 md:py-24 lg:py-28 xl:py-32 grid grid-cols-1 md:grid-cols-[1.1fr_320px] lg:grid-cols-[1.15fr_360px] xl:grid-cols-[1.2fr_400px] 2xl:grid-cols-[1.25fr_440px] gap-10 md:gap-12 lg:gap-16 xl:gap-20 items-center md:items-start relative z-10">
+          <div className="py-20 md:py-28 lg:py-32 grid grid-cols-1 md:grid-cols-[1fr_300px] lg:grid-cols-[1fr_340px] gap-12 md:gap-16 lg:gap-24 items-start relative z-10">
             {/* Text — staggered entrance */}
             <div className={reduced ? undefined : "hero-stagger"}>
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-secondary/80 border border-border text-[11px] font-sans text-navy mb-5 shadow-xs">
@@ -87,14 +87,14 @@ export default function HomePage() {
               </p>
               <h1
                 id="hero-heading"
-                className="font-serif text-4xl sm:text-5xl md:text-[52px] lg:text-6xl xl:text-[68px] font-normal text-navy leading-[1.08] sm:leading-[1.05] mt-4 sm:mt-5"
+                className="font-serif text-5xl md:text-6xl lg:text-[68px] font-normal text-navy leading-[1.05] mt-5"
               >
                 {author.fullName}
               </h1>
-              <p className="font-sans text-base md:text-[17px] text-muted-foreground leading-[1.8] mt-6 sm:mt-7 max-w-2xl">
+              <p className="font-sans text-base md:text-[17px] text-muted-foreground leading-[1.8] mt-7 max-w-lg">
                 {author.shortBio}
               </p>
-              <div className="flex flex-wrap items-center gap-4 sm:gap-5 mt-8 sm:mt-9">
+              <div className="flex flex-wrap items-center gap-5 mt-9">
                 <Link
                   to="/books"
                   className="inline-flex items-center font-sans text-[13px] font-medium tracking-wide bg-navy text-ivory border border-navy hover:bg-navy-deep hover:scale-[1.015] active:scale-[0.99] transition-all duration-200 ease-out px-7 py-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 min-h-[48px] shadow-xs"
@@ -112,7 +112,7 @@ export default function HomePage() {
 
             {/* Portrait with gentle parallax */}
             <div
-              className="w-full max-w-[280px] sm:max-w-[340px] md:max-w-none mx-auto md:mx-0"
+              className="w-full max-w-[260px] md:max-w-none"
               style={
                 reduced
                   ? undefined
@@ -151,10 +151,10 @@ export default function HomePage() {
       </section>
 
       {/* ── Scholarly Areas ──────────────────────────────────────── */}
-      <section aria-labelledby="areas-heading" className="py-16 sm:py-20 md:py-28">
+      <section aria-labelledby="areas-heading" className="py-20 md:py-28">
         <Container>
           <RevealSection>
-            <div className="grid grid-cols-1 md:grid-cols-[240px_1fr] lg:grid-cols-[280px_1fr] xl:grid-cols-[320px_1fr] gap-8 md:gap-14 lg:gap-20 items-start">
+            <div className="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-12 md:gap-20 items-start">
               <div>
                 <p className="font-sans text-[11px] font-medium tracking-[0.2em] uppercase text-gold mb-3">
                   Areas of Work
@@ -169,11 +169,11 @@ export default function HomePage() {
               <div>
                 {author.areasOfExpertise.map((area, i) => (
                   <div key={area}>
-                    <div className="flex items-baseline gap-4 sm:gap-6 py-4 sm:py-5 group cursor-default">
-                      <span className="font-sans text-[10px] text-gold tracking-widest w-7 sm:w-8 shrink-0">
+                    <div className="flex items-baseline gap-6 py-5 group cursor-default">
+                      <span className="font-sans text-[10px] text-gold tracking-widest w-8 shrink-0">
                         {String(i + 1).padStart(2, "0")}
                       </span>
-                      <span className="font-serif text-xl sm:text-2xl text-foreground font-normal group-hover:text-navy transition-colors">
+                      <span className="font-serif text-xl md:text-2xl text-foreground font-normal group-hover:text-navy transition-colors">
                         {area}
                       </span>
                     </div>
@@ -191,11 +191,11 @@ export default function HomePage() {
       {/* ── About strip ──────────────────────────────────────────── */}
       <section
         aria-labelledby="about-strip-heading"
-        className="py-16 sm:py-20 md:py-28 bg-secondary/50"
+        className="py-20 md:py-28 bg-secondary/50"
       >
         <Container>
           <RevealSection>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 lg:gap-20 items-start">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
               <div>
                 <p className="font-sans text-[11px] font-medium tracking-[0.2em] uppercase text-gold mb-4">
                   The Author
@@ -208,10 +208,10 @@ export default function HomePage() {
                 </h2>
               </div>
               <div>
-                <p className="font-sans text-[15px] text-foreground leading-[1.85] mb-4 max-w-2xl">
+                <p className="font-sans text-[15px] text-foreground leading-[1.85] mb-4">
                   {author.earlyLifeAndFormation[1]}
                 </p>
-                <p className="font-sans text-[15px] text-muted-foreground leading-[1.85] mb-7 max-w-2xl">
+                <p className="font-sans text-[15px] text-muted-foreground leading-[1.85] mb-7">
                   {author.priesthoodAndHigherStudies[0]}
                 </p>
                 <Link
@@ -229,9 +229,9 @@ export default function HomePage() {
       <Divider />
 
       {/* ── Featured Books ───────────────────────────────────────── */}
-      <section aria-labelledby="featured-heading" className="py-16 sm:py-20 md:py-28">
+      <section aria-labelledby="featured-heading" className="py-20 md:py-28">
         <Container>
-          <RevealSection className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-14">
+          <RevealSection className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
             <SectionHeading
               label="Selected Works"
               title="From the Catalogue"
@@ -253,11 +253,11 @@ export default function HomePage() {
       {/* ── Publication updates ──────────────────────────────────── */}
       <section
         aria-labelledby="updates-heading"
-        className="py-14 sm:py-16 md:py-20 bg-secondary/50"
+        className="py-16 md:py-20 bg-secondary/50"
       >
         <Container>
           <RevealSection>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 lg:gap-16 items-start">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start">
               <div>
                 <p className="font-sans text-[11px] font-medium tracking-[0.2em] uppercase text-gold mb-4">
                   Stay Informed
@@ -268,11 +268,11 @@ export default function HomePage() {
                 >
                   Publication Updates
                 </h2>
-                <p className="font-sans text-[15px] text-muted-foreground leading-relaxed max-w-xl">
+                <p className="font-sans text-[15px] text-muted-foreground leading-relaxed">
                   Receive updates when new books become available.
                 </p>
               </div>
-              <div className="md:pt-10">
+              <div className="md:pt-12">
                 <PublicationForm />
               </div>
             </div>

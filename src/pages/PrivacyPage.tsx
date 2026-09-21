@@ -14,9 +14,9 @@ export default function PrivacyPage() {
   }, [])
 
   return (
-    <main id="root" className="py-14 sm:py-16 md:py-24">
+    <main id="root" className="py-16 md:py-24">
       <Container>
-        <div className="max-w-3xl lg:max-w-4xl">
+        <div className="max-w-3xl">
           <SectionHeading
             label="Legal & Pastoral Privacy"
             title="Privacy Policy"

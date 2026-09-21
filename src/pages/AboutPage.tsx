@@ -29,11 +29,11 @@ function TwoCol({
   children: React.ReactNode
 }) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-[220px_1fr] lg:grid-cols-[260px_1fr] gap-6 sm:gap-8 md:gap-12 lg:gap-16">
+    <div className="grid grid-cols-1 md:grid-cols-[220px_1fr] gap-8 md:gap-16">
       <div className="md:sticky md:top-24 self-start">
         <SectionLabel number={number} title={label} />
       </div>
-      <div className="max-w-3xl lg:max-w-4xl">{children}</div>
+      <div>{children}</div>
     </div>
   )
 }
@@ -50,29 +50,29 @@ export default function AboutPage() {
   return (
     <main id="root" className="bg-parchment min-h-screen">
       {/* ── Hero ─────────────────────────────────────────────────── */}
-      <section aria-labelledby="about-heading" className="border-b border-border py-12 sm:py-16 md:py-20">
+      <section aria-labelledby="about-heading" className="border-b border-border py-16 md:py-20">
         <Container>
-          <div className="grid grid-cols-1 sm:grid-cols-[180px_1fr] md:grid-cols-[220px_1fr] lg:grid-cols-[260px_1fr] gap-8 sm:gap-10 md:gap-14 lg:gap-16 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-10 md:gap-16 items-start">
             {/* Portrait */}
-            <div className="w-36 sm:w-44 md:w-52 lg:w-60 mx-auto sm:mx-0 shrink-0">
+            <div className="w-44 md:w-52 shrink-0">
               <AuthorPortrait />
             </div>
 
             {/* Identity */}
             <div className="flex flex-col justify-center">
-              <p className="font-sans text-[11px] font-medium tracking-[0.22em] uppercase text-gold mb-4 sm:mb-5">
+              <p className="font-sans text-[11px] font-medium tracking-[0.22em] uppercase text-gold mb-5">
                 About the Author
               </p>
               <h1
                 id="about-heading"
-                className="font-serif text-3.5xl sm:text-4xl md:text-5xl font-normal text-navy leading-tight mb-3 sm:mb-4"
+                className="font-serif text-4xl md:text-5xl font-normal text-navy leading-tight mb-4"
               >
                 {author.fullName}
               </h1>
-              <p className="font-sans text-[11px] tracking-[0.16em] uppercase text-muted-foreground mb-6 sm:mb-8">
+              <p className="font-sans text-[11px] tracking-[0.16em] uppercase text-muted-foreground mb-8">
                 Priest · Theologian · Canonist · Preacher · Author
               </p>
-              <p className="font-sans text-[15px] text-muted-foreground leading-[1.85] max-w-2xl">
+              <p className="font-sans text-[15px] text-muted-foreground leading-[1.85] max-w-xl">
                 {author.shortBio}
               </p>
             </div>

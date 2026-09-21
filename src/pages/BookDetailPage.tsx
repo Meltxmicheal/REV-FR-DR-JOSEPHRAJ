@@ -256,9 +256,9 @@ export default function BookDetailPage() {
       </nav>
 
       {/* ── Book Hero / Overview ─────────────────────────────────── */}
-      <section aria-labelledby="book-title" className="py-12 sm:py-16 md:py-20">
+      <section aria-labelledby="book-title" className="py-14 md:py-20">
         <Container>
-          <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] lg:grid-cols-[340px_1fr] xl:grid-cols-[380px_1fr] gap-8 sm:gap-12 md:gap-14 lg:gap-16 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] lg:grid-cols-[340px_1fr] gap-12 md:gap-16 lg:gap-20 items-start">
             {/* Left: Book Cover */}
             <div className="w-full max-w-[280px] sm:max-w-[320px] md:max-w-none mx-auto md:mx-0">
               <div className="shadow-[0_8px_30px_rgba(23,36,58,0.12)] border border-border">
@@ -290,7 +290,7 @@ export default function BookDetailPage() {
               <Divider className="mb-6" />
 
               {/* Short Description */}
-              <p className="font-sans text-[15px] sm:text-[16px] text-foreground leading-[1.85] mb-8 max-w-3xl">
+              <p className="font-sans text-[15px] sm:text-[16px] text-foreground leading-[1.85] mb-8">
                 {book.description}
               </p>
 
@@ -307,9 +307,9 @@ export default function BookDetailPage() {
       {book.generalIntroduction && book.generalIntroduction.length > 0 && (
         <>
           <Divider />
-          <section aria-labelledby="general-intro-heading" className="py-14 sm:py-16 md:py-24 bg-secondary/30">
+          <section aria-labelledby="general-intro-heading" className="py-16 md:py-24 bg-secondary/30">
             <Container>
-              <div className="max-w-4xl lg:max-w-5xl">
+              <div className="max-w-3xl">
                 <SectionHeading
                   label="Author Overview"
                   title="General Introduction"
@@ -440,9 +440,9 @@ export default function BookDetailPage() {
       {book.keyDistinction && (
         <>
           <Divider />
-          <section aria-labelledby="key-distinction-heading" className="py-14 sm:py-16 md:py-24 bg-secondary/30">
+          <section aria-labelledby="key-distinction-heading" className="py-16 md:py-24 bg-secondary/30">
             <Container>
-              <div className="max-w-4xl lg:max-w-5xl">
+              <div className="max-w-4xl">
                 <SectionHeading
                   label="Doctrinal Synthesis"
                   title={book.keyDistinction.heading}
@@ -581,9 +581,9 @@ export default function BookDetailPage() {
       {book.personalPilgrimage && (
         <>
           <Divider />
-          <section aria-labelledby="personal-pilgrimage-heading" className="py-14 sm:py-16 md:py-24">
+          <section aria-labelledby="personal-pilgrimage-heading" className="py-16 md:py-24">
             <Container>
-              <div className="max-w-4xl lg:max-w-5xl">
+              <div className="max-w-3xl">
                 <SectionHeading
                   label="Spiritual Reflection"
                   title={book.personalPilgrimage.heading}
@@ -632,9 +632,9 @@ export default function BookDetailPage() {
       {book.trainingGround && (
         <>
           <Divider />
-          <section aria-labelledby="training-ground-heading" className="py-14 sm:py-16 md:py-24 bg-secondary/30">
+          <section aria-labelledby="training-ground-heading" className="py-16 md:py-24 bg-secondary/30">
             <Container>
-              <div className="max-w-4xl lg:max-w-5xl">
+              <div className="max-w-3xl">
                 <SectionHeading
                   label="The Broader Journey"
                   title={book.trainingGround.heading}
@@ -661,9 +661,9 @@ export default function BookDetailPage() {
       {book.bookThemes && (
         <>
           <Divider />
-          <section aria-labelledby="book-themes-heading" className="py-14 sm:py-16 md:py-24">
+          <section aria-labelledby="book-themes-heading" className="py-16 md:py-24">
             <Container>
-              <div className="max-w-4xl lg:max-w-5xl">
+              <div className="max-w-3xl">
                 <SectionHeading
                   label="Content & Themes"
                   title={book.bookThemes.heading}
@@ -712,9 +712,9 @@ export default function BookDetailPage() {
       {book.concludingReflection && (
         <>
           <Divider />
-          <section aria-labelledby="conclusion-heading" className="py-14 sm:py-16 md:py-24 bg-secondary/30">
+          <section aria-labelledby="conclusion-heading" className="py-16 md:py-24 bg-secondary/30">
             <Container>
-              <div className="max-w-4xl lg:max-w-5xl">
+              <div className="max-w-3xl">
                 <SectionHeading
                   label="Final Message"
                   title={book.concludingReflection.heading}
