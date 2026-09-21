@@ -54,7 +54,7 @@ export default function ContactForm() {
       "",
       `Message:\n${fields.message}`,
       "",
-      "Source:\nContact Form (josephraj.org)",
+      "Source:\nContact Form (www.revfrdrjosephraj.org)",
       "",
       `Date:\n${new Date().toLocaleString()}`,
     ].join("\n")

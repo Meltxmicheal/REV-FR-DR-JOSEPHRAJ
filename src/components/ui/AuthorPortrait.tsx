@@ -23,7 +23,7 @@ export default function AuthorPortrait({
         )}
         <img
           src={author.imageUrl}
-          alt={`Portrait of ${author.fullName}`}
+          alt={author.fullName}
           className={`w-full h-full object-cover object-top transition-all duration-500 ease-out group-hover:scale-[1.018] motion-reduce:transform-none ${
             loaded ? "opacity-100" : "opacity-0"
           }`}

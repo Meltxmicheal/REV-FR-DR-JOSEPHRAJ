@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { Link, useParams } from "react-router-dom"
 import Container from "../components/layout/Container"
+import { usePageMeta } from "../hooks/usePageMeta"
 import BookCover from "../components/books/BookCover"
 import BookStatusBadge from "../components/books/BookStatus"
 import Divider from "../components/ui/Divider"
@@ -89,96 +90,76 @@ export default function BookDetailPage() {
   const { slug } = useParams<{ slug: string }>()
   const book = slug ? getBook(slug) : undefined
 
-  useEffect(() => {
-    window.scrollTo(0, 0)
-    if (book) {
-      const titleBase = book.seo?.title || book.title
-      const finalTitle = titleBase.includes("Joseph Raj")
-        ? titleBase
-        : `${titleBase} | Rev. Fr. Dr. Joseph Raj`
-      document.title = finalTitle
+  const metaTitle = book ? `${book.title} | Rev. Fr. Dr. Joseph Raj` : "Book Not Found | Rev. Fr. Dr. Joseph Raj"
+  const metaDesc = book ? (book.seo?.description || book.description) : "The requested book could not be found."
+  const bookUrl = book ? `https://www.revfrdrjosephraj.org/books/${book.slug}` : undefined
+  const coverUrl = book ? `https://www.revfrdrjosephraj.org${book.coverImage}` : undefined
 
-      const desc = book.seo?.description || book.description
-      const metaDesc = document.querySelector('meta[name="description"]')
-      if (metaDesc) metaDesc.setAttribute("content", desc)
-      const ogTitle = document.querySelector('meta[property="og:title"]')
-      if (ogTitle) ogTitle.setAttribute("content", finalTitle)
-      const ogDesc = document.querySelector('meta[property="og:description"]')
-      if (ogDesc) ogDesc.setAttribute("content", desc)
-      const twTitle = document.querySelector('meta[property="twitter:title"]')
-      if (twTitle) twTitle.setAttribute("content", finalTitle)
-      const twDesc = document.querySelector('meta[property="twitter:description"]')
-      if (twDesc) twDesc.setAttribute("content", desc)
-    }
-
-    // Inject dynamic JSON-LD Schema for Book & Breadcrumbs
-    if (book) {
-      const scriptId = "book-jsonld-schema"
-      let scriptTag = document.getElementById(scriptId) as HTMLScriptElement | null
-      if (!scriptTag) {
-        scriptTag = document.createElement("script")
-        scriptTag.id = scriptId
-        scriptTag.type = "application/ld+json"
-        document.head.appendChild(scriptTag)
-      }
-
-      const structuredData = {
-        "@context": "https://schema.org",
-        "@graph": [
+  const schema = book ? {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Book",
+        "@id": `${bookUrl}#book`,
+        "name": book.title,
+        "description": book.description,
+        "image": coverUrl,
+        "url": bookUrl,
+        "inLanguage": "en",
+        "author": {
+          "@type": "Person",
+          "@id": "https://www.revfrdrjosephraj.org/#author",
+          "name": "Rev. Fr. Dr. Joseph Raj"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${bookUrl}#breadcrumb`,
+        "itemListElement": [
           {
-            "@type": "Book",
-            "@id": `https://josephraj.org/books/${book.slug}#book`,
-            "name": book.title,
-            "description": book.description,
-            "image": `https://josephraj.org${book.coverImage}`,
-            "url": `https://josephraj.org/books/${book.slug}`,
-            "inLanguage": "en",
-            "author": {
-              "@type": "Person",
-              "@id": "https://josephraj.org/#author",
-              "name": "Rev. Fr. Dr. Joseph Raj"
-            },
-            "genre": book.categories || [book.category],
-            "workExample": {
-              "@type": "Book",
-              "bookFormat": "https://schema.org/Paperback",
-              "availability": "https://schema.org/PreOrder"
-            }
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.revfrdrjosephraj.org/"
           },
           {
-            "@type": "BreadcrumbList",
-            "@id": `https://josephraj.org/books/${book.slug}#breadcrumb`,
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://josephraj.org/"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Books",
-                "item": "https://josephraj.org/books"
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "name": `Book ${book.order ?? ""}: ${book.title}`,
-                "item": `https://josephraj.org/books/${book.slug}`
-              }
-            ]
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Books",
+            "item": "https://www.revfrdrjosephraj.org/books"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": book.title,
+            "item": bookUrl
           }
         ]
       }
+    ]
+  } : undefined
 
-      scriptTag.text = JSON.stringify(structuredData)
-
-      return () => {
-        const tag = document.getElementById(scriptId)
-        if (tag) tag.remove()
-      }
+  usePageMeta(
+    metaTitle,
+    metaDesc,
+    {
+      canonical: bookUrl,
+      ogTitle: metaTitle,
+      ogDescription: metaDesc,
+      ogUrl: bookUrl,
+      ogImage: coverUrl,
+      ogType: "book",
+      twitterTitle: metaTitle,
+      twitterDescription: metaDesc,
+      twitterUrl: bookUrl,
+      twitterImage: coverUrl,
+      noindex: !book,
+      schema: schema,
     }
+  )
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
   }, [book])
 
   if (!book) return <NotFound />

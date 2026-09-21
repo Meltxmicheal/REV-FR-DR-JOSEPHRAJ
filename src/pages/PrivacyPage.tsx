@@ -6,8 +6,14 @@ import { usePageMeta } from "../hooks/usePageMeta"
 
 export default function PrivacyPage() {
   usePageMeta(
-    "Privacy Policy — Rev. Fr. Dr. Joseph Raj",
-    "Privacy policy and data protection principles for the official author and pastoral website of Rev. Fr. Dr. Joseph Raj."
+    "Privacy Policy | Rev. Fr. Dr. Joseph Raj",
+    "Privacy policy regarding pastoral communications, publication notification requests, and personal data handling for Rev. Fr. Dr. Joseph Raj Ministry & Publications.",
+    {
+      canonical: "https://www.revfrdrjosephraj.org/privacy",
+      ogUrl: "https://www.revfrdrjosephraj.org/privacy",
+      ogImage: "https://www.revfrdrjosephraj.org/images/author/author.jpg",
+      twitterImage: "https://www.revfrdrjosephraj.org/images/author/author.jpg",
+    }
   )
   useEffect(() => {
     window.scrollTo(0, 0)

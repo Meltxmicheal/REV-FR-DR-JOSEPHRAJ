@@ -67,7 +67,7 @@ export default function Navbar() {
           >
             <img
               src="/logo.png"
-              alt="Rev. Dr. Fr. Joseph Raj official logo"
+              alt="Rev. Fr. Dr. Joseph Raj"
               className="h-9 sm:h-10 w-auto object-contain shrink-0 transition-transform duration-200 group-hover:scale-[1.03]"
             />
             <div className="flex flex-col leading-none">

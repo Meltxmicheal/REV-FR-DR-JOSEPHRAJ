@@ -52,7 +52,7 @@ export default function PublicationForm({ compact = false }: PublicationFormProp
       "",
       `Email:\n${savedEmail}`,
       "",
-      "Source:\nPublication Updates Form (josephraj.org)",
+      "Source:\nPublication Updates Form (www.revfrdrjosephraj.org)",
       "",
       `Date:\n${new Date().toLocaleString()}`,
       "",

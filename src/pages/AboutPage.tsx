@@ -41,8 +41,14 @@ function TwoCol({
 /* ── Page ──────────────────────────────────────────────────────────────── */
 export default function AboutPage() {
   usePageMeta(
-    "About the Author — Rev. Fr. Dr. Joseph Raj",
-    "Biography of Rev. Fr. Dr. Joseph Raj: formation, priestly ministry, academic studies in Rome, and pastoral service across the Archdioceses of Castries and Melbourne."
+    "About Rev. Fr. Dr. Joseph Raj | Priest & Author",
+    "Learn about Rev. Fr. Dr. Joseph Raj, Catholic priest of the Archdiocese of Castries, Doctor in Moral Theology, Canonist, and author of 15 theological and pastoral works.",
+    {
+      canonical: "https://www.revfrdrjosephraj.org/about",
+      ogUrl: "https://www.revfrdrjosephraj.org/about",
+      ogImage: "https://www.revfrdrjosephraj.org/images/author/author.jpg",
+      twitterImage: "https://www.revfrdrjosephraj.org/images/author/author.jpg",
+    }
   )
   const fluent = author.languages.filter((l) => l.level === "fluent")
   const working = author.languages.filter((l) => l.level === "working")
@@ -372,7 +378,7 @@ export default function AboutPage() {
           <div className="max-w-2xl mx-auto text-center">
             <img
               src="/logo.png"
-              alt="Rev. Dr. Fr. Joseph Raj official logo"
+              alt="Rev. Fr. Dr. Joseph Raj"
               className="h-12 w-auto mx-auto mb-4 object-contain opacity-90"
             />
             <span className="font-sans text-[11px] text-gold tracking-widest">09</span>

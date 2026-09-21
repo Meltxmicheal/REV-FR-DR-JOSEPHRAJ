@@ -4,8 +4,12 @@ import { usePageMeta } from "../hooks/usePageMeta"
 
 export default function NotFoundPage() {
   usePageMeta(
-    "Page Not Found — Rev. Fr. Dr. Joseph Raj",
-    "The requested page could not be found. Return to the catalogue or home page."
+    "Page Not Found | Rev. Fr. Dr. Joseph Raj",
+    "The requested page could not be found. Return to the catalogue or home page of Rev. Fr. Dr. Joseph Raj.",
+    {
+      noindex: true,
+      canonical: "https://www.revfrdrjosephraj.org/404",
+    }
   )
 
   return (

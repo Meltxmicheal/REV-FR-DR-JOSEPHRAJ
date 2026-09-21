@@ -29,7 +29,7 @@ export default function BookCover({ title, coverImage, index = 0 }: BookCoverPro
         )}
         <img
           src={coverImage}
-          alt={`Cover of ${title}`}
+          alt={`${title} by Rev. Fr. Dr. Joseph Raj`}
           className={`w-full h-full object-cover object-center transition-opacity duration-500 ${
             loaded ? "opacity-100" : "opacity-0"
           }`}

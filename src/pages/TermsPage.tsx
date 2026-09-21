@@ -6,8 +6,14 @@ import { usePageMeta } from "../hooks/usePageMeta"
 
 export default function TermsPage() {
   usePageMeta(
-    "Terms of Use — Rev. Fr. Dr. Joseph Raj",
-    "Terms governing the use of this website, copyright, intellectual property, and theological materials."
+    "Terms of Use | Rev. Fr. Dr. Joseph Raj",
+    "Terms of use and intellectual property guidelines for the theological writings, publications, and online ministry of Rev. Fr. Dr. Joseph Raj.",
+    {
+      canonical: "https://www.revfrdrjosephraj.org/terms",
+      ogUrl: "https://www.revfrdrjosephraj.org/terms",
+      ogImage: "https://www.revfrdrjosephraj.org/images/author/author.jpg",
+      twitterImage: "https://www.revfrdrjosephraj.org/images/author/author.jpg",
+    }
   )
   useEffect(() => {
     window.scrollTo(0, 0)

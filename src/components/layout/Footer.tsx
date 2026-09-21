@@ -18,7 +18,7 @@ export default function Footer() {
             >
               <img
                 src="/logo.png"
-                alt="Rev. Dr. Fr. Joseph Raj official logo"
+                alt="Rev. Fr. Dr. Joseph Raj"
                 className="h-11 w-auto object-contain shrink-0 transition-transform duration-200 group-hover:scale-[1.03]"
               />
               <div className="flex flex-col leading-none">

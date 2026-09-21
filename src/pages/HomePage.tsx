@@ -46,8 +46,14 @@ function RevealSection({
 
 export default function HomePage() {
   usePageMeta(
-    "Rev. Fr. Dr. Joseph Raj — Theologian, Canonist & Author",
-    "The official website of Rev. Fr. Dr. Joseph Raj — priest, theologian, canonist, and author of works on marriage, moral theology, canon law, and spirituality."
+    "Rev. Fr. Dr. Joseph Raj | Priest, Theologian, Canonist & Author",
+    "Explore the life, ministry, writings, and 15-volume scholarly and pastoral collection of Rev. Fr. Dr. Joseph Raj, priest, theologian, canonist, preacher, and author.",
+    {
+      canonical: "https://www.revfrdrjosephraj.org/",
+      ogUrl: "https://www.revfrdrjosephraj.org/",
+      ogImage: "https://www.revfrdrjosephraj.org/images/author/author.jpg",
+      twitterImage: "https://www.revfrdrjosephraj.org/images/author/author.jpg",
+    }
   )
   const reduced = useReducedMotion()
   const parallaxOffset = useParallax(0.04)

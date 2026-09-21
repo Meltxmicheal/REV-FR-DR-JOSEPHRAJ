@@ -20,8 +20,14 @@ function isBookInCategory(cat: string, book: Book): boolean {
 
 export default function BooksPage() {
   usePageMeta(
-    "Books & Publications — Rev. Fr. Dr. Joseph Raj",
-    "A catalogue of fifteen forthcoming works spanning moral theology, canon law, scripture, and pastoral spirituality by Rev. Fr. Dr. Joseph Raj."
+    "Books by Rev. Fr. Dr. Joseph Raj | 15-Volume Collection",
+    "Explore the 15-volume scholarly and pastoral collection of Rev. Fr. Dr. Joseph Raj covering faith, Scripture, family life, marriage, spirituality, theology, canon law, and Christian mission.",
+    {
+      canonical: "https://www.revfrdrjosephraj.org/books",
+      ogUrl: "https://www.revfrdrjosephraj.org/books",
+      ogImage: "https://www.revfrdrjosephraj.org/images/author/author.jpg",
+      twitterImage: "https://www.revfrdrjosephraj.org/images/author/author.jpg",
+    }
   )
   const [searchParams, setSearchParams] = useSearchParams()
   const categoryParam = searchParams.get("category")
