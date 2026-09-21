@@ -11,18 +11,18 @@ export default function ContactPage() {
   return (
     <main id="root" className="bg-parchment min-h-screen">
       {/* ── Page header ──────────────────────────────────────────── */}
-      <section aria-labelledby="contact-heading" className="border-b border-border py-16 md:py-20">
+      <section aria-labelledby="contact-heading" className="border-b border-border py-12 sm:py-16 md:py-20">
         <Container>
-          <p className="font-sans text-[11px] font-medium tracking-[0.2em] uppercase text-gold mb-5">
+          <p className="font-sans text-[11px] font-medium tracking-[0.2em] uppercase text-gold mb-4 sm:mb-5">
             Get in Touch
           </p>
           <h1
             id="contact-heading"
-            className="font-serif text-4xl md:text-5xl font-normal text-navy leading-tight mb-6"
+            className="font-serif text-3.5xl sm:text-4xl md:text-5xl font-normal text-navy leading-tight mb-4 sm:mb-6"
           >
             Contact
           </h1>
-          <p className="font-sans text-base text-muted-foreground leading-relaxed max-w-xl">
+          <p className="font-sans text-base text-muted-foreground leading-relaxed max-w-2xl">
             For enquiries about the author's books, lectures, retreats, or other matters, please
             use the form below. All messages are received and responded to personally.
           </p>
@@ -30,9 +30,9 @@ export default function ContactPage() {
       </section>
 
       {/* ── Form ─────────────────────────────────────────────────── */}
-      <section aria-label="Contact form" className="py-16 md:py-24">
+      <section aria-label="Contact form" className="py-12 sm:py-16 md:py-24">
         <Container>
-          <div className="grid grid-cols-1 md:grid-cols-[260px_1fr] gap-16 md:gap-20">
+          <div className="grid grid-cols-1 md:grid-cols-[260px_1fr] lg:grid-cols-[300px_1fr] gap-10 md:gap-14 lg:gap-20">
             {/* Left: context */}
             <div className="space-y-8">
               <div>

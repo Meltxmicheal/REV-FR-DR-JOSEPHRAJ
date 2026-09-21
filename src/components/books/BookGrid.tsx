@@ -33,7 +33,7 @@ function StaggeredCard({ book, index }: { book: Book; index: number }) {
 
 export default function BookGrid({ books }: BookGridProps) {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 sm:gap-x-8 gap-y-8 sm:gap-y-12">
       {books.map((book, i) => (
         <StaggeredCard key={book.id} book={book} index={i} />
       ))}

@@ -55,21 +55,21 @@ export default function BooksPage() {
   return (
     <main id="root" className="bg-parchment min-h-screen">
       {/* ── Page header ──────────────────────────────────────────── */}
-      <section aria-labelledby="books-heading" className="border-b border-border py-16 md:py-20">
+      <section aria-labelledby="books-heading" className="border-b border-border py-12 sm:py-16 md:py-20">
         <Container>
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 sm:gap-8">
             <div>
-              <p className="font-sans text-[11px] font-medium tracking-[0.2em] uppercase text-gold mb-5">
+              <p className="font-sans text-[11px] font-medium tracking-[0.2em] uppercase text-gold mb-4 sm:mb-5">
                 Works & Publications
               </p>
               <h1
                 id="books-heading"
-                className="font-serif text-4xl md:text-5xl font-normal text-navy leading-tight mb-4"
+                className="font-serif text-3.5xl sm:text-4xl md:text-5xl font-normal text-navy leading-tight mb-3 sm:mb-4"
               >
                 Books
               </h1>
-              <p className="font-sans text-base text-muted-foreground leading-relaxed max-w-xl">
-                A collection of theological, pastoral, canonical and spiritual writings.
+              <p className="font-sans text-base text-muted-foreground leading-relaxed max-w-2xl">
+                A collection of theological, pastoral, canonical and spiritual writings across fifteen published volumes.
               </p>
             </div>
             <div className="flex-shrink-0">

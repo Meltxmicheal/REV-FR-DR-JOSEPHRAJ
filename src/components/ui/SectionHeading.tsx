@@ -26,7 +26,7 @@ export default function SectionHeading({
         {title}
       </h2>
       {subtitle && (
-        <p className="mt-4 font-sans text-base text-muted-foreground leading-relaxed max-w-xl">
+        <p className="mt-4 font-sans text-base text-muted-foreground leading-relaxed max-w-2xl">
           {subtitle}
         </p>
       )}
