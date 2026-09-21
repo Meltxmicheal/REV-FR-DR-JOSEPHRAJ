@@ -370,6 +370,11 @@ export default function AboutPage() {
       <section aria-labelledby="closing-heading" className="py-14 md:py-20">
         <Container>
           <div className="max-w-2xl mx-auto text-center">
+            <img
+              src="/logo.png"
+              alt="Rev. Dr. Fr. Joseph Raj official logo"
+              className="h-12 w-auto mx-auto mb-4 object-contain opacity-90"
+            />
             <span className="font-sans text-[11px] text-gold tracking-widest">09</span>
             <div className="w-px h-8 bg-border mx-auto my-4" aria-hidden="true" />
             <p

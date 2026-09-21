@@ -154,7 +154,9 @@ export const author: AuthorData = {
     {
       title: "Preaching God’s Word Day in and Day Out – Cycle C",
     },
-    { title: "What Matters Most Is Faith" },
+    {
+      title: "What Matters Most Is Faith-Biblical Encounters with Christ That Reveal the Power of Faith",
+    },
     { title: "Holy Women as Evangelizers of the Gospel" },
     {
       title: "The Heart God Sees – Beyond What Man Cannot See",

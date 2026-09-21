@@ -63,7 +63,7 @@ His published works include:
 - **The Lenten Journey of a Pilgrim – A Short Journey within the Longer Journey of Life**
 - **The Magical Perfection of Number 7 in Sacred Scriptures**
 - **The Theological, Canonical and Pastoral Implications of the Sacraments in the Church**
-- **What Matters Most is Faith**
+- **What Matters Most Is Faith-Biblical Encounters with Christ That Reveal the Power of Faith**
 - **Holy Women As Evangelizers of the Gospel**
 - **The Heart God Sees - Beyond What Man Cannot See**
 - **My Soul Magnifies the Lord: A Tribute to the Blessed Virgin Mother Mary**

@@ -1342,8 +1342,8 @@ export const books: Book[] = [
   {
     id: "book-11",
     order: 11,
-    title: "What Matters Most Is Faith",
-    slug: "what-matters-most-is-faith",
+    title: "What Matters Most Is Faith-Biblical Encounters with Christ That Reveal the Power of Faith",
+    slug: "what-matters-most-is-faith-biblical-encounters-with-christ-that-reveal-the-power-of-faith",
     description:
       "Faith is the foundation of Christian life and the doorway into relationship with God. Exploring salvation history, the Hall of Faith in Hebrews, and fifteen biblical encounters with Christ, this work reveals how genuine trust, humility, and surrender to the Lord transform the human heart.",
     coverImage: "/images/books/book11.jpg",
@@ -1359,7 +1359,7 @@ export const books: Book[] = [
     publishedAt: null,
     createdAt: "2024-01-01",
     seo: {
-      title: "What Matters Most Is Faith",
+      title: "What Matters Most Is Faith-Biblical Encounters with Christ That Reveal the Power of Faith",
       description:
         "Faith is the foundation of Christian life. Exploring biblical encounters with Christ, salvation history, and Hebrews 11, this book reveals how authentic trust in God transforms the heart.",
     },
@@ -1440,7 +1440,7 @@ export const books: Book[] = [
       ],
     },
     concludingReflection: {
-      heading: "WHAT MATTERS MOST IS FAITH",
+      heading: "WHAT MATTERS MOST IS FAITH-BIBLICAL ENCOUNTERS WITH CHRIST THAT REVEAL THE POWER OF FAITH",
       subtitle:
         "Amid the countless pursuits and distractions of the world, one truth remains central.",
       points: [

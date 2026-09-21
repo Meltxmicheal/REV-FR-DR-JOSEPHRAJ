@@ -62,15 +62,22 @@ export default function Navbar() {
           {/* Brand */}
           <Link
             to="/"
-            className="flex flex-col leading-none group focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2"
+            className="flex items-center gap-2.5 sm:gap-3 group focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2"
             aria-label="Rev. Fr. Dr. Joseph Raj — Home"
           >
-            <span className="font-sans text-[10px] font-medium tracking-[0.18em] uppercase text-gold mb-0.5 group-hover:text-gold/80 transition-colors">
-              Rev. Fr. Dr.
-            </span>
-            <span className="font-serif text-[17px] font-normal text-navy tracking-wide group-hover:text-navy-deep transition-colors">
-              Joseph Raj
-            </span>
+            <img
+              src="/logo.png"
+              alt="Rev. Dr. Fr. Joseph Raj official logo"
+              className="h-9 sm:h-10 w-auto object-contain shrink-0 transition-transform duration-200 group-hover:scale-[1.03]"
+            />
+            <div className="flex flex-col leading-none">
+              <span className="font-sans text-[10px] font-medium tracking-[0.18em] uppercase text-gold mb-0.5 group-hover:text-gold/80 transition-colors">
+                Rev. Fr. Dr.
+              </span>
+              <span className="font-serif text-[16px] sm:text-[17px] font-normal text-navy tracking-wide group-hover:text-navy-deep transition-colors">
+                Joseph Raj
+              </span>
+            </div>
           </Link>
 
           {/* Desktop links */}
