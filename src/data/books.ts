@@ -1036,334 +1036,8 @@ export const books: Book[] = [
     },
   },
   {
-    id: "book-08",
-    order: 8,
-    title: "Preaching God’s Word Day in and Day Out – Cycle A",
-    slug: "preaching-gods-word-day-in-and-day-out-cycle-a",
-    description:
-      "An enriching collection of homily reflections for Liturgical Cycle A, journeying through the Gospel of Matthew and the mystery of Christ. These reflections invite readers to encounter God’s Word more deeply, connect faith with daily life, and allow the Gospel to transform the heart through prayer, meditation, and faithful living.",
-    coverImage: "/images/books/book8.jpg",
-    webpImage: "/images/books/book8.webp",
-    blurHash: "TlJ*Fx-;M{~qxuRj9bR,afD*j]Rk",
-    status: "COMING_SOON",
-    category: "Homiletics & Liturgy",
-    categories: [
-      "Gospel & Homily Reflections",
-      "Christian Discipleship",
-      "Faith & Trust",
-      "Evangelization & Mission",
-    ],
-    publishedAt: null,
-    createdAt: "2024-01-01",
-    seo: {
-      title: "Preaching God’s Word Day in and Day Out – Cycle A",
-      description:
-        "An enriching collection of homily reflections for Liturgical Cycle A, journeying through the Gospel of Matthew and the mystery of Christ. These reflections invite readers to encounter God’s Word more deeply, connect faith with daily life, and allow the Gospel to transform the heart through prayer, meditation, and faithful living.",
-    },
-    generalIntroduction: [
-      {
-        heading: "ABOUT THE BOOK",
-        paragraphs: [
-          "“Preaching God’s Word Day in and Day Out – Cycle A” is a collection of homiletic reflections rooted in the liturgical readings of Cycle A.",
-        ],
-      },
-      {
-        heading: "THE JOURNEY THROUGH CYCLE A",
-        paragraphs: [
-          "In the liturgical calendar, Cycle A invites the faithful to journey more deeply into the mystery of Christ primarily through the Gospel of Matthew, complemented at important liturgical moments by the Gospel of John.",
-        ],
-      },
-      {
-        heading: "THE GOSPEL OF MATTHEW",
-        paragraphs: [
-          "The Gospel of Matthew provides rich insights into the life, teachings, mission, and saving work of Jesus Christ. Through His teachings and powerful miracles, Jesus is presented not merely as a teacher, but as the living fulfillment of God's saving plan.",
-        ],
-      },
-      {
-        heading: "CHRIST AS MESSIAH AND KING",
-        paragraphs: [
-          "A central emphasis of Matthew's Gospel is the revelation of Jesus as the long-awaited Messiah, the true King of Israel, and the fulfillment of the prophecies of the Old Testament. Matthew establishes this identity from the beginning by tracing Jesus' genealogy to Abraham and King David, emphasizing His royal lineage and covenantal identity.",
-        ],
-      },
-      {
-        heading: "THE SERMON ON THE MOUNT AND THE KINGDOM OF HEAVEN",
-        paragraphs: [
-          "The Gospel also gives particular importance to the Kingdom of Heaven and records profound teachings of Jesus, especially the Sermon on the Mount. Through these teachings, Christ presents the new law of love and calls His disciples to participate in the mission of proclaiming the Gospel to all nations.",
-        ],
-      },
-      {
-        heading: "HOMILIES FOR DAILY CHRISTIAN LIFE",
-        paragraphs: [
-          "Throughout the liturgical journey of Cycle A, the homilies seek to help the faithful recognize Christ's presence in both ordinary and extraordinary moments of daily life.",
-          "The reflections are intended not merely to communicate information or theological knowledge. Their deeper purpose is to touch the heart, encourage spiritual renewal, strengthen faith, and lead believers toward a deeper encounter with the Lord.",
-          "The homilies are written within the context of local culture and worship and are sometimes enriched through the use of the Italian language. They seek to communicate the unwavering love and compassion of Christ and to proclaim God's plan of salvation, expressed in the Church's mission of salvezza delle anime.",
-        ],
-      },
-      {
-        heading: "PRAYER, MEDITATION AND TRANSFORMATION",
-        paragraphs: [
-          "The book encourages readers not simply to read the Word of God, but to enter into it through prayer and meditation.",
-          "A central spiritual message of the work is that God's Word is not merely something to be read or heard. It is something to be lived.",
-          "The reader is therefore invited to pray for the guidance of the Holy Spirit so that God's Word may penetrate deeply into everyday life, transform thoughts, renew the heart, and guide the person according to the will of God.",
-        ],
-      },
-      {
-        heading: "FINAL SPIRITUAL INVITATION",
-        paragraphs: [
-          "Ultimately, this book is intended to accompany the faithful throughout the liturgical journey of Cycle A, helping them listen to, reflect upon, pray with, and live the Word of God.",
-        ],
-      },
-    ],
-    bookThemes: {
-      heading: "WHAT THIS BOOK EXPLORES",
-      subtitle: "Key liturgical, biblical, and spiritual themes across Cycle A.",
-      points: [
-        "Homily reflections rooted in the liturgical readings of Cycle A",
-        "Journeying through the Gospel of Matthew and the Gospel of John",
-        "Jesus as the long-awaited Messiah, true King of Israel, and fulfillment of prophecy",
-        "Jesus' royal genealogy tracing back to Abraham and King David",
-        "The Sermon on the Mount and the new law of love",
-        "Proclaiming the Kingdom of Heaven to all nations",
-        "Connecting Sunday Gospel readings with everyday Christian life",
-        "Spiritual renewal and deeper encounter with Christ",
-        "Cultural context and enrichment through the Italian language",
-        "Proclamation of God's plan of salvation (salvezza delle anime)",
-        "Prayer and meditation under the guidance of the Holy Spirit",
-        "Living the Word of God day in and day out",
-      ],
-      paragraphs: [
-        "This collection offers an accessible, pastorally warm companion for Sunday worshippers, preachers, and catechists seeking to integrate liturgical prayer into the fabric of daily life.",
-      ],
-    },
-    concludingReflection: {
-      heading: "LIVING THE WORD OF GOD DAY IN AND DAY OUT",
-      subtitle:
-        "A spiritual companion for listening, praying, and living the Gospel.",
-      points: [
-        "Encountering Christ in the liturgical rhythm of Cycle A",
-        "Transforming the heart through prayerful meditation on Scripture",
-        "The Church's supreme mission: la salvezza delle anime",
-        "Allowing the Holy Spirit to guide daily thought and action",
-      ],
-      paragraphs: [
-        "God's Word is not merely something to be read or heard—it is a living reality to be lived. This collection accompanies the faithful on their journey, inspiring minds and hearts to be transformed in Christ.",
-      ],
-    },
-  },
-  {
-    id: "book-09",
-    order: 9,
-    title: "Preaching God’s Word Day in and Day Out – Cycle B",
-    slug: "preaching-gods-word-day-in-and-day-out-cycle-b",
-    description:
-      "Journey through Liturgical Cycle B with the Gospel of Mark, reflecting on Christ’s humanity, compassion, suffering, discipleship, and call to service. These homily reflections connect God’s Word with daily life, Caribbean culture, and the mission of bringing Christ’s love, peace, and salvation to others.",
-    coverImage: "/images/books/book9.jpg",
-    webpImage: "/images/books/book9.webp",
-    blurHash: "ThK18g-:IV~pt7Rk4=NIoyIUofR+",
-    status: "COMING_SOON",
-    category: "Homiletics & Liturgy",
-    categories: [
-      "Gospel & Homily Reflections",
-      "Christian Discipleship",
-      "Evangelization & Mission",
-      "Faith & Trust",
-    ],
-    publishedAt: null,
-    createdAt: "2024-01-01",
-    seo: {
-      title: "Preaching God’s Word Day in and Day Out – Cycle B",
-      description:
-        "Journey through Liturgical Cycle B with the Gospel of Mark, reflecting on Christ’s humanity, compassion, suffering, discipleship, and call to service. These homily reflections connect God’s Word with daily life, Caribbean culture, and the mission of bringing Christ’s love, peace, and salvation to others.",
-    },
-    generalIntroduction: [
-      {
-        heading: "ABOUT THE BOOK",
-        paragraphs: [
-          "“Preaching God’s Word Day in and Day Out – Cycle B” is a collection of homiletic reflections centered on the liturgical readings of Cycle B.",
-          "In the liturgical calendar, Cycle B invites the faithful to journey deeper into the mystery of Christ primarily through the Gospel of Mark, supplemented by the Gospel of John during key liturgical moments.",
-        ],
-      },
-      {
-        heading: "THE GOSPEL OF MARK AND CYCLE B",
-        paragraphs: [
-          "This cycle places particular emphasis on the humanity of Jesus, His compassion, and His call to discipleship. It provides an opportunity to reflect upon how Christ’s teachings and example continue to speak to the realities of everyday life.",
-          "The book also recognizes the importance of understanding the distinctive character of Mark’s Gospel when preparing and proclaiming homilies. Pastors and preachers are encouraged to appreciate Mark’s dynamic and action-oriented narrative so that its message can be communicated effectively to the faithful.",
-          "The Gospel of Mark is the shortest and one of the most action-oriented of the four Gospels. It presents Jesus as the suffering Messiah and the powerful Son of God. Rather than concentrating primarily on extended teachings, Mark frequently emphasizes the actions and miracles of Jesus.",
-          "The repeated sense of urgency and movement within Mark’s narrative invites the reader to encounter Christ as one who acts, serves, heals, suffers, and calls people to follow Him.",
-        ],
-      },
-      {
-        heading: "CHRIST, DISCIPLESHIP AND SERVICE",
-        paragraphs: [
-          "A major theme of this cycle is discipleship. Believers are invited to follow Christ faithfully through sacrifice, suffering, service, and a life shaped by faith.",
-          "Each homily seeks to bring the unwavering love and compassion of Christ to the people while proclaiming God's plan of “salvezza delle animae” — the salvation of souls, which remains paramount.",
-        ],
-      },
-      {
-        heading: "CARIBBEAN CULTURAL AND PASTORAL CONTEXT",
-        paragraphs: [
-          "These reflections are written within the context of Caribbean culture and worship. The homilies seek to connect the Gospel with the lived experiences of local communities, drawing examples from daily life, local cultural experiences, worship patterns, and community realities.",
-          "The material also incorporates the local dialect French-Kewyol in certain places to communicate the message with greater impact among local people.",
-        ],
-      },
-      {
-        heading: "THE POWER OF GOD'S WORD",
-        paragraphs: [
-          "Allowing God's Word to enter deeply into our lives and meditating upon it helps us understand the message of the homilies more fully. God's Word is living and active, guiding and forming the believer in every circumstance of life (Hebrews 4:12; 2 Timothy 3:16).",
-          "The faithful are called to remain open to God's Word so that Scripture becomes an integral part of everyday life, shaping decisions and deepening prayer.",
-        ],
-      },
-      {
-        heading: "FAITH, REFLECTION, AND HUMAN EXPERIENCE",
-        paragraphs: [
-          "Although God's Word is divine and powerful, the writing and interpretation of homilies take place through human minds with limited knowledge and understanding. The work therefore recognizes human conditions and limitations in the process of preparing these reflections.",
-          "Rather than weakening the authority of Scripture, this invites both preacher and listener to approach God's Word with humility, openness, and faith.",
-        ],
-      },
-      {
-        heading: "A CALL TO RECEIVE GOD'S WORD",
-        paragraphs: [
-          "The reader is invited to keep the heart open to receive the seed of God's Word so that it may produce a rich harvest in daily life.",
-          "The ultimate invitation is to grow in faith, deepen one's personal relationship with God, follow Christ faithfully, serve others with compassion, and become instruments of God's love and peace in the world.",
-        ],
-      },
-    ],
-    bookThemes: {
-      heading: "WHAT THIS BOOK EXPLORES",
-      subtitle:
-        "Key liturgical, biblical, and cultural themes across Cycle B and Mark's Gospel.",
-      points: [
-        "Homily reflections rooted in the liturgical readings of Cycle B",
-        "Journeying primarily through the action-oriented Gospel of Mark (with John at key moments)",
-        "Jesus as the suffering Messiah and the powerful Son of God",
-        "Urgency, movement, healing miracles, and dynamic action in Mark's Gospel",
-        "Discipleship through sacrifice, suffering, service, and steadfast faith",
-        "Proclaiming God's plan of salvation (salvezza delle anime)",
-        "Caribbean cultural context, local community life, and worship",
-        "Use of French-Kweyol dialect for meaningful local pastoral communication",
-        "The living and transformative power of Scripture (Hebrews 4:12; 2 Timothy 3:16)",
-        "Human limitation and humility in the ministry of the Word",
-        "The spiritual seed of God's Word producing a rich harvest",
-        "Becoming instruments of Christ's love, peace, and salvation in daily life",
-      ],
-      paragraphs: [
-        "This volume provides a vibrant pastoral companion for Sunday worshippers and ministers, integrating the rapid urgency of the Gospel of Mark with the warmth and cultural richness of Caribbean parish life.",
-      ],
-    },
-    concludingReflection: {
-      heading: "THE SEED OF GOD'S WORD BEARING FRUIT",
-      subtitle:
-        "A pastoral journey through Mark's Gospel and the lived reality of faith.",
-      points: [
-        "Following Christ through discipleship, service, and sacrifice",
-        "Encountering the action-oriented urgency of Mark's Gospel",
-        "Rooted in Caribbean culture and the salvation of souls (salvezza delle anime)",
-        "Keeping our hearts open to the transformative seed of the Word",
-      ],
-      paragraphs: [
-        "May this collection of homilies for Cycle B inspire readers to open their hearts to the seed of God's Word, allowing it to take root and bear a rich harvest of faith, service, compassion, and peace.",
-      ],
-    },
-  },
-  {
-    id: "book-10",
-    order: 10,
-    title: "Preaching God’s Word Day in and Day Out – Cycle C",
-    slug: "preaching-gods-word-day-in-and-day-out-cycle-c",
-    description:
-      "Homiletic reflections for Liturgical Cycle C centered on the Gospel of Luke, reflecting on Christ’s compassion, mercy, forgiveness, the poor, prayer, the Holy Spirit, Emmaus, migrant context, and the call to eternal life.",
-    coverImage: "/images/books/book10.jpg",
-    webpImage: "/images/books/book10.webp",
-    blurHash: "ToJ@Bw%1WB~Vt6soI[RlkCD+R*W=",
-    status: "COMING_SOON",
-    category: "Homiletics & Liturgy",
-    categories: [
-      "Gospel & Homily Reflections",
-      "Prayer, Mercy & Spiritual Growth",
-      "Christian Discipleship",
-      "The Human Heart & Transformation",
-      "Evangelization & Mission",
-    ],
-    publishedAt: null,
-    createdAt: "2024-01-01",
-    seo: {
-      title: "Preaching God’s Word Day in and Day Out – Cycle C",
-      description:
-        "Homiletic reflections for Liturgical Cycle C centered on the Gospel of Luke, reflecting on Christ’s compassion, mercy, forgiveness, the poor, prayer, the Holy Spirit, Emmaus, migrant context, and the call to eternal life.",
-    },
-    generalIntroduction: [
-      {
-        heading: "ABOUT THE BOOK",
-        paragraphs: [
-          "“Preaching God’s Word Day in and Day Out – Cycle C” is a collection of homiletic reflections for Liturgical Cycle C, centered primarily on the Gospel of Luke and complemented by the Gospel of John during significant liturgical moments.",
-        ],
-      },
-      {
-        heading: "THE GOSPEL OF LUKE AND THE COMPASSIONATE SAVIOR",
-        paragraphs: [
-          "Luke presents Jesus as the compassionate Savior who seeks and saves the lost, with particular emphasis on the poor, sinners, marginalized people, prayer, mercy, forgiveness, and the Holy Spirit.",
-          "The reflections invite the faithful to recognize Christ in both ordinary and extraordinary moments of life.",
-        ],
-      },
-      {
-        heading: "MIGRANT CULTURE AND LINGUISTIC CONTEXT",
-        paragraphs: [
-          "The book is written within a migrant cultural and worship context and incorporates Italian language and Saint Lucian French Kweyol where appropriate to connect the Word of God with the lived reality of diverse communities.",
-        ],
-      },
-      {
-        heading: "THE EMMAUS JOURNEY AND SPIRITUAL TRANSFORMATION",
-        paragraphs: [
-          "Throughout Cycle C, the journey of the disciples on the road to Emmaus serves as a powerful model of encounter, breaking open the Scriptures and recognizing Christ in the breaking of the bread.",
-        ],
-      },
-      {
-        heading: "A CALL TO RECEIVE GOD'S WORD",
-        paragraphs: [
-          "The central purpose is to allow God's Word to penetrate the heart, inspire faith, and guide the faithful toward eternal life and the salvation of souls.",
-        ],
-      },
-    ],
-    bookThemes: {
-      heading: "KEY THEMES",
-      subtitle:
-        "Major theological and pastoral emphases in Cycle C and Luke's Gospel.",
-      points: [
-        "Gospel of Luke",
-        "Compassion",
-        "Mercy",
-        "Forgiveness",
-        "Prayer",
-        "Holy Spirit",
-        "The poor and marginalized",
-        "Emmaus",
-        "Migrant culture",
-        "Italian language",
-        "Saint Lucian French Kweyol",
-        "Salvation of souls",
-      ],
-      paragraphs: [
-        "This volume offers an inspiring, compassionate companion for Sunday worshippers and preachers, bringing Luke's portrait of the merciful Christ into the realities of modern multicultural parish life.",
-      ],
-    },
-    concludingReflection: {
-      heading: "THE SAVING MERCY OF CHRIST AND THE JOURNEY OF FAITH",
-      subtitle:
-        "Encountering Christ in Luke's Gospel and the life of the Church.",
-      points: [
-        "Encountering Jesus as the compassionate Savior who seeks the lost",
-        "Living the Gospel of mercy, forgiveness, and prayer",
-        "Recognizing Christ in the migrant community and the breaking of bread",
-        "Guiding souls toward the fullness of eternal life",
-      ],
-      paragraphs: [
-        "Through the Gospel of Luke and the reflections of Cycle C, the faithful are called to allow God's transformative Word to guide every step of life toward salvation and eternal communion with God.",
-      ],
-    },
-  },
-  {
     id: "book-11",
-    order: 11,
+    order: 8,
     title: "What Matters Most Is Faith-Biblical Encounters with Christ That Reveal the Power of Faith",
     slug: "what-matters-most-is-faith-biblical-encounters-with-christ-that-reveal-the-power-of-faith",
     description:
@@ -1480,7 +1154,7 @@ export const books: Book[] = [
   },
   {
     id: "book-12",
-    order: 12,
+    order: 9,
     title: "Holy Women as Evangelizers of the Gospel",
     slug: "holy-women-as-evangelizers-of-the-gospel",
     description:
@@ -1575,7 +1249,7 @@ export const books: Book[] = [
   },
   {
     id: "book-13",
-    order: 13,
+    order: 10,
     title: "The Heart God Sees – Beyond What Man Cannot See",
     slug: "the-heart-god-sees-beyond-what-man-cannot-see",
     description:
@@ -1680,7 +1354,7 @@ export const books: Book[] = [
   },
   {
     id: "book-14",
-    order: 14,
+    order: 11,
     title: "Celebrating the Liturgical Life of the Church",
     slug: "celebrating-the-liturgical-life-of-the-church",
     description:
@@ -1789,7 +1463,7 @@ export const books: Book[] = [
   },
   {
     id: "book-15",
-    order: 15,
+    order: 12,
     title: "Encountering Immanuel: The Messiah",
     slug: "encountering-immanuel-the-messiah",
     description:
@@ -1893,6 +1567,332 @@ export const books: Book[] = [
       ],
       paragraphs: [
         "May this book lead us beyond merely celebrating the birth of Christ to a living encounter with him, so that Immanuel — God with us — may truly become God with us every day of our lives.",
+      ],
+    },
+  },
+  {
+    id: "book-08",
+    order: 13,
+    title: "Preaching God’s Word Day in and Day Out – Cycle A",
+    slug: "preaching-gods-word-day-in-and-day-out-cycle-a",
+    description:
+      "An enriching collection of homily reflections for Liturgical Cycle A, journeying through the Gospel of Matthew and the mystery of Christ. These reflections invite readers to encounter God’s Word more deeply, connect faith with daily life, and allow the Gospel to transform the heart through prayer, meditation, and faithful living.",
+    coverImage: "/images/books/book8.jpg",
+    webpImage: "/images/books/book8.webp",
+    blurHash: "TlJ*Fx-;M{~qxuRj9bR,afD*j]Rk",
+    status: "COMING_SOON",
+    category: "Homiletics & Liturgy",
+    categories: [
+      "Gospel & Homily Reflections",
+      "Christian Discipleship",
+      "Faith & Trust",
+      "Evangelization & Mission",
+    ],
+    publishedAt: null,
+    createdAt: "2024-01-01",
+    seo: {
+      title: "Preaching God’s Word Day in and Day Out – Cycle A",
+      description:
+        "An enriching collection of homily reflections for Liturgical Cycle A, journeying through the Gospel of Matthew and the mystery of Christ. These reflections invite readers to encounter God’s Word more deeply, connect faith with daily life, and allow the Gospel to transform the heart through prayer, meditation, and faithful living.",
+    },
+    generalIntroduction: [
+      {
+        heading: "ABOUT THE BOOK",
+        paragraphs: [
+          "“Preaching God’s Word Day in and Day Out – Cycle A” is a collection of homiletic reflections rooted in the liturgical readings of Cycle A.",
+        ],
+      },
+      {
+        heading: "THE JOURNEY THROUGH CYCLE A",
+        paragraphs: [
+          "In the liturgical calendar, Cycle A invites the faithful to journey more deeply into the mystery of Christ primarily through the Gospel of Matthew, complemented at important liturgical moments by the Gospel of John.",
+        ],
+      },
+      {
+        heading: "THE GOSPEL OF MATTHEW",
+        paragraphs: [
+          "The Gospel of Matthew provides rich insights into the life, teachings, mission, and saving work of Jesus Christ. Through His teachings and powerful miracles, Jesus is presented not merely as a teacher, but as the living fulfillment of God's saving plan.",
+        ],
+      },
+      {
+        heading: "CHRIST AS MESSIAH AND KING",
+        paragraphs: [
+          "A central emphasis of Matthew's Gospel is the revelation of Jesus as the long-awaited Messiah, the true King of Israel, and the fulfillment of the prophecies of the Old Testament. Matthew establishes this identity from the beginning by tracing Jesus' genealogy to Abraham and King David, emphasizing His royal lineage and covenantal identity.",
+        ],
+      },
+      {
+        heading: "THE SERMON ON THE MOUNT AND THE KINGDOM OF HEAVEN",
+        paragraphs: [
+          "The Gospel also gives particular importance to the Kingdom of Heaven and records profound teachings of Jesus, especially the Sermon on the Mount. Through these teachings, Christ presents the new law of love and calls His disciples to participate in the mission of proclaiming the Gospel to all nations.",
+        ],
+      },
+      {
+        heading: "HOMILIES FOR DAILY CHRISTIAN LIFE",
+        paragraphs: [
+          "Throughout the liturgical journey of Cycle A, the homilies seek to help the faithful recognize Christ's presence in both ordinary and extraordinary moments of daily life.",
+          "The reflections are intended not merely to communicate information or theological knowledge. Their deeper purpose is to touch the heart, encourage spiritual renewal, strengthen faith, and lead believers toward a deeper encounter with the Lord.",
+          "The homilies are written within the context of local culture and worship and are sometimes enriched through the use of the Italian language. They seek to communicate the unwavering love and compassion of Christ and to proclaim God's plan of salvation, expressed in the Church's mission of salvezza delle anime.",
+        ],
+      },
+      {
+        heading: "PRAYER, MEDITATION AND TRANSFORMATION",
+        paragraphs: [
+          "The book encourages readers not simply to read the Word of God, but to enter into it through prayer and meditation.",
+          "A central spiritual message of the work is that God's Word is not merely something to be read or heard. It is something to be lived.",
+          "The reader is therefore invited to pray for the guidance of the Holy Spirit so that God's Word may penetrate deeply into everyday life, transform thoughts, renew the heart, and guide the person according to the will of God.",
+        ],
+      },
+      {
+        heading: "FINAL SPIRITUAL INVITATION",
+        paragraphs: [
+          "Ultimately, this book is intended to accompany the faithful throughout the liturgical journey of Cycle A, helping them listen to, reflect upon, pray with, and live the Word of God.",
+        ],
+      },
+    ],
+    bookThemes: {
+      heading: "WHAT THIS BOOK EXPLORES",
+      subtitle: "Key liturgical, biblical, and spiritual themes across Cycle A.",
+      points: [
+        "Homily reflections rooted in the liturgical readings of Cycle A",
+        "Journeying through the Gospel of Matthew and the Gospel of John",
+        "Jesus as the long-awaited Messiah, true King of Israel, and fulfillment of prophecy",
+        "Jesus' royal genealogy tracing back to Abraham and King David",
+        "The Sermon on the Mount and the new law of love",
+        "Proclaiming the Kingdom of Heaven to all nations",
+        "Connecting Sunday Gospel readings with everyday Christian life",
+        "Spiritual renewal and deeper encounter with Christ",
+        "Cultural context and enrichment through the Italian language",
+        "Proclamation of God's plan of salvation (salvezza delle anime)",
+        "Prayer and meditation under the guidance of the Holy Spirit",
+        "Living the Word of God day in and day out",
+      ],
+      paragraphs: [
+        "This collection offers an accessible, pastorally warm companion for Sunday worshippers, preachers, and catechists seeking to integrate liturgical prayer into the fabric of daily life.",
+      ],
+    },
+    concludingReflection: {
+      heading: "LIVING THE WORD OF GOD DAY IN AND DAY OUT",
+      subtitle:
+        "A spiritual companion for listening, praying, and living the Gospel.",
+      points: [
+        "Encountering Christ in the liturgical rhythm of Cycle A",
+        "Transforming the heart through prayerful meditation on Scripture",
+        "The Church's supreme mission: la salvezza delle anime",
+        "Allowing the Holy Spirit to guide daily thought and action",
+      ],
+      paragraphs: [
+        "God's Word is not merely something to be read or heard—it is a living reality to be lived. This collection accompanies the faithful on their journey, inspiring minds and hearts to be transformed in Christ.",
+      ],
+    },
+  },
+  {
+    id: "book-09",
+    order: 14,
+    title: "Preaching God’s Word Day in and Day Out – Cycle B",
+    slug: "preaching-gods-word-day-in-and-day-out-cycle-b",
+    description:
+      "Journey through Liturgical Cycle B with the Gospel of Mark, reflecting on Christ’s humanity, compassion, suffering, discipleship, and call to service. These homily reflections connect God’s Word with daily life, Caribbean culture, and the mission of bringing Christ’s love, peace, and salvation to others.",
+    coverImage: "/images/books/book9.jpg",
+    webpImage: "/images/books/book9.webp",
+    blurHash: "ThK18g-:IV~pt7Rk4=NIoyIUofR+",
+    status: "COMING_SOON",
+    category: "Homiletics & Liturgy",
+    categories: [
+      "Gospel & Homily Reflections",
+      "Christian Discipleship",
+      "Evangelization & Mission",
+      "Faith & Trust",
+    ],
+    publishedAt: null,
+    createdAt: "2024-01-01",
+    seo: {
+      title: "Preaching God’s Word Day in and Day Out – Cycle B",
+      description:
+        "Journey through Liturgical Cycle B with the Gospel of Mark, reflecting on Christ’s humanity, compassion, suffering, discipleship, and call to service. These homily reflections connect God’s Word with daily life, Caribbean culture, and the mission of bringing Christ’s love, peace, and salvation to others.",
+    },
+    generalIntroduction: [
+      {
+        heading: "ABOUT THE BOOK",
+        paragraphs: [
+          "“Preaching God’s Word Day in and Day Out – Cycle B” is a collection of homiletic reflections centered on the liturgical readings of Cycle B.",
+          "In the liturgical calendar, Cycle B invites the faithful to journey deeper into the mystery of Christ primarily through the Gospel of Mark, supplemented by the Gospel of John during key liturgical moments.",
+        ],
+      },
+      {
+        heading: "THE GOSPEL OF MARK AND CYCLE B",
+        paragraphs: [
+          "This cycle places particular emphasis on the humanity of Jesus, His compassion, and His call to discipleship. It provides an opportunity to reflect upon how Christ’s teachings and example continue to speak to the realities of everyday life.",
+          "The book also recognizes the importance of understanding the distinctive character of Mark’s Gospel when preparing and proclaiming homilies. Pastors and preachers are encouraged to appreciate Mark’s dynamic and action-oriented narrative so that its message can be communicated effectively to the faithful.",
+          "The Gospel of Mark is the shortest and one of the most action-oriented of the four Gospels. It presents Jesus as the suffering Messiah and the powerful Son of God. Rather than concentrating primarily on extended teachings, Mark frequently emphasizes the actions and miracles of Jesus.",
+          "The repeated sense of urgency and movement within Mark’s narrative invites the reader to encounter Christ as one who acts, serves, heals, suffers, and calls people to follow Him.",
+        ],
+      },
+      {
+        heading: "CHRIST, DISCIPLESHIP AND SERVICE",
+        paragraphs: [
+          "A major theme of this cycle is discipleship. Believers are invited to follow Christ faithfully through sacrifice, suffering, service, and a life shaped by faith.",
+          "Each homily seeks to bring the unwavering love and compassion of Christ to the people while proclaiming God's plan of “salvezza delle animae” — the salvation of souls, which remains paramount.",
+        ],
+      },
+      {
+        heading: "CARIBBEAN CULTURAL AND PASTORAL CONTEXT",
+        paragraphs: [
+          "These reflections are written within the context of Caribbean culture and worship. The homilies seek to connect the Gospel with the lived experiences of local communities, drawing examples from daily life, local cultural experiences, worship patterns, and community realities.",
+          "The material also incorporates the local dialect French-Kewyol in certain places to communicate the message with greater impact among local people.",
+        ],
+      },
+      {
+        heading: "THE POWER OF GOD'S WORD",
+        paragraphs: [
+          "Allowing God's Word to enter deeply into our lives and meditating upon it helps us understand the message of the homilies more fully. God's Word is living and active, guiding and forming the believer in every circumstance of life (Hebrews 4:12; 2 Timothy 3:16).",
+          "The faithful are called to remain open to God's Word so that Scripture becomes an integral part of everyday life, shaping decisions and deepening prayer.",
+        ],
+      },
+      {
+        heading: "FAITH, REFLECTION, AND HUMAN EXPERIENCE",
+        paragraphs: [
+          "Although God's Word is divine and powerful, the writing and interpretation of homilies take place through human minds with limited knowledge and understanding. The work therefore recognizes human conditions and limitations in the process of preparing these reflections.",
+          "Rather than weakening the authority of Scripture, this invites both preacher and listener to approach God's Word with humility, openness, and faith.",
+        ],
+      },
+      {
+        heading: "A CALL TO RECEIVE GOD'S WORD",
+        paragraphs: [
+          "The reader is invited to keep the heart open to receive the seed of God's Word so that it may produce a rich harvest in daily life.",
+          "The ultimate invitation is to grow in faith, deepen one's personal relationship with God, follow Christ faithfully, serve others with compassion, and become instruments of God's love and peace in the world.",
+        ],
+      },
+    ],
+    bookThemes: {
+      heading: "WHAT THIS BOOK EXPLORES",
+      subtitle:
+        "Key liturgical, biblical, and cultural themes across Cycle B and Mark's Gospel.",
+      points: [
+        "Homily reflections rooted in the liturgical readings of Cycle B",
+        "Journeying primarily through the action-oriented Gospel of Mark (with John at key moments)",
+        "Jesus as the suffering Messiah and the powerful Son of God",
+        "Urgency, movement, healing miracles, and dynamic action in Mark's Gospel",
+        "Discipleship through sacrifice, suffering, service, and steadfast faith",
+        "Proclaiming God's plan of salvation (salvezza delle anime)",
+        "Caribbean cultural context, local community life, and worship",
+        "Use of French-Kweyol dialect for meaningful local pastoral communication",
+        "The living and transformative power of Scripture (Hebrews 4:12; 2 Timothy 3:16)",
+        "Human limitation and humility in the ministry of the Word",
+        "The spiritual seed of God's Word producing a rich harvest",
+        "Becoming instruments of Christ's love, peace, and salvation in daily life",
+      ],
+      paragraphs: [
+        "This volume provides a vibrant pastoral companion for Sunday worshippers and ministers, integrating the rapid urgency of the Gospel of Mark with the warmth and cultural richness of Caribbean parish life.",
+      ],
+    },
+    concludingReflection: {
+      heading: "THE SEED OF GOD'S WORD BEARING FRUIT",
+      subtitle:
+        "A pastoral journey through Mark's Gospel and the lived reality of faith.",
+      points: [
+        "Following Christ through discipleship, service, and sacrifice",
+        "Encountering the action-oriented urgency of Mark's Gospel",
+        "Rooted in Caribbean culture and the salvation of souls (salvezza delle anime)",
+        "Keeping our hearts open to the transformative seed of the Word",
+      ],
+      paragraphs: [
+        "May this collection of homilies for Cycle B inspire readers to open their hearts to the seed of God's Word, allowing it to take root and bear a rich harvest of faith, service, compassion, and peace.",
+      ],
+    },
+  },
+  {
+    id: "book-10",
+    order: 15,
+    title: "Preaching God’s Word Day in and Day Out – Cycle C",
+    slug: "preaching-gods-word-day-in-and-day-out-cycle-c",
+    description:
+      "Homiletic reflections for Liturgical Cycle C centered on the Gospel of Luke, reflecting on Christ’s compassion, mercy, forgiveness, the poor, prayer, the Holy Spirit, Emmaus, migrant context, and the call to eternal life.",
+    coverImage: "/images/books/book10.jpg",
+    webpImage: "/images/books/book10.webp",
+    blurHash: "ToJ@Bw%1WB~Vt6soI[RlkCD+R*W=",
+    status: "COMING_SOON",
+    category: "Homiletics & Liturgy",
+    categories: [
+      "Gospel & Homily Reflections",
+      "Prayer, Mercy & Spiritual Growth",
+      "Christian Discipleship",
+      "The Human Heart & Transformation",
+      "Evangelization & Mission",
+    ],
+    publishedAt: null,
+    createdAt: "2024-01-01",
+    seo: {
+      title: "Preaching God’s Word Day in and Day Out – Cycle C",
+      description:
+        "Homiletic reflections for Liturgical Cycle C centered on the Gospel of Luke, reflecting on Christ’s compassion, mercy, forgiveness, the poor, prayer, the Holy Spirit, Emmaus, migrant context, and the call to eternal life.",
+    },
+    generalIntroduction: [
+      {
+        heading: "ABOUT THE BOOK",
+        paragraphs: [
+          "“Preaching God’s Word Day in and Day Out – Cycle C” is a collection of homiletic reflections for Liturgical Cycle C, centered primarily on the Gospel of Luke and complemented by the Gospel of John during significant liturgical moments.",
+        ],
+      },
+      {
+        heading: "THE GOSPEL OF LUKE AND THE COMPASSIONATE SAVIOR",
+        paragraphs: [
+          "Luke presents Jesus as the compassionate Savior who seeks and saves the lost, with particular emphasis on the poor, sinners, marginalized people, prayer, mercy, forgiveness, and the Holy Spirit.",
+          "The reflections invite the faithful to recognize Christ in both ordinary and extraordinary moments of life.",
+        ],
+      },
+      {
+        heading: "MIGRANT CULTURE AND LINGUISTIC CONTEXT",
+        paragraphs: [
+          "The book is written within a migrant cultural and worship context and incorporates Italian language and Saint Lucian French Kweyol where appropriate to connect the Word of God with the lived reality of diverse communities.",
+        ],
+      },
+      {
+        heading: "THE EMMAUS JOURNEY AND SPIRITUAL TRANSFORMATION",
+        paragraphs: [
+          "Throughout Cycle C, the journey of the disciples on the road to Emmaus serves as a powerful model of encounter, breaking open the Scriptures and recognizing Christ in the breaking of the bread.",
+        ],
+      },
+      {
+        heading: "A CALL TO RECEIVE GOD'S WORD",
+        paragraphs: [
+          "The central purpose is to allow God's Word to penetrate the heart, inspire faith, and guide the faithful toward eternal life and the salvation of souls.",
+        ],
+      },
+    ],
+    bookThemes: {
+      heading: "KEY THEMES",
+      subtitle:
+        "Major theological and pastoral emphases in Cycle C and Luke's Gospel.",
+      points: [
+        "Gospel of Luke",
+        "Compassion",
+        "Mercy",
+        "Forgiveness",
+        "Prayer",
+        "Holy Spirit",
+        "The poor and marginalized",
+        "Emmaus",
+        "Migrant culture",
+        "Italian language",
+        "Saint Lucian French Kweyol",
+        "Salvation of souls",
+      ],
+      paragraphs: [
+        "This volume offers an inspiring, compassionate companion for Sunday worshippers and preachers, bringing Luke's portrait of the merciful Christ into the realities of modern multicultural parish life.",
+      ],
+    },
+    concludingReflection: {
+      heading: "THE SAVING MERCY OF CHRIST AND THE JOURNEY OF FAITH",
+      subtitle:
+        "Encountering Christ in Luke's Gospel and the life of the Church.",
+      points: [
+        "Encountering Jesus as the compassionate Savior who seeks the lost",
+        "Living the Gospel of mercy, forgiveness, and prayer",
+        "Recognizing Christ in the migrant community and the breaking of bread",
+        "Guiding souls toward the fullness of eternal life",
+      ],
+      paragraphs: [
+        "Through the Gospel of Luke and the reflections of Cycle C, the faithful are called to allow God's transformative Word to guide every step of life toward salvation and eternal communion with God.",
       ],
     },
   },

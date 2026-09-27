@@ -69,21 +69,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.revfrdrjosephraj.org/books/preaching-gods-word-day-in-and-day-out-cycle-a</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.revfrdrjosephraj.org/books/preaching-gods-word-day-in-and-day-out-cycle-b</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.revfrdrjosephraj.org/books/preaching-gods-word-day-in-and-day-out-cycle-c</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.revfrdrjosephraj.org/books/what-matters-most-is-faith-biblical-encounters-with-christ-that-reveal-the-power-of-faith</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -105,6 +90,21 @@
   </url>
   <url>
     <loc>https://www.revfrdrjosephraj.org/books/encountering-immanuel-the-messiah</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.revfrdrjosephraj.org/books/preaching-gods-word-day-in-and-day-out-cycle-a</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.revfrdrjosephraj.org/books/preaching-gods-word-day-in-and-day-out-cycle-b</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.revfrdrjosephraj.org/books/preaching-gods-word-day-in-and-day-out-cycle-c</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
