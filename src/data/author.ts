@@ -72,7 +72,7 @@ export const author: AuthorData = {
 
   imageUrl: "/images/author/author.jpg",
   webpImageUrl: "/images/author/author.webp",
-  blurHash: "TSOV_gw[8^VCbbkDI9R*o~s:jttR",
+  blurHash: "TUOp3@xC8^Q+bIkDI9WBtSs:jutR",
 
   /* ── Section 01: Early Life & Formation ──────────────────────── */
   earlyLifeAndFormation: [
