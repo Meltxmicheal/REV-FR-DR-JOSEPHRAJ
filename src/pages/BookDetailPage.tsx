@@ -7,9 +7,10 @@ import BookStatusBadge from "../components/books/BookStatus"
 import Divider from "../components/ui/Divider"
 import SectionHeading from "../components/ui/SectionHeading"
 import PublicationForm from "../components/forms/PublicationForm"
-import { books, getBook, type BookStatus } from "../data/books"
+import { sortedBooks, getBook, type BookStatus } from "../data/books"
 import { author } from "../data/author"
 import BookCard from "../components/books/BookCard"
+import NotFoundPage from "./NotFoundPage"
 
 function BookCTA({ status }: { status: BookStatus }) {
   if (status === "AVAILABLE") {
@@ -59,30 +60,6 @@ function BookCTA({ status }: { status: BookStatus }) {
         <PublicationForm />
       </div>
     </div>
-  )
-}
-
-function NotFound() {
-  return (
-    <main id="root">
-      <Container>
-        <div className="py-32 text-center">
-          <p className="font-sans text-[11px] font-medium tracking-[0.2em] uppercase text-muted-foreground mb-5">
-            404
-          </p>
-          <h1 className="font-serif text-4xl text-navy mb-4">Book Not Found</h1>
-          <p className="font-sans text-base text-muted-foreground mb-8">
-            The book you are looking for could not be found.
-          </p>
-          <Link
-            to="/books"
-            className="font-sans text-sm text-navy underline underline-offset-4 hover:text-gold transition-colors"
-          >
-            ← Return to Books
-          </Link>
-        </div>
-      </Container>
-    </main>
   )
 }
 
@@ -162,15 +139,15 @@ export default function BookDetailPage() {
     window.scrollTo(0, 0)
   }, [book])
 
-  if (!book) return <NotFound />
+  if (!book) return <NotFoundPage />
 
-  const bookIndex = books.findIndex((b) => b.slug === slug)
-  const prevBook = bookIndex > 0 ? books[bookIndex - 1] : null
-  const nextBook = bookIndex < books.length - 1 ? books[bookIndex + 1] : null
+  const bookIndex = sortedBooks.findIndex((b) => b.slug === slug)
+  const prevBook = bookIndex > 0 ? sortedBooks[bookIndex - 1] : null
+  const nextBook = bookIndex < sortedBooks.length - 1 ? sortedBooks[bookIndex + 1] : null
 
   // Thematic similarity: score other books by shared categories
   const currentCats = book.categories || [book.category]
-  const relatedBooks = books
+  const relatedBooks = sortedBooks
     .filter((b) => b.slug !== slug)
     .map((otherBook) => {
       const otherCats = otherBook.categories || [otherBook.category]
@@ -208,9 +185,9 @@ export default function BookDetailPage() {
                 <Link
                   to={`/books/${prevBook.slug}`}
                   className="text-navy hover:text-gold transition-colors flex items-center gap-1"
-                  title={`Previous: Book ${bookIndex}: ${prevBook.title}`}
+                  title={`Previous: Book ${prevBook.order ?? bookIndex}: ${prevBook.title}`}
                 >
-                  ← <span className="hidden sm:inline">Book {bookIndex}</span>
+                  ← <span className="hidden sm:inline">Book {prevBook.order ?? bookIndex}</span>
                 </Link>
               ) : (
                 <span className="text-muted-foreground/30 cursor-not-allowed">
@@ -222,9 +199,9 @@ export default function BookDetailPage() {
                 <Link
                   to={`/books/${nextBook.slug}`}
                   className="text-navy hover:text-gold transition-colors flex items-center gap-1"
-                  title={`Next: Book ${bookIndex + 2}: ${nextBook.title}`}
+                  title={`Next: Book ${nextBook.order ?? bookIndex + 2}: ${nextBook.title}`}
                 >
-                  <span className="hidden sm:inline">Book {bookIndex + 2}</span> →
+                  <span className="hidden sm:inline">Book {nextBook.order ?? bookIndex + 2}</span> →
                 </Link>
               ) : (
                 <span className="text-muted-foreground/30 cursor-not-allowed">

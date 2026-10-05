@@ -6,7 +6,7 @@ import SectionHeading from "../components/ui/SectionHeading"
 import Divider from "../components/ui/Divider"
 import PublicationForm from "../components/forms/PublicationForm"
 import AuthorPortrait from "../components/ui/AuthorPortrait"
-import { books } from "../data/books"
+import { sortedBooks, books } from "../data/books"
 import { author } from "../data/author"
 import { useInView } from "../hooks/useInView"
 import { useReducedMotion } from "../hooks/useReducedMotion"
@@ -57,7 +57,7 @@ export default function HomePage() {
   )
   const reduced = useReducedMotion()
   const parallaxOffset = useParallax(0.04)
-  const featuredBooks = books.slice(0, 3)
+  const featuredBooks = sortedBooks.slice(0, 3)
 
   return (
     <main id="root" className="bg-parchment min-h-screen">

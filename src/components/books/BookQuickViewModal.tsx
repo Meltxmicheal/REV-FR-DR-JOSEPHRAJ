@@ -4,7 +4,7 @@ import type { Book } from "../../data/books"
 import { author } from "../../data/author"
 import BookCover from "./BookCover"
 import BookStatusBadge from "./BookStatus"
-import { books } from "../../data/books"
+import { sortedBooks } from "../../data/books"
 
 type Props = {
   book: Book | null
@@ -52,19 +52,21 @@ export default function BookQuickViewModal({ book, onClose }: Props) {
   const overlayRef = useRef<HTMLDivElement>(null)
   const panelRef = useRef<HTMLDivElement>(null)
   const closeButtonRef = useRef<HTMLButtonElement>(null)
+  const exitTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const navigate = useNavigate()
 
-  const bookIndex = book ? books.findIndex((b) => b.slug === book.slug) : 0
+  const bookIndex = book ? sortedBooks.findIndex((b) => b.slug === book.slug) : 0
 
   const triggerClose = useCallback(() => {
     setExiting(true)
-    setTimeout(() => {
+    if (exitTimerRef.current) clearTimeout(exitTimerRef.current)
+    exitTimerRef.current = setTimeout(() => {
       setExiting(false)
       onClose()
     }, 180)
   }, [onClose])
 
-  /* Focus trap + ESC */
+  /* Focus trap + ESC + cleanup */
   useEffect(() => {
     if (!book) return
 
@@ -83,6 +85,7 @@ export default function BookQuickViewModal({ book, onClose }: Props) {
       const focusable = panel.querySelectorAll<HTMLElement>(
         'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
       )
+      if (focusable.length === 0) return
       const first = focusable[0]
       const last = focusable[focusable.length - 1]
 
@@ -105,6 +108,7 @@ export default function BookQuickViewModal({ book, onClose }: Props) {
     return () => {
       document.removeEventListener("keydown", onKeyDown)
       document.body.style.overflow = ""
+      if (exitTimerRef.current) clearTimeout(exitTimerRef.current)
       previousFocus?.focus()
     }
   }, [book, triggerClose])
@@ -116,7 +120,7 @@ export default function BookQuickViewModal({ book, onClose }: Props) {
       ref={overlayRef}
       role="dialog"
       aria-modal="true"
-      aria-label={`Quick view: ${book.title}`}
+      aria-labelledby="quick-view-title"
       className={`fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-6
         ${exiting ? "modal-overlay-exit" : "modal-overlay-enter"}
       `}
@@ -177,7 +181,7 @@ export default function BookQuickViewModal({ book, onClose }: Props) {
             </div>
 
             {/* Title */}
-            <h2 className="font-serif text-2xl sm:text-3xl font-normal text-navy leading-snug mb-5">
+            <h2 id="quick-view-title" className="font-serif text-2xl sm:text-3xl font-normal text-navy leading-snug mb-5">
               {book.title}
             </h2>
 

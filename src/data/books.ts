@@ -1898,6 +1898,11 @@ export const books: Book[] = [
   },
 ]
 
+export const sortedBooks: Book[] = [...books].sort(
+  (a, b) => (a.order ?? 0) - (b.order ?? 0)
+)
+
 export function getBook(slug: string): Book | undefined {
-  return books.find((b) => b.slug === slug)
+  return sortedBooks.find((b) => b.slug === slug)
 }
+

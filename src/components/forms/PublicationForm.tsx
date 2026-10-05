@@ -13,10 +13,12 @@ export default function PublicationForm({ compact = false }: PublicationFormProp
   const [formState, setFormState] = useState<FormState>("idle")
   const [emailError, setEmailError] = useState("")
   const [savedEmail, setSavedEmail] = useState("")
+  const [copied, setCopied] = useState(false)
 
   function validateEmail(value: string): string {
-    if (!value.trim()) return "Email address is required."
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return "Please enter a valid email address."
+    const trimmed = value.trim()
+    if (!trimmed) return "Email address is required."
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmed)) return "Please enter a valid email address."
     return ""
   }
 
@@ -30,49 +32,92 @@ export default function PublicationForm({ compact = false }: PublicationFormProp
     setEmailError("")
     setFormState("submitting")
 
+    const cleanEmail = email.trim().toLowerCase()
+
     try {
-      // Save locally to maintain client state
-      const existing = JSON.parse(localStorage.getItem("publication_notifications") || "[]")
-      if (!existing.includes(email)) {
-        existing.push(email)
-        localStorage.setItem("publication_notifications", JSON.stringify(existing))
+      const raw = localStorage.getItem("publication_notifications")
+      let list: string[] = []
+      if (raw) {
+        const parsed = JSON.parse(raw)
+        if (Array.isArray(parsed)) {
+          list = parsed.filter((item): item is string => typeof item === "string")
+        }
+      }
+      if (!list.includes(cleanEmail)) {
+        list.push(cleanEmail)
+        localStorage.setItem("publication_notifications", JSON.stringify(list))
       }
     } catch {
-      // Ignore localStorage errors
+      // Safe fallback if localStorage is disabled or unavailable
     }
 
-    setSavedEmail(email)
+    setSavedEmail(cleanEmail)
     setFormState("success")
     setEmail("")
   }
 
+  const formatNotifyBody = () => [
+    "New publication notification request received from the Rev. Fr. Dr. Joseph Raj website.",
+    "",
+    `Email:\n${savedEmail}`,
+    "",
+    "Source:\nPublication Updates Form (www.revfrdrjosephraj.org)",
+    "",
+    `Date:\n${new Date().toLocaleString()}`,
+    "",
+    "Request:\nPlease notify me when new books and publications by Rev. Fr. Dr. Joseph Raj are released.",
+  ].join("\n")
+
+  function handleCopyText() {
+    navigator.clipboard.writeText(formatNotifyBody())
+    setCopied(true)
+    setTimeout(() => setCopied(false), 3000)
+  }
+
   if (formState === "success") {
-    const notifyBody = [
-      "New publication notification request received from the Rev. Dr. Fr. Joseph Raj website.",
-      "",
-      `Email:\n${savedEmail}`,
-      "",
-      "Source:\nPublication Updates Form (www.revfrdrjosephraj.org)",
-      "",
-      `Date:\n${new Date().toLocaleString()}`,
-      "",
-      "Request:\nPlease notify me when new books and publications by Rev. Fr. Dr. Joseph Raj are released.",
-    ].join("\n")
+    const mailtoUrl = `mailto:${NOTIFY_EMAIL}?subject=${encodeURIComponent(
+      "Website Notification Request — New Book Releases"
+    )}&body=${encodeURIComponent(formatNotifyBody())}`
 
     return (
-      <div className="bg-background border border-border p-4 space-y-2 text-left" role="status" aria-live="polite">
-        <p className="font-sans text-[13px] text-navy font-medium">
-          ✓ Notification Request Saved
+      <div className="bg-background border border-border p-5 space-y-4 text-left" role="status" aria-live="polite">
+        <div className="flex items-center gap-2">
+          <span className="w-2 h-2 rounded-full bg-gold inline-block" />
+          <p className="font-sans text-[12px] font-semibold tracking-wider uppercase text-navy">
+            Saved Locally on Device
+          </p>
+        </div>
+        <p className="font-sans text-[13px] text-muted-foreground leading-relaxed">
+          Your request for <strong className="text-foreground">{savedEmail}</strong> has been saved on this browser.
         </p>
         <p className="font-sans text-[12px] text-muted-foreground leading-relaxed">
-          Your email (<strong className="text-foreground">{savedEmail}</strong>) is registered. To ensure priority dispatch upon release, you can also{" "}
-          <a
-            href={`mailto:${NOTIFY_EMAIL}?subject=${encodeURIComponent("Website Notification Request — New Book Releases")}&body=${encodeURIComponent(notifyBody)}`}
-            className="text-navy underline hover:text-gold"
-          >
-            send a 1-click confirmation note
-          </a>.
+          Because this site is a direct showcase without a backend server, send a quick 1-click email directly to Fr. Joseph Raj to confirm your request:
         </p>
+        <div className="flex flex-wrap items-center gap-3 pt-1">
+          <a
+            href={mailtoUrl}
+            className="inline-flex items-center justify-center font-sans text-[12px] font-medium bg-navy text-ivory px-5 py-2.5 hover:bg-navy-deep transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring"
+          >
+            Send Direct Email Confirmation →
+          </a>
+          <button
+            type="button"
+            onClick={handleCopyText}
+            className="font-sans text-[12px] text-navy underline underline-offset-4 hover:text-gold transition-colors"
+          >
+            {copied ? "✓ Copied Details" : "Copy Email Details"}
+          </button>
+        </div>
+        <button
+          type="button"
+          onClick={() => {
+            setFormState("idle")
+            setSavedEmail("")
+          }}
+          className="font-sans text-[11px] text-muted-foreground hover:text-navy underline underline-offset-2 block pt-1"
+        >
+          Submit another request
+        </button>
       </div>
     )
   }
@@ -80,11 +125,11 @@ export default function PublicationForm({ compact = false }: PublicationFormProp
   const inputId = compact ? "notify-compact" : "notify-main"
 
   return (
-    <form onSubmit={handleSubmit} noValidate>
+    <form onSubmit={handleSubmit} noValidate className="space-y-2">
       <div className={`flex ${compact ? "flex-col gap-2" : "flex-col sm:flex-row gap-3"}`}>
         <div className="flex-1 flex flex-col gap-1">
           <label htmlFor={inputId} className="sr-only">
-            Email address
+            Email address for publication updates
           </label>
           <input
             id={inputId}
@@ -124,9 +169,12 @@ export default function PublicationForm({ compact = false }: PublicationFormProp
             ${compact ? "w-full" : "shrink-0"}
           `}
         >
-          {formState === "submitting" ? "Registering…" : "Notify Me"}
+          {formState === "submitting" ? "Processing…" : "Notify Me"}
         </button>
       </div>
+      <p className="font-sans text-[11px] text-muted-foreground/80 leading-normal">
+        Saves a local device bookmark &amp; opens a 1-click email to Fr. Joseph Raj.
+      </p>
     </form>
   )
 }

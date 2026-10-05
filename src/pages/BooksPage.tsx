@@ -5,7 +5,7 @@ import BookGrid from "../components/books/BookGrid"
 import SectionHeading from "../components/ui/SectionHeading"
 import Divider from "../components/ui/Divider"
 import PublicationForm from "../components/forms/PublicationForm"
-import { books, DISCOVERY_CATEGORIES, type Book } from "../data/books"
+import { sortedBooks, books, DISCOVERY_CATEGORIES, type Book } from "../data/books"
 import { usePageMeta } from "../hooks/usePageMeta"
 
 const categories = ["All Books", ...DISCOVERY_CATEGORIES]
@@ -56,7 +56,7 @@ export default function BooksPage() {
     }
   }
 
-  const filtered = books.filter((b) => isBookInCategory(activeCategory, b))
+  const filtered = sortedBooks.filter((b) => isBookInCategory(activeCategory, b))
 
   return (
     <main id="root" className="bg-parchment min-h-screen">
