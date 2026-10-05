@@ -38,29 +38,29 @@ export default function PrivacyPage() {
             </section>
 
             <section className="space-y-4">
-              <h2 className="font-serif text-2xl text-navy">2. Information We Collect</h2>
+              <h2 className="font-serif text-2xl text-navy">2. Information We Handle</h2>
               <p>
-                We only collect personal information that you voluntarily provide to us when you:
+                This website operates as a direct static showcase. We only process information that you voluntarily provide when you:
               </p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Submit a general or academic inquiry through the contact page.</li>
-                <li>Register your email address to receive publication updates for forthcoming books.</li>
-                <li>Communicate directly with the author or editorial administration via email.</li>
+                <li>Prepare a general or academic inquiry through the contact form.</li>
+                <li>Save a publication notification bookmark locally on your browser or launch a direct email confirmation.</li>
+                <li>Communicate directly with the author or administration via email.</li>
               </ul>
               <p>
-                Such information may include your name, email address, message subject, and the contents of your inquiry. We do not collect sensitive payment data or financial details on this platform.
+                Such information may include your name, email address, message subject, and the contents of your inquiry. No payment processing, account creation, or tracking databases exist on this platform.
               </p>
             </section>
 
             <section className="space-y-4">
               <h2 className="font-serif text-2xl text-navy">3. Use of Information</h2>
               <p>
-                Any personal information provided to us is used solely for:
+                Any information or preference recorded is used solely for:
               </p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Responding directly to your pastoral, academic, or general inquiries.</li>
+                <li>Responding directly to your pastoral, academic, or general inquiries via email.</li>
                 <li>Transmitting announcements regarding the release of new theological publications.</li>
-                <li>Maintaining the security and technical functionality of the website.</li>
+                <li>Maintaining local browser preferences for publication notification reminders.</li>
               </ul>
               <p>
                 We do not sell, rent, lease, or commercialize your personal information to third parties or marketing entities under any circumstances.
