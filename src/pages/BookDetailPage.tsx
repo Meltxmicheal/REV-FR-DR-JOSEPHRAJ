@@ -83,10 +83,18 @@ export default function BookDetailPage() {
         "image": coverUrl,
         "url": bookUrl,
         "inLanguage": "en",
+        "genre": book.category,
+        "mainEntityOfPage": bookUrl,
         "author": {
           "@type": "Person",
           "@id": "https://www.revfrdrjosephraj.org/#author",
-          "name": "Rev. Fr. Dr. Joseph Raj"
+          "name": "Rev. Fr. Dr. Joseph Raj",
+          "url": "https://www.revfrdrjosephraj.org/about"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "@id": "https://www.revfrdrjosephraj.org/#organization",
+          "name": "Rev. Fr. Dr. Joseph Raj Ministry & Publications"
         }
       },
       {
@@ -112,7 +120,19 @@ export default function BookDetailPage() {
             "item": bookUrl
           }
         ]
-      }
+      },
+      ...(book.faqs && book.faqs.length > 0 ? [{
+        "@type": "FAQPage",
+        "@id": `${bookUrl}#faq`,
+        "mainEntity": book.faqs.map((faq) => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      }] : [])
     ]
   } : undefined
 
@@ -247,10 +267,22 @@ export default function BookDetailPage() {
               {/* Title */}
               <h1
                 id="book-title"
-                className="font-serif text-2xl sm:text-3xl md:text-[34px] lg:text-[38px] font-normal text-navy leading-[1.25] mb-6"
+                className="font-serif text-2xl sm:text-3xl md:text-[34px] lg:text-[38px] font-normal text-navy leading-[1.25] mb-3"
               >
                 {book.title}
               </h1>
+
+              {/* Author attribution for AEO & Entity Linking */}
+              <p className="font-sans text-[13px] text-muted-foreground mb-6">
+                By{" "}
+                <Link
+                  to="/about"
+                  className="font-medium text-navy hover:text-gold underline underline-offset-2 transition-colors"
+                >
+                  Rev. Fr. Dr. Joseph Raj
+                </Link>{" "}
+                · Priest, Theologian, Canonist &amp; Author
+              </p>
 
               <Divider className="mb-6" />
 
@@ -717,6 +749,133 @@ export default function BookDetailPage() {
                       </ul>
                     </div>
                   )}
+                </div>
+              </div>
+            </Container>
+          </section>
+        </>
+      )}
+
+      {/* ── AEO Question Section: About This Book ────────────────── */}
+      {book.aeoQuestions && (
+        <>
+          <Divider />
+          <section aria-labelledby="aeo-questions-heading" className="py-16 md:py-24 bg-secondary/40">
+            <Container>
+              <div className="max-w-3xl">
+                <SectionHeading
+                  label="AEO Overview"
+                  title="About This Book"
+                  subtitle="Essential questions, target audience, key themes, and theological impact."
+                />
+
+                <div className="mt-12 space-y-10">
+                  {book.aeoQuestions.aboutThisBook && (
+                    <div>
+                      <h3 className="font-sans text-[11px] font-semibold tracking-[0.2em] uppercase text-gold mb-3">
+                        What is this book about?
+                      </h3>
+                      <p className="font-sans text-[15px] sm:text-[16px] text-foreground/90 leading-[1.85]">
+                        {book.aeoQuestions.aboutThisBook}
+                      </p>
+                    </div>
+                  )}
+
+                  {book.aeoQuestions.whoIsThisBookFor && (
+                    <div>
+                      <h3 className="font-sans text-[11px] font-semibold tracking-[0.2em] uppercase text-gold mb-3">
+                        Who is this book for?
+                      </h3>
+                      <p className="font-sans text-[15px] sm:text-[16px] text-foreground/90 leading-[1.85]">
+                        {book.aeoQuestions.whoIsThisBookFor}
+                      </p>
+                    </div>
+                  )}
+
+                  {book.aeoQuestions.mainThemes && book.aeoQuestions.mainThemes.length > 0 && (
+                    <div>
+                      <h3 className="font-sans text-[11px] font-semibold tracking-[0.2em] uppercase text-gold mb-4">
+                        What are the main themes?
+                      </h3>
+                      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        {book.aeoQuestions.mainThemes.map((theme, tIdx) => (
+                          <li key={tIdx} className="flex items-start gap-2.5 font-sans text-[13px] text-foreground leading-snug">
+                            <span className="w-1.5 h-1.5 rounded-full bg-gold shrink-0 mt-1.5" aria-hidden="true" />
+                            <span>{theme}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {book.aeoQuestions.questionsAddressed && book.aeoQuestions.questionsAddressed.length > 0 && (
+                    <div>
+                      <h3 className="font-sans text-[11px] font-semibold tracking-[0.2em] uppercase text-gold mb-4">
+                        What questions does this book address?
+                      </h3>
+                      <ul className="space-y-3">
+                        {book.aeoQuestions.questionsAddressed.map((q, qIdx) => (
+                          <li key={qIdx} className="flex items-start gap-2.5 font-sans text-[14px] text-navy font-medium leading-snug">
+                            <span className="text-gold font-sans font-semibold shrink-0" aria-hidden="true">?</span>
+                            <span>{q}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {book.aeoQuestions.theologicalSignificance && (
+                    <div>
+                      <h3 className="font-sans text-[11px] font-semibold tracking-[0.2em] uppercase text-gold mb-3">
+                        What is the theological significance?
+                      </h3>
+                      <p className="font-sans text-[15px] sm:text-[16px] text-foreground/90 leading-[1.85]">
+                        {book.aeoQuestions.theologicalSignificance}
+                      </p>
+                    </div>
+                  )}
+
+                  {book.aeoQuestions.pastoralSignificance && (
+                    <div>
+                      <h3 className="font-sans text-[11px] font-semibold tracking-[0.2em] uppercase text-gold mb-3">
+                        What is the pastoral significance?
+                      </h3>
+                      <p className="font-sans text-[15px] sm:text-[16px] text-foreground/90 leading-[1.85]">
+                        {book.aeoQuestions.pastoralSignificance}
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </Container>
+          </section>
+        </>
+      )}
+
+      {/* ── FAQ Section: Frequently Asked Questions ─────────────── */}
+      {book.faqs && book.faqs.length > 0 && (
+        <>
+          <Divider />
+          <section aria-labelledby="faq-heading" className="py-16 md:py-24">
+            <Container>
+              <div className="max-w-3xl">
+                <SectionHeading
+                  label="Inquiries & Explanations"
+                  title="Frequently Asked Questions"
+                  subtitle="Authoritative answers derived from the author's written works."
+                />
+
+                <div className="mt-12 space-y-8">
+                  {book.faqs.map((faq, fIdx) => (
+                    <article key={fIdx} className="bg-secondary/60 border border-border p-6 sm:p-8">
+                      <h3 className="font-serif text-xl sm:text-2xl text-navy font-normal mb-3">
+                        {faq.question}
+                      </h3>
+                      <p className="font-sans text-[15px] sm:text-[16px] text-foreground/90 leading-[1.85]">
+                        {faq.answer}
+                      </p>
+                    </article>
+                  ))}
                 </div>
               </div>
             </Container>

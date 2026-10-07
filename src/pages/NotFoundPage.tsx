@@ -8,7 +8,6 @@ export default function NotFoundPage() {
     "The requested page could not be found. Return to the catalogue or home page of Rev. Fr. Dr. Joseph Raj.",
     {
       noindex: true,
-      canonical: "https://www.revfrdrjosephraj.org/404",
     }
   )
 

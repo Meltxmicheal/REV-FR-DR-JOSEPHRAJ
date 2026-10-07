@@ -4,6 +4,43 @@ import Divider from "../components/ui/Divider"
 import { usePageMeta } from "../hooks/usePageMeta"
 
 export default function ContactPage() {
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ContactPage",
+        "@id": "https://www.revfrdrjosephraj.org/contact#contactpage",
+        "url": "https://www.revfrdrjosephraj.org/contact",
+        "name": "Contact Rev. Fr. Dr. Joseph Raj",
+        "description": "Get in touch with Rev. Fr. Dr. Joseph Raj for pastoral inquiries, publication updates, and correspondence.",
+        "mainEntity": {
+          "@type": "Person",
+          "@id": "https://www.revfrdrjosephraj.org/#author",
+          "name": "Rev. Fr. Dr. Joseph Raj",
+          "email": "mailto:josephraj13@hotmail.com"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.revfrdrjosephraj.org/contact#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.revfrdrjosephraj.org/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Contact",
+            "item": "https://www.revfrdrjosephraj.org/contact"
+          }
+        ]
+      }
+    ]
+  }
+
   usePageMeta(
     "Contact Rev. Fr. Dr. Joseph Raj",
     "Get in touch with Rev. Fr. Dr. Joseph Raj for pastoral enquiries, theological research discussions, publication updates, and correspondence.",
@@ -12,6 +49,7 @@ export default function ContactPage() {
       ogUrl: "https://www.revfrdrjosephraj.org/contact",
       ogImage: "https://www.revfrdrjosephraj.org/images/author/author.jpg",
       twitterImage: "https://www.revfrdrjosephraj.org/images/author/author.jpg",
+      schema: contactSchema,
     }
   )
   return (

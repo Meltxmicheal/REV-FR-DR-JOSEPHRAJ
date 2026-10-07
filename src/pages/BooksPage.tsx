@@ -19,6 +19,60 @@ function isBookInCategory(cat: string, book: Book): boolean {
 }
 
 export default function BooksPage() {
+  const booksCollectionSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://www.revfrdrjosephraj.org/books#collection",
+        "url": "https://www.revfrdrjosephraj.org/books",
+        "name": "Books by Rev. Fr. Dr. Joseph Raj | 15-Volume Collection",
+        "description": "The complete 15-volume scholarly and pastoral collection of Rev. Fr. Dr. Joseph Raj.",
+        "publisher": {
+          "@type": "Person",
+          "@id": "https://www.revfrdrjosephraj.org/#author",
+          "name": "Rev. Fr. Dr. Joseph Raj"
+        },
+        "mainEntity": {
+          "@type": "ItemList",
+          "numberOfItems": sortedBooks.length,
+          "itemListElement": sortedBooks.map((b, idx) => ({
+            "@type": "ListItem",
+            "position": idx + 1,
+            "url": `https://www.revfrdrjosephraj.org/books/${b.slug}`,
+            "item": {
+              "@type": "Book",
+              "@id": `https://www.revfrdrjosephraj.org/books/${b.slug}#book`,
+              "name": b.title,
+              "url": `https://www.revfrdrjosephraj.org/books/${b.slug}`,
+              "author": {
+                "@id": "https://www.revfrdrjosephraj.org/#author"
+              }
+            }
+          }))
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.revfrdrjosephraj.org/books#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.revfrdrjosephraj.org/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Books",
+            "item": "https://www.revfrdrjosephraj.org/books"
+          }
+        ]
+      }
+    ]
+  }
+
   usePageMeta(
     "Books by Rev. Fr. Dr. Joseph Raj | 15-Volume Collection",
     "Explore the 15-volume scholarly and pastoral collection of Rev. Fr. Dr. Joseph Raj covering faith, Scripture, family life, marriage, spirituality, theology, canon law, and Christian mission.",
@@ -27,6 +81,7 @@ export default function BooksPage() {
       ogUrl: "https://www.revfrdrjosephraj.org/books",
       ogImage: "https://www.revfrdrjosephraj.org/images/author/author.jpg",
       twitterImage: "https://www.revfrdrjosephraj.org/images/author/author.jpg",
+      schema: booksCollectionSchema,
     }
   )
   const [searchParams, setSearchParams] = useSearchParams()

@@ -45,6 +45,56 @@ function RevealSection({
 }
 
 export default function HomePage() {
+  const homeSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://www.revfrdrjosephraj.org/#author",
+        "name": "Rev. Fr. Dr. Joseph Raj",
+        "givenName": "Joseph",
+        "familyName": "Raj",
+        "honorificPrefix": "Rev. Fr. Dr.",
+        "jobTitle": "Priest, Theologian, Canonist and Author",
+        "description": "Catholic Priest of the Archdiocese of Castries, Doctor in Moral Theology (Accademia Alfonsiana), Licentiate in Canon Law (Angelicum, Rome), and Author.",
+        "image": "https://www.revfrdrjosephraj.org/images/author/author.jpg",
+        "url": "https://www.revfrdrjosephraj.org/",
+        "email": "mailto:josephraj13@hotmail.com",
+        "workLocation": {
+          "@type": "Place",
+          "name": "Saint Lucia, West Indies"
+        },
+        "memberOf": {
+          "@type": "Organization",
+          "name": "Archdiocese of Castries"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.revfrdrjosephraj.org/#website",
+        "url": "https://www.revfrdrjosephraj.org/",
+        "name": "Rev. Fr. Dr. Joseph Raj",
+        "description": "Official website and 15-volume theological, canonical, and spiritual collection of Rev. Fr. Dr. Joseph Raj.",
+        "publisher": {
+          "@id": "https://www.revfrdrjosephraj.org/#author"
+        },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.revfrdrjosephraj.org/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.revfrdrjosephraj.org/"
+          }
+        ]
+      }
+    ]
+  }
+
   usePageMeta(
     "Rev. Fr. Dr. Joseph Raj | Priest, Theologian, Canonist & Author",
     "Explore the life, ministry, writings, and 15-volume scholarly and pastoral collection of Rev. Fr. Dr. Joseph Raj, priest, theologian, canonist, preacher, and author.",
@@ -53,6 +103,7 @@ export default function HomePage() {
       ogUrl: "https://www.revfrdrjosephraj.org/",
       ogImage: "https://www.revfrdrjosephraj.org/images/author/author.jpg",
       twitterImage: "https://www.revfrdrjosephraj.org/images/author/author.jpg",
+      schema: homeSchema,
     }
   )
   const reduced = useReducedMotion()

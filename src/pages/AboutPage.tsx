@@ -40,14 +40,53 @@ function TwoCol({
 
 /* ── Page ──────────────────────────────────────────────────────────────── */
 export default function AboutPage() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfilePage",
+        "@id": "https://www.revfrdrjosephraj.org/about#profile",
+        "url": "https://www.revfrdrjosephraj.org/about",
+        "name": "About Rev. Fr. Dr. Joseph Raj | Priest, Theologian & Author",
+        "mainEntity": {
+          "@type": "Person",
+          "@id": "https://www.revfrdrjosephraj.org/#author",
+          "name": "Rev. Fr. Dr. Joseph Raj",
+          "jobTitle": "Priest, Theologian, Canonist and Author",
+          "email": "mailto:josephraj13@hotmail.com",
+          "url": "https://www.revfrdrjosephraj.org/"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.revfrdrjosephraj.org/about#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.revfrdrjosephraj.org/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "About",
+            "item": "https://www.revfrdrjosephraj.org/about"
+          }
+        ]
+      }
+    ]
+  }
+
   usePageMeta(
-    "About Rev. Fr. Dr. Joseph Raj | Priest & Author",
+    "About Rev. Fr. Dr. Joseph Raj | Priest, Theologian & Author",
     "Learn about Rev. Fr. Dr. Joseph Raj, Catholic priest of the Archdiocese of Castries, Doctor in Moral Theology, Canonist, and author of 15 theological and pastoral works.",
     {
       canonical: "https://www.revfrdrjosephraj.org/about",
       ogUrl: "https://www.revfrdrjosephraj.org/about",
       ogImage: "https://www.revfrdrjosephraj.org/images/author/author.jpg",
       twitterImage: "https://www.revfrdrjosephraj.org/images/author/author.jpg",
+      schema: schema,
     }
   )
   const fluent = author.languages.filter((l) => l.level === "fluent")
@@ -89,8 +128,11 @@ export default function AboutPage() {
       {/* ── 01 Early Life & Formation ────────────────────────────── */}
       <section aria-labelledby="formation-heading" className="py-14 md:py-20">
         <Container>
-          <TwoCol number="01" label="Early Life & Formation">
+          <TwoCol number="01" label="Who is Rev. Fr. Dr. Joseph Raj?">
             <div id="formation-heading" className="space-y-5">
+              <h2 className="font-serif text-2xl sm:text-3xl text-navy font-normal mb-3">
+                Who is Rev. Fr. Dr. Joseph Raj?
+              </h2>
               {author.earlyLifeAndFormation.map((para, i) => (
                 <p key={i} className="font-sans text-[15px] text-foreground leading-[1.85]">
                   {para}
@@ -120,8 +162,11 @@ export default function AboutPage() {
       {/* ── 02 Priesthood & Higher Studies ───────────────────────── */}
       <section aria-labelledby="priesthood-heading" className="py-14 md:py-20 bg-secondary">
         <Container>
-          <TwoCol number="02" label="Priesthood & Higher Studies">
+          <TwoCol number="02" label="Canonical Work & Formation">
             <div id="priesthood-heading" className="space-y-6">
+              <h2 className="font-serif text-2xl sm:text-3xl text-navy font-normal mb-3">
+                What is his canonical work and ecclesiastical studies?
+              </h2>
               {author.priesthoodAndHigherStudies.map((para, i) => (
                 <p key={i} className="font-sans text-[15px] text-foreground leading-[1.85]">
                   {para}
@@ -217,6 +262,9 @@ export default function AboutPage() {
         <Container>
           <TwoCol number="04" label="Pastoral & Ecclesiastical Ministry">
             <div id="ministry-heading" className="space-y-6">
+              <h2 className="font-serif text-2xl sm:text-3xl text-navy font-normal mb-3">
+                What is his ministry in the Church?
+              </h2>
               <p className="font-sans text-[15px] text-foreground leading-[1.85]">
                 {author.ministry.intro}
               </p>
@@ -265,6 +313,9 @@ export default function AboutPage() {
         <Container>
           <TwoCol number="05" label="Areas of Writing">
             <div id="writing-areas-heading">
+              <h2 className="font-serif text-2xl sm:text-3xl text-navy font-normal mb-4">
+                What are his areas of theological interest?
+              </h2>
               <p className="font-sans text-[15px] text-foreground leading-[1.85] mb-8">
                 A respected theologian, canonist, preacher, and author, Fr. Joseph Raj has written
                 extensively on marriage, family life, moral theology, canon law, and spirituality.
@@ -291,6 +342,9 @@ export default function AboutPage() {
         <Container>
           <TwoCol number="06" label="Published Works">
             <div id="published-works-heading">
+              <h2 className="font-serif text-2xl sm:text-3xl text-navy font-normal mb-4">
+                What books has Rev. Fr. Dr. Joseph Raj written?
+              </h2>
               <p className="font-sans text-[13px] text-muted-foreground mb-6">
                 Complete fifteen-volume scholarly and pastoral collection spanning moral theology, canon law, sacred scripture, and spiritual formation.
               </p>
@@ -372,7 +426,7 @@ export default function AboutPage() {
 
       <Divider />
 
-      {/* ── 09 Closing Statement ─────────────────────────────────── */}
+      {/* ── 09 Closing Statement / Purpose of Publications ───────── */}
       <section aria-labelledby="closing-heading" className="py-14 md:py-20">
         <Container>
           <div className="max-w-2xl mx-auto text-center">
@@ -383,6 +437,9 @@ export default function AboutPage() {
             />
             <span className="font-sans text-[11px] text-gold tracking-widest">09</span>
             <div className="w-px h-8 bg-border mx-auto my-4" aria-hidden="true" />
+            <h2 className="font-sans text-[11px] font-semibold tracking-[0.2em] uppercase text-muted-foreground mb-4">
+              What is the purpose of his publications?
+            </h2>
             <p
               id="closing-heading"
               className="font-serif text-xl md:text-2xl text-navy font-normal leading-relaxed italic"
