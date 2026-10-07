@@ -7,7 +7,7 @@ import { usePageMeta } from "../hooks/usePageMeta"
 export default function PrivacyPage() {
   usePageMeta(
     "Privacy Policy | Rev. Fr. Dr. Joseph Raj",
-    "Privacy policy regarding pastoral communications, publication notification requests, and personal data handling for Rev. Fr. Dr. Joseph Raj Ministry & Publications.",
+    "Privacy policy regarding pastoral communications, publication notification requests, and personal data handling for Rev. Fr. Dr. Joseph Raj.",
     {
       canonical: "https://www.revfrdrjosephraj.org/privacy",
       ogUrl: "https://www.revfrdrjosephraj.org/privacy",
@@ -20,7 +20,7 @@ export default function PrivacyPage() {
   }, [])
 
   return (
-    <main id="root" className="py-16 md:py-24">
+    <main id="privacy-main" className="py-16 md:py-24">
       <Container>
         <div className="max-w-3xl">
           <SectionHeading

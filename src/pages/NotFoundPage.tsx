@@ -12,7 +12,7 @@ export default function NotFoundPage() {
   )
 
   return (
-    <main id="root" className="py-28 md:py-36 bg-parchment min-h-[60vh] flex items-center">
+    <main id="not-found-main" className="py-28 md:py-36 bg-parchment min-h-[60vh] flex items-center">
       <Container>
         <div className="max-w-xl mx-auto text-center">
           <p className="font-sans text-[11px] font-medium tracking-[0.22em] uppercase text-gold mb-4">

@@ -18,7 +18,7 @@ function BookCTA({ status }: { status: BookStatus }) {
       <div>
         <button
           className="inline-flex items-center font-sans text-sm font-medium tracking-wide bg-navy text-ivory border border-navy hover:bg-navy-deep transition-colors px-8 py-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 min-h-[48px]"
-          onClick={() => {/* wire to cart when backend ready */}}
+          onClick={() => {/* wire to cart when backend ready */ }}
         >
           Buy Now
         </button>
@@ -90,11 +90,6 @@ export default function BookDetailPage() {
           "@id": "https://www.revfrdrjosephraj.org/#author",
           "name": "Rev. Fr. Dr. Joseph Raj",
           "url": "https://www.revfrdrjosephraj.org/about"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "@id": "https://www.revfrdrjosephraj.org/#organization",
-          "name": "Rev. Fr. Dr. Joseph Raj Ministry & Publications"
         }
       },
       {
@@ -120,19 +115,7 @@ export default function BookDetailPage() {
             "item": bookUrl
           }
         ]
-      },
-      ...(book.faqs && book.faqs.length > 0 ? [{
-        "@type": "FAQPage",
-        "@id": `${bookUrl}#faq`,
-        "mainEntity": book.faqs.map((faq) => ({
-          "@type": "Question",
-          "name": faq.question,
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": faq.answer
-          }
-        }))
-      }] : [])
+      }
     ]
   } : undefined
 
@@ -182,7 +165,7 @@ export default function BookDetailPage() {
     .slice(0, 3)
 
   return (
-    <main id="root" className="bg-parchment min-h-screen">
+    <main id="book-detail-main" className="bg-parchment min-h-screen">
       {/* ── Breadcrumb & Navigation Bar ──────────────────────────── */}
       <nav aria-label="Breadcrumb" className="border-b border-border bg-secondary/40">
         <Container>
@@ -506,7 +489,7 @@ export default function BookDetailPage() {
           <section aria-labelledby="structure-heading" className="py-16 md:py-24">
             <Container>
               <SectionHeading
-                label="Organization"
+                label="STRUCTURE"
                 title={book.chapters.length === 7 ? "The Seven-Stage Lenten Journey" : "Book Structure"}
                 subtitle={book.structureOverview || "An outline of the chapters comprising this comprehensive volume."}
               />
@@ -756,24 +739,24 @@ export default function BookDetailPage() {
         </>
       )}
 
-      {/* ── AEO Question Section: About This Book ────────────────── */}
+      {/* ── Overview Section: About This Book ────────────────── */}
       {book.aeoQuestions && (
         <>
           <Divider />
-          <section aria-labelledby="aeo-questions-heading" className="py-16 md:py-24 bg-secondary/40">
+          <section aria-labelledby="about-book-heading" className="py-16 md:py-24 bg-secondary/40">
             <Container>
               <div className="max-w-3xl">
                 <SectionHeading
-                  label="AEO Overview"
+                  label="THE BOOK"
                   title="About This Book"
-                  subtitle="Essential questions, target audience, key themes, and theological impact."
+                  subtitle="A concise guide to the subject, themes, questions, and significance of this work."
                 />
 
                 <div className="mt-12 space-y-10">
                   {book.aeoQuestions.aboutThisBook && (
                     <div>
                       <h3 className="font-sans text-[11px] font-semibold tracking-[0.2em] uppercase text-gold mb-3">
-                        What is this book about?
+                        About the Book
                       </h3>
                       <p className="font-sans text-[15px] sm:text-[16px] text-foreground/90 leading-[1.85]">
                         {book.aeoQuestions.aboutThisBook}
@@ -784,7 +767,7 @@ export default function BookDetailPage() {
                   {book.aeoQuestions.whoIsThisBookFor && (
                     <div>
                       <h3 className="font-sans text-[11px] font-semibold tracking-[0.2em] uppercase text-gold mb-3">
-                        Who is this book for?
+                        Who Is This Book For?
                       </h3>
                       <p className="font-sans text-[15px] sm:text-[16px] text-foreground/90 leading-[1.85]">
                         {book.aeoQuestions.whoIsThisBookFor}
@@ -795,7 +778,7 @@ export default function BookDetailPage() {
                   {book.aeoQuestions.mainThemes && book.aeoQuestions.mainThemes.length > 0 && (
                     <div>
                       <h3 className="font-sans text-[11px] font-semibold tracking-[0.2em] uppercase text-gold mb-4">
-                        What are the main themes?
+                        Key Themes
                       </h3>
                       <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         {book.aeoQuestions.mainThemes.map((theme, tIdx) => (
@@ -811,7 +794,7 @@ export default function BookDetailPage() {
                   {book.aeoQuestions.questionsAddressed && book.aeoQuestions.questionsAddressed.length > 0 && (
                     <div>
                       <h3 className="font-sans text-[11px] font-semibold tracking-[0.2em] uppercase text-gold mb-4">
-                        What questions does this book address?
+                        Questions Explored in This Book
                       </h3>
                       <ul className="space-y-3">
                         {book.aeoQuestions.questionsAddressed.map((q, qIdx) => (
@@ -827,7 +810,7 @@ export default function BookDetailPage() {
                   {book.aeoQuestions.theologicalSignificance && (
                     <div>
                       <h3 className="font-sans text-[11px] font-semibold tracking-[0.2em] uppercase text-gold mb-3">
-                        What is the theological significance?
+                        Theological Significance
                       </h3>
                       <p className="font-sans text-[15px] sm:text-[16px] text-foreground/90 leading-[1.85]">
                         {book.aeoQuestions.theologicalSignificance}
@@ -838,7 +821,7 @@ export default function BookDetailPage() {
                   {book.aeoQuestions.pastoralSignificance && (
                     <div>
                       <h3 className="font-sans text-[11px] font-semibold tracking-[0.2em] uppercase text-gold mb-3">
-                        What is the pastoral significance?
+                        Pastoral Significance
                       </h3>
                       <p className="font-sans text-[15px] sm:text-[16px] text-foreground/90 leading-[1.85]">
                         {book.aeoQuestions.pastoralSignificance}
@@ -852,16 +835,16 @@ export default function BookDetailPage() {
         </>
       )}
 
-      {/* ── FAQ Section: Frequently Asked Questions ─────────────── */}
+      {/* ── Questions & Answers Section ─────────────── */}
       {book.faqs && book.faqs.length > 0 && (
         <>
           <Divider />
-          <section aria-labelledby="faq-heading" className="py-16 md:py-24">
+          <section aria-labelledby="qa-heading" className="py-16 md:py-24">
             <Container>
               <div className="max-w-3xl">
                 <SectionHeading
-                  label="Inquiries & Explanations"
-                  title="Frequently Asked Questions"
+                  label="EXPLANATIONS"
+                  title="Questions & Answers"
                   subtitle="Authoritative answers derived from the author's written works."
                 />
 

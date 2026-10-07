@@ -20,7 +20,7 @@ export default function TermsPage() {
   }, [])
 
   return (
-    <main id="root" className="py-16 md:py-24">
+    <main id="terms-main" className="py-16 md:py-24">
       <Container>
         <div className="max-w-3xl">
           <SectionHeading

@@ -114,7 +114,7 @@ export default function BooksPage() {
   const filtered = sortedBooks.filter((b) => isBookInCategory(activeCategory, b))
 
   return (
-    <main id="root" className="bg-parchment min-h-screen">
+    <main id="books-main" className="bg-parchment min-h-screen">
       {/* ── Page header ──────────────────────────────────────────── */}
       <section aria-labelledby="books-heading" className="border-b border-border py-16 md:py-20">
         <Container>

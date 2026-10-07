@@ -111,7 +111,7 @@ export default function HomePage() {
   const featuredBooks = sortedBooks.slice(0, 3)
 
   return (
-    <main id="root" className="bg-parchment min-h-screen">
+    <main id="home-main" className="bg-parchment min-h-screen">
       {/* ── Hero ─────────────────────────────────────────────────── */}
       <section
         aria-labelledby="hero-heading"
